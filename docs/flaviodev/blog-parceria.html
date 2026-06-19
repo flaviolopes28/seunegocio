@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parceria Exclusiva: 8 Blogs Prontos - Busco Sócio com R$ 15K</title>
+    <meta name="description" content="Tenho 8 blogs com 60% do conteúdo pronto. Busco parceiro com experiência em Adsense para investir R$ 15.000 e dividir 50% dos lucros. ROI em 6-8 meses.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== RESET & VARIÁVEIS ===== */
+        :root {
+            --primary-dark: #0a2463;
+            --primary-blue: #247BA0;
+            --accent-orange: #FF6B35;
+            --accent-green: #2E8B57;
+            --light-gray: #F8F9FA;
+            --medium-gray: #6C757D;
+            --dark-gray: #343A40;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 1rem;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-orange);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        
+        .btn-large {
+            padding: 18px 40px;
+            font-size: 1.1rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent-orange);
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+        
+        /* ===== HEADER ===== */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            color: var(--accent-orange);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-orange);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding-top: 140px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="%230a2463" opacity="0.03"/></svg>');
+            background-size: cover;
+        }
+        
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+        
+        .hero-content h1 span {
+            color: var(--accent-orange);
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            margin-bottom: 30px;
+        }
+        
+        .hero-badges {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background-color: var(--white);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .badge i {
+            color: var(--accent-green);
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-stats {
+            background-color: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .stat-item:last-child {
+            border-bottom: none;
+        }
+        
+        .stat-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        
+        .stat-label i {
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+        }
+        
+        .stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+        }
+        
+        /* ===== BLOGS SECTION ===== */
+        .blogs {
+            background-color: var(--light-gray);
+        }
+        
+        .blogs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .blog-header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .blog-header h3 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        
+        .blog-body {
+            padding: 25px;
+        }
+        
+        .blog-metric {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .blog-metric:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .metric-label {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+        
+        .metric-value {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: var(--accent-green);
+            border-radius: 4px;
+        }
+        
+        /* ===== ROI CALCULATOR ===== */
+        .roi-calculator {
+            background-color: var(--primary-dark);
+            color: var(--white);
+        }
+        
+        .roi-calculator .section-title h2 {
+            color: var(--white);
+        }
+        
+        .roi-calculator .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .calculator-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .calculator-controls {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .calculator-input {
+            margin-bottom: 25px;
+        }
+        
+        .calculator-input label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .calculator-input input {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+            font-size: 1rem;
+        }
+        
+        .calculator-input input:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+        }
+        
+        .calculator-results {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .result-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .result-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .result-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--accent-orange);
+        }
+        
+        .highlight {
+            background-color: rgba(255, 107, 53, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid var(--accent-orange);
+        }
+        
+        /* ===== PROCESS SECTION ===== */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 12px;
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent-orange);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 0 auto 20px;
+        }
+        
+        .step h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        
+        /* ===== CONTRACT SECTION ===== */
+        .contract {
+            background-color: var(--light-gray);
+        }
+        
+        .contract-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contract-highlights {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+        
+        .contract-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contract-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contract-icon {
+            background-color: var(--accent-green);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .contract-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--primary-dark);
+        }
+        
+        .contract-cta {
+            text-align: center;
+        }
+        
+        /* ===== FORM SECTION ===== */
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary-dark);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-submit {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        /* ===== FAQ SECTION ===== */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-item summary {
+            padding: 20px 25px;
+            background-color: var(--white);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-orange);
+            transition: var(--transition);
+        }
+        
+        .faq-item[open] summary::after {
+            content: '−';
+        }
+        
+        .faq-item[open] summary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            background-color: var(--white);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-item[open] .faq-answer {
+            padding: 0 25px 25px;
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            margin-bottom: 15px;
+        }
+        
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-logo i {
+            color: var(--accent-orange);
+        }
+        
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+        
+        .footer-contact h3,
+        .footer-links h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            color: var(--accent-orange);
+            width: 20px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-orange);
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .hero-container,
+            .calculator-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero::before {
+                width: 100%;
+                height: 40%;
+                opacity: 0.05;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-handshake"></i>
+                BlogPartner
+            </a>
+            <nav>
+                <div class="nav-links">
+                    <a href="#oportunidade">Oportunidade</a>
+                    <a href="#blogs">Blogs</a>
+                    <a href="#roi">ROI</a>
+                    <a href="#processo">Processo</a>
+                    <a href="#contrato">Contrato</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="oportunidade">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Parceria em <span>8 Blogs Prontos</span> para Monetizar</h1>
+                <p>Tenho 8 blogs com 60% do conteúdo pronto. Busco parceiro com experiência em Adsense para investir R$ 15.000 e dividir 50% dos lucros. ROI em 6-8 meses.</p>
+                
+                <div class="hero-badges">
+                    <div class="badge">
+                        <i class="fas fa-check-circle"></i>
+                        Blogs 60% prontos
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-check-circle"></i>
+                        Domínios registrados
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-check-circle"></i>
+                        Nichos validados
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#contato" class="btn btn-primary btn-large">
+                        <i class="fas fa-handshake"></i> Quero ser sócio
+                    </a>
+                    <a href="#contrato" class="btn btn-secondary btn-large">
+                        <i class="fas fa-file-contract"></i> Ver contrato
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-label">
+                        <i class="fas fa-chart-line"></i>
+                        Investimento por parceiro
+                    </div>
+                    <div class="stat-value">R$ 15.000</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">
+                        <i class="fas fa-calendar-alt"></i>
+                        Retorno esperado
+                    </div>
+                    <div class="stat-value">6-8 meses</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">
+                        <i class="fas fa-percentage"></i>
+                        Divisão de lucros
+                    </div>
+                    <div class="stat-value">50/50</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">
+                        <i class="fas fa-money-bill-wave"></i>
+                        Projeção mês 12
+                    </div>
+                    <div class="stat-value">R$ 5-8K/mês</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section class="blogs" id="blogs">
+        <div class="container">
+            <div class="section-title">
+                <h2>Os 8 Blogs Prontos</h2>
+                <p>Cada blog está 60% completo, com domínio registrado e estrutura otimizada para SEO e monetização.</p>
+            </div>
+            
+            <div class="blogs-grid">
+                <!-- Blog 1 -->
+                <div class="blog-card">
+                    <div class="blog-header">
+                        <h3>Saúde & Bem-estar</h3>
+                    </div>
+                    <div class="blog-body">
+                        <div class="blog-metric">
+                            <span class="metric-label">Conteúdo pronto</span>
+                            <span class="metric-value">45/60 artigos</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        
+                        <div class="blog-metric">
+                            <span class="metric-label">Potencial RPM</span>
+                            <span class="metric-value">R$ 15-25</span>
+                        </div>
+                        
+                        <div class="blog-metric">
+                            <span class="metric-label">Domínio</span>
+                            <span class="metric-value">Registrado</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog 2 -->
+                <div class="blog-card">
+                    <div class="blog-header">
+                        <h3>Finanças Pessoais</h3>
+                    </div>
+                    <div class="blog-body">
+                        <div class="blog-metric">
+                            <span class="metric-label">Conteúdo pronto</span>
+                            <span class="metric-value">38/63 artigos</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        
+                        <div class="blog-metric">
+                            <span class="metric-label">Potencial RPM</span>
+                            <span class="metric-value">R$ 20-30</span>
+                        </div>
+                        
+                        <div class="blog-metric">
+                            <span class="metric-label">Domínio</span>
+                            <span class="metric-value">Registrado</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog 3 -->
+                <div class="blog-card">
+                    <div class="blog-header">
+                        <h3>Tecnologia</h3>
+                    </div>
+                    <div class="blog-body">
+                        <div class="blog-metric">
+                            <span class="metric-label">Conteúdo pronto</span>
+                            <span class="metric-value">52/72 artigos</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 72%"></div>
+                        </div>
+                        
+                        <div class="blog-metric">
+                            <span class="metric-label">Potencial RPM</span>
+                            <span class="metric-value">R$ 10-20</span>
+                        </div>
+                        
+                        <div class="blog-metric">
+                            <span class="metric-label">Domínio</span>
+                            <span class="metric-value">Registrado</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog 4 -->
+                <div class="blog-card">
+                    <div class="blog-header">
+                        <h3>Viagens</h3>
+                    </div>
+                    <div class="blog-body">
+                        <div class="blog-metric">
+                            <span class="metric-label">Conteúdo pronto</span>
+                            <span class="metric-value">40/65 artigos</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 62%"></div>
+                        </div>
+                        
+                        <div class="blog-metric">
+                            <span class="metric-label">Potencial RPM</span>
+                            <span class="metric-value">R$ 12-22</span>
+                        </div>
+                        
+                        <div class="blog-metric">
+                            <span class="metric-label">Domínio</span>
+                            <span class="metric-value">Registrado</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mais 4 blogs similares... -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <p><strong>+ 4 blogs em nichos diferentes:</strong> Educação, Casa & Jardim, Automóveis, Esportes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="roi-calculator" id="roi">
+        <div class="container">
+            <div class="section-title">
+                <h2>Simulador de Retorno</h2>
+                <p>Calcule o potencial de retorno do investimento baseado em métricas reais do mercado.</p>
+            </div>
+            
+            <div class="calculator-container">
+                <div class="calculator-controls">
+                    <div class="calculator-input">
+                        <label for="investment">Investimento por parceiro (R$)</label>
+                        <input type="range" id="investment" min="10000" max="30000" step="1000" value="15000">
+                        <div style="text-align: center; margin-top: 5px; font-weight: 600;" id="investment-value">R$ 15.000</div>
+                    </div>
+                    
+                    <div class="calculator-input">
+                        <label for="months">Período de análise (meses)</label>
+                        <input type="range" id="months" min="3" max="24" step="1" value="12">
+                        <div style="text-align: center; margin-top: 5px; font-weight: 600;" id="months-value">12 meses</div>
+                    </div>
+                    
+                    <div class="calculator-input">
+                        <label for="rpm">RPM estimado (R$ por 1000 visualizações)</label>
+                        <input type="range" id="rpm" min="5" max="50" step="1" value="18">
+                        <div style="text-align: center; margin-top: 5px; font-weight: 600;" id="rpm-value">R$ 18</div>
+                    </div>
+                </div>
+                
+                <div class="calculator-results">
+                    <h3 style="color: var(--white); margin-bottom: 30px;">Projeção de Retorno</h3>
+                    
+                    <div class="result-item">
+                        <span class="result-label">Investimento total</span>
+                        <span class="result-value" id="total-investment">R$ 30.000</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="result-label">Receita mensal (mês 12)</span>
+                        <span class="result-value" id="monthly-revenue">R$ 8.400</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="result-label">Lucro mensal (mês 12)</span>
+                        <span class="result-value" id="monthly-profit">R$ 6.900</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="result-label">Seu lucro mensal (50%)</span>
+                        <span class="result-value" id="your-profit">R$ 3.450</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="result-label">ROI total (12 meses)</span>
+                        <span class="result-value" id="total-roi">R$ 41.400</span>
+                    </div>
+                    
+                    <div class="highlight">
+                        <p><strong>Ponto de equilíbrio:</strong> <span id="break-even">8.7</span> meses</p>
+                        <p><strong>ROI líquido:</strong> <span id="net-roi">138%</span> em 12 meses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="processo">
+        <div class="container">
+            <div class="section-title">
+                <h2>Processo em 4 Passos</h2>
+                <p>Do primeiro contato até o primeiro lucro compartilhado.</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Contato Inicial</h3>
+                    <p>Conversa por vídeo para alinhar expectativas e experiência.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Due Diligence</h3>
+                    <p>Análise mútua: você vê os blogs, eu vejo sua experiência.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Contrato Inteligente</h3>
+                    <p>Assinatura do contrato com cláusulas de metas e prazo definido.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Operação & Lucro</h3>
+                    <p>Início imediato da operação. Primeiro saque em 60-90 dias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contract Section -->
+    <section class="contract" id="contrato">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contrato Inteligente</h2>
+                <p>Parceria com regras claras, prazo definido e opção de compra futura.</p>
+            </div>
+            
+            <div class="contract-container">
+                <div class="contract-highlights">
+                    <div class="contract-item">
+                        <div class="contract-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="contract-content">
+                            <h3>Prazo Definido</h3>
+                            <p>Parceria inicial de 24 meses. Após esse período, revisão ou dissolução com regras pré-definidas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contract-item">
+                        <div class="contract-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="contract-content">
+                            <h3>Metas Graduais</h3>
+                            <p>Metas trimestrais de receita. Se não atingidas, reavaliação da estratégia ou ajuste de participação.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contract-item">
+                        <div class="contract-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="contract-content">
+                            <h3>Opção de Compra</h3>
+                            <p>Após 12 meses, qualquer parte pode comprar a participação da outra por valuation pré-definido.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contract-item">
+                        <div class="contract-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="contract-content">
+                            <h3>Participação Progressiva</h3>
+                            <p>Se investidor quiser aumentar participação após metas, pode comprar % adicional por valuation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contract-cta">
+                    <a href="#contato" class="btn btn-primary btn-large" style="margin-right: 20px;">
+                        <i class="fas fa-download"></i> Baixar Modelo de Contrato
+                    </a>
+                    <p style="margin-top: 20px; color: var(--medium-gray);">
+                        <small>Contrato completo com 12 cláusulas detalhadas. PDF editável.</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="contato">
+        <div class="container">
+            <div class="section-title">
+                <h2>Interessado na Parceria?</h2>
+                <p>Preencha o formulário abaixo. Só entro em contato com investidores qualificados.</p>
+            </div>
+            
+            <div class="form-container">
+                <form id="partnership-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome completo *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp *</label>
+                            <input type="tel" id="whatsapp" placeholder="(11) 99999-9999" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-mail profissional *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience">Experiência com Adsense *</label>
+                            <select id="experience" required>
+                                <option value="">Selecione...</option>
+                                <option value="nenhuma">Nenhuma</option>
+                                <option value="basica">Básica (1-2 blogs)</option>
+                                <option value="intermediaria">Intermediária (R$ 1-5K/mês)</option>
+                                <option value="avancada">Avançada (R$ 5K+/mês)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="investment-capacity">Capital disponível para investir *</label>
+                            <select id="investment-capacity" required>
+                                <option value="">Selecione...</option>
+                                <option value="10-15">R$ 10.000 - 15.000</option>
+                                <option value="15-20">R$ 15.000 - 20.000</option>
+                                <option value="20-30">R$ 20.000 - 30.000</option>
+                                <option value="30+">Mais de R$ 30.000</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Quando pode iniciar? *</label>
+                            <select id="timeline" required>
+                                <option value="">Selecione...</option>
+                                <option value="15-dias">Em 15 dias</option>
+                                <option value="1-mes">Em 1 mês</option>
+                                <option value="2-3-meses">Em 2-3 meses</option>
+                                <option value="indefinido">Indefinido</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Por que você é o parceiro ideal? *</label>
+                        <textarea id="message" placeholder="Conte sobre sua experiência, disponibilidade, e por que está interessado nesta parceria..." required></textarea>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i> Enviar proposta
+                        </button>
+                        <p style="margin-top: 15px; color: var(--medium-gray); font-size: 0.9rem;">
+                            Entrarei em contato por WhatsApp em até 48 horas.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tire suas dúvidas sobre a parceria, contrato e retorno.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <summary>Qual o investimento mínimo necessário?</summary>
+                    <div class="faq-answer">
+                        <p>O investimento por parceiro é de R$ 15.000 (total R$ 30.000 para os dois). Esse valor cobre:</p>
+                        <p>• Finalização do conteúdo restante (40%)</p>
+                        <p>• SEO técnico e otimização</p>
+                        <p>• Campanhas iniciais de tráfego pago (3 meses)</p>
+                        <p>• Reserva para contingências</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <summary>Quando começa a dar retorno financeiro?</summary>
+                    <div class="faq-answer">
+                        <p>Projeção realista:</p>
+                        <p>• <strong>Mês 1-2:</strong> Finalização e lançamento (zero receita)</p>
+                        <p>• <strong>Mês 3:</strong> Primeiras receitas (R$ 500-1.000)</p>
+                        <p>• <strong>Mês 6:</strong> Receita consolidada (R$ 2.000-3.000)</p>
+                        <p>• <strong>Mês 12:</strong> Receita madura (R$ 5.000-8.000)</p>
+                        <p>O primeiro saque de lucros acontece após o 3º mês de operação.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <summary>Como é a divisão de responsabilidades?</summary>
+                    <div class="faq-answer">
+                        <p><strong>Minhas responsabilidades:</strong></p>
+                        <p>• Produção e edição de conteúdo final</p>
+                        <p>• Gestão técnica dos blogs (hospedagem, plugins)</p>
+                        <p>• Relacionamento com redatores (se necessário)</p>
+                        
+                        <p><strong>Responsabilidades do parceiro:</strong></p>
+                        <p>• Configuração e otimização do Google Adsense</p>
+                        <p>• Gestão de campanhas de tráfego (orgânico e pago)</p>
+                        <p>• Análise de métricas e otimização de ROI</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <summary>O contrato tem prazo definido? Posso sair antes?</summary>
+                    <div class="faq-answer">
+                        <p>Sim, o contrato tem <strong>prazo inicial de 24 meses</strong> com as seguintes cláusulas:</p>
+                        <p>• <strong>Período mínimo:</strong> 6 meses (para dar tempo do ROI)</p>
+                        <p>• <strong>Saída antecipada:</strong> Possível após 6 meses, com aviso de 60 dias</p>
+                        <p>• <strong>Valuation de saída:</strong> 12x a média dos últimos 3 meses de lucro</p>
+                        <p>• <strong>Direito de preferência:</strong> A parte que fica tem prioridade na compra</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <summary>Posso aumentar minha participação no futuro?</summary>
+                    <div class="faq-answer">
+                        <p>Sim, o contrato prevê essa possibilidade:</p>
+                        <p>• <strong>Após 12 meses:</strong> Qualquer parte pode comprar participação adicional</p>
+                        <p>• <strong>Valuation:</strong> 12x a média dos últimos 3 meses de lucro</p>
+                        <p>• <strong>Metas batidas:</strong> Se ROI superar 150% em 12 meses, parceiro pode aumentar para 60%</p>
+                        <p>• <strong>Opção de compra total:</strong> Após 24 meses, qualquer parte pode comprar 100%</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <summary>Preciso ter experiência prévia com blogs/Adsense?</summary>
+                    <div class="faq-answer">
+                        <p><strong>É obrigatório ter experiência comprovada com Adsense.</strong> Não é parceria para aprender.</p>
+                        <p>• <strong>Mínimo:</strong> Já ter gerenciado 1-2 blogs com Adsense</p>
+                        <p>• <strong>Ideal:</strong> Ter gerado R$ 1.000+/mês com Adsense</p>
+                        <p>• <strong>Comprovação:</strong> Será solicitado print do painel do Adsense (dados sensíveis podem ser ocultados)</p>
+                        <p>Se não tem experiência, essa não é a oportunidade ideal para você.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <summary>Posso ver os blogs antes de fechar?</summary>
+                    <div class="faq-answer">
+                        <p>Sim, mas com um processo estruturado:</p>
+                        <p>1. <strong>Formulário preenchido</strong> e análise inicial</p>
+                        <p>2. <strong>Chamada de vídeo</strong> para alinhamento</p>
+                        <p>3. <strong>NDA assinado</strong> (acordo de confidencialidade)</p>
+                        <p>4. <strong>Acesso temporário</strong> a 1-2 blogs para avaliação</p>
+                        <p>5. <strong>Due diligence completa</strong> antes do contrato</p>
+                        <p>Não forneço acesso livre antes do processo para proteger os ativos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-handshake"></i>
+                        BlogPartner
+                    </div>
+                    <p>Parceria estratégica para monetização de blogs. Conteúdo + Investimento = Lucro compartilhado.</p>
+                    <p>Focado em resultados reais com contrato inteligente e prazo definido.</p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contato Direto</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>parceria@reviewnexus.blog</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp após formulário</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Parceria 100% remota</span>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#oportunidade">Oportunidade</a></li>
+                        <li><a href="#blogs">Os 8 Blogs</a></li>
+                        <li><a href="#roi">Simulador ROI</a></li>
+                        <li><a href="#processo">Processo</a></li>
+                        <li><a href="#contrato">Contrato</a></li>
+                        <li><a href="#contato">Formulário</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 BlogPartner. Parceria estratégica para monetização de blogs. Todos os direitos reservados.</p>
+                <p style="margin-top: 10px;">Esta oferta é válida apenas para investidores qualificados com experiência comprovada em Adsense.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // ROI Calculator Logic
+        const investmentSlider = document.getElementById('investment');
+        const monthsSlider = document.getElementById('months');
+        const rpmSlider = document.getElementById('rpm');
+        
+        const investmentValue = document.getElementById('investment-value');
+        const monthsValue = document.getElementById('months-value');
+        const rpmValue = document.getElementById('rpm-value');
+        
+        const totalInvestmentEl = document.getElementById('total-investment');
+        const monthlyRevenueEl = document.getElementById('monthly-revenue');
+        const monthlyProfitEl = document.getElementById('monthly-profit');
+        const yourProfitEl = document.getElementById('your-profit');
+        const totalRoiEl = document.getElementById('total-roi');
+        const breakEvenEl = document.getElementById('break-even');
+        const netRoiEl = document.getElementById('net-roi');
+        
+        function updateCalculator() {
+            const investment = parseInt(investmentSlider.value);
+            const months = parseInt(monthsSlider.value);
+            const rpm = parseInt(rpmSlider.value);
+            
+            // Update display values
+            investmentValue.textContent = `R$ ${investment.toLocaleString('pt-BR')}`;
+            monthsValue.textContent = `${months} meses`;
+            rpmValue.textContent = `R$ ${rpm}`;
+            
+            // Calculations
+            const totalInvestment = investment * 2; // 2 partners
+            const estimatedTraffic = 50000 * (months / 12); // Estimated traffic growth
+            const monthlyRevenue = (estimatedTraffic / 1000) * rpm;
+            const monthlyCosts = 1500; // Fixed costs
+            const monthlyProfit = monthlyRevenue - monthlyCosts;
+            const yourMonthlyProfit = monthlyProfit * 0.5; // 50% share
+            const totalROI = yourMonthlyProfit * months;
+            const breakEvenMonths = totalInvestment / (monthlyProfit * 2); // Both partners' profit
+            const netROI = ((totalROI - investment) / investment) * 100;
+            
+            // Update results
+            totalInvestmentEl.textContent = `R$ ${totalInvestment.toLocaleString('pt-BR')}`;
+            monthlyRevenueEl.textContent = `R$ ${monthlyRevenue.toLocaleString('pt-BR', {minimumFractionDigits: 0, maximumFractionDigits: 0})}`;
+            monthlyProfitEl.textContent = `R$ ${monthlyProfit.toLocaleString('pt-BR', {minimumFractionDigits: 0, maximumFractionDigits: 0})}`;
+            yourProfitEl.textContent = `R$ ${yourMonthlyProfit.toLocaleString('pt-BR', {minimumFractionDigits: 0, maximumFractionDigits: 0})}`;
+            totalRoiEl.textContent = `R$ ${totalROI.toLocaleString('pt-BR', {minimumFractionDigits: 0, maximumFractionDigits: 0})}`;
+            breakEvenEl.textContent = breakEvenMonths.toFixed(1);
+            netRoiEl.textContent = `${netROI.toFixed(0)}%`;
+        }
+        
+        // Event listeners for sliders
+        investmentSlider.addEventListener('input', updateCalculator);
+        monthsSlider.addEventListener('input', updateCalculator);
+        rpmSlider.addEventListener('input', updateCalculator);
+        
+        // Initialize calculator
+        updateCalculator();
+        
+        // Form Submission
+        document.getElementById('partnership-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const experience = document.getElementById('experience').value;
+            
+            // Simple validation
+            if (!name || !whatsapp || !experience) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+            
+            // Create WhatsApp message
+            const message = `Olá! Sou ${name}. Preenchi o formulário para a parceria dos 8 blogs. Minha experiência com Adsense: ${experience}. Aguardo seu contato para conversarmos.`;
+            
+            // Encode message for WhatsApp URL
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/55${whatsapp.replace(/\D/g, '')}?text=${encodedMessage}`;
+            
+            // Open WhatsApp
+            window.open(whatsappURL, '_blank');
+            
+            // Show confirmation
+            alert('Obrigado! Em instantes você será redirecionado para o WhatsApp. Por favor, envie a mensagem pré-preparada.');
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').style.display = 'none';
+                    
+                    // Scroll to element
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Contract download
+        document.querySelector('a[href="#contato"]').addEventListener('click', function(e) {
+            if (this.textContent.includes('Baixar Modelo')) {
+                e.preventDefault();
+                
+                // Create contract content
+                const contractContent = `
+CONTRATO DE PARCERIA PARA BLOGS - MODELO
+
+CLÁUSULA 1ª - DAS PARTES
+PARCEIRO A: [Seu Nome] - Detentor dos 8 blogs 60% completos
+PARCEIRO B: [Nome do Investidor] - Investidor e gestor de monetização
+
+CLÁUSULA 2ª - DO OBJETO
+Parceria para finalização, monetização e gestão de 8 blogs listados em anexo.
+
+CLÁUSULA 3ª - DO PRAZO
+3.1. Prazo inicial: 24 (vinte e quatro) meses
+3.2. Renovação automática por 12 meses se ambas as partes concordarem
+3.3. Período mínimo: 6 meses
+
+CLÁUSULA 4ª - DO INVESTIMENTO
+4.1. PARCEIRO B investe R$ 15.000,00 em duas parcelas:
+   a) R$ 7.500 na assinatura
+   b) R$ 7.500 após 60 dias
+4.2. Recursos serão usados exclusivamente para os blogs
+
+CLÁUSULA 5ª - DAS RESPONSABILIDADES
+5.1. PARCEIRO A: Conteúdo final, gestão técnica
+5.2. PARCEIRO B: Adsense, tráfego, monetização
+
+CLÁUSULA 6ª - DA DISTRIBUIÇÃO DE LUCROS
+6.1. Lucros distribuídos 50/50 após custos operacionais
+6.2. Primeiro saque: após 3 meses de operação
+6.3. Distribuição mensal até dia 10
+
+CLÁUSULA 7ª - DAS METAS
+7.1. Meta trimestral 1: R$ 500/mês de receita
+7.2. Meta trimestral 2: R$ 1.500/mês de receita
+7.3. Meta trimestral 3: R$ 3.000/mês de receita
+7.4. Se metas não atingidas: reavaliação estratégica
+
+CLÁUSULA 8ª - DA OPÇÃO DE COMPRA
+8.1. Após 12 meses: qualquer parte pode comprar participação
+8.2. Valuation: 12x média dos últimos 3 meses de lucro
+8.3. Direito de preferência: parte que permanece tem prioridade
+
+CLÁUSULA 9ª - DA SAÍDA ANTECIPADA
+9.1. Após 6 meses, qualquer parte pode sair com 60 dias de aviso
+9.2. Valuation de saída: 12x média dos últimos 3 meses
+9.3. Multa por saída antes de 6 meses: perde investimento
+
+CLÁUSULA 10ª - DA PROPRIEDADE
+10.1. Blogs são propriedade conjunta 50/50
+10.2. Domínios em conta conjunta
+10.3. Em caso de dissolução, aplica-se valuation da cláusula 8
+
+CLÁUSULA 11ª - DA CONFIDENCIALIDADE
+11.1. Informações estratégicas são confidenciais
+11.2. Proibido replicar modelo em nichos concorrentes
+
+CLÁUSULA 12ª - DO FORO
+12.1. Foro da comarca de [Sua Cidade] para questões judiciais
+
+ASSINATURAS:
+
+___________________________
+[Seu Nome]
+PARCEIRO A
+
+___________________________
+[Nome do Investidor]
+PARCEIRO B
+
+Data: __/__/2026
+                `;
+                
+                // Create blob and download link
+                const blob = new Blob([contractContent], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'modelo-contrato-parceria-blogs.txt';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                alert('Modelo de contrato baixado! Este é um arquivo de texto que pode ser editado e convertido para PDF.');
+            }
+        });
+        
+        // FAQ animation
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('toggle', function() {
+                if (this.open) {
+                    // Close other open items
+                    document.querySelectorAll('.faq-item').forEach(otherItem => {
+                        if (otherItem !== this && otherItem.open) {
+                            otherItem.open = false;
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

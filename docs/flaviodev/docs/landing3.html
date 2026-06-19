@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="pt-BR" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- SEO ESSENCIAL -->
+    <title>Diagnóstico Gratuito de Site + Landing Pages de Alta Conversão | FlávioDev Arquitetura Web</title>
+    <meta name="description" content="Sua landing page converte menos de 3%? Receba uma ANÁLISE GRATUITA em 15 minutos + desenvolvimento de Landing Pages otimizadas para SEO e conversão. Performance garantida.">
+    
+    <!-- KEYWORDS OTIMIZADAS -->
+    <meta name="keywords" content="diagnóstico gratuito site, análise landing page, otimização conversão, SEO técnico, core web vitals, landing page alta conversão, desenvolvimento WordPress, velocidade site, Google Analytics, Meta Pixel, arquitetura web">
+    
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Diagnóstico Gratuito + Landing Pages de Alta Conversão | FlávioDev">
+    <meta property="og:description" content="Receba análise gratuita do seu site em 15 minutos. Landing Pages otimizadas para SEO e conversão.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flaviodev.reviewnexus.blog/diagnostico-gratuito"> 
+    <meta property="og:image" content="https://flaviodev.reviewnexus.blog/og-image-diagnostico.jpg">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="FlávioDev Arquitetura Web">
+    
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Diagnóstico Gratuito + Landing Pages de Alta Conversão">
+    <meta name="twitter:description" content="Análise gratuita do seu site em 15 minutos. Descubra pontos críticos que travam suas vendas.">
+    <meta name="twitter:image" content="https://flaviodev.reviewnexus.blog/twitter-card-diagnostico.jpg">
+    
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://flaviodev.reviewnexus.blog/diagnostico-gratuito">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="https://flaviodev.reviewnexus.blog/favicon.ico">
+    <link rel="apple-touch-icon" href="https://flaviodev.reviewnexus.blog/apple-touch-icon.png">
+    
+    <!-- SCHEMA MARKUP JSON-LD (IMPORTANTE PARA SEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "FlávioDev Arquitetura Web",
+        "description": "Desenvolvimento de Landing Pages otimizadas para SEO e alta conversão com análise técnica gratuita",
+        "url": "https://flaviodev.reviewnexus.blog",
+        "logo": "https://flaviodev.reviewnexus.blog/logo-flavio.png",
+        "telephone": "+5543996432679",
+        "email": "contato@flaviodev.reviewnexus.blog",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BR"
+        },
+        "priceRange": "R$500 - R$1.800",
+        "areaServed": "Brasil",
+        "serviceType": "Desenvolvimento Web, SEO Técnico, Landing Pages",
+        "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": "4",
+            "lowPrice": "0",
+            "highPrice": "1800",
+            "priceCurrency": "BRL"
+        }
+    }
+    </script>
+    
+    <!-- SCHEMA PARA SERVICES -->
+    <script type="application/ld+json">
+    [{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Diagnóstico Técnico Gratuito",
+        "description": "Análise completa do site em 15 minutos: velocidade, conversão e rastreamento",
+        "provider": {
+            "@type": "Person",
+            "name": "Flávio Lopes"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "BRL"
+        }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Landing Page Básica",
+        "description": "Desenvolvimento de landing page otimizada para WordPress com integração WhatsApp",
+        "provider": {
+            "@type": "Person",
+            "name": "Flávio Lopes"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "500",
+            "priceCurrency": "BRL"
+        }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Landing Page Estratégica",
+        "description": "Landing page completa com copy, SEO técnico e configuração de analytics",
+        "provider": {
+            "@type": "Person",
+            "name": "Flávio Lopes"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "1200",
+            "priceCurrency": "BRL"
+        }
+    }]
+    </script>
+
+    <!-- Carregamento do Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper para carrossel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Configuração Tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'deep-blue': '#0A192F',
+              'vibrant-orange': '#FF4500',
+              'light-bg': '#CCD6F6',
+              'gray-text': '#8892B0',
+              'accent-blue': '#06b6d4',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+        /* ESTILOS OTIMIZADOS PARA PERFORMANCE */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A192F;
+            color: #CCD6F6;
+            line-height: 1.6;
+        }
+        
+        /* Heading hierarchy para SEO */
+        h1 { font-size: 2.5rem; font-weight: 800; }
+        h2 { font-size: 2rem; font-weight: 700; }
+        h3 { font-size: 1.5rem; font-weight: 600; }
+        
+        @media (min-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            h2 { font-size: 2.5rem; }
+        }
+        
+        /* Gradientes */
+        .text-gradient {
+            background: linear-gradient(90deg, #FF4500, #FF8C00, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Cards */
+        .card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 69, 0, 0.2);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            border-color: #FF4500;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 69, 0, 0.1);
+        }
+        
+        /* Botões */
+        .btn-primary {
+            background: linear-gradient(135deg, #FF4500, #FF5A1A);
+            color: white;
+            font-weight: 700;
+            padding: 16px 32px;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.3);
+        }
+        
+        /* FAQ Accordion */
+        .faq-item {
+            border-bottom: 1px solid rgba(136, 146, 176, 0.2);
+        }
+        
+        .faq-question {
+            padding: 20px 0;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: #FF4500;
+            transition: transform 0.3s;
+        }
+        
+        .faq-question.active::after {
+            content: '-';
+            transform: translateY(-50%) rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-answer.open {
+            max-height: 500px;
+        }
+        
+        /* Swiper Carrossel */
+        .swiper {
+            width: 100%;
+            padding: 20px 0 40px;
+        }
+        
+        .swiper-slide {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 69, 0, 0.2);
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+        
+        /* Animações suaves */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        /* Lazy loading images */
+        img.lazy {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        img.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-deep-blue text-light-bg">
+    <!-- NAVEGAÇÃO (header semântico para SEO) -->
+    <header class="sticky top-0 z-50 bg-deep-blue/95 backdrop-blur-sm border-b border-vibrant-orange/10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo com link para home -->
+            <a href="/" class="text-2xl font-extrabold text-vibrant-orange flex items-center">
+                <img src="https://flaviodev.reviewnexus.blog/logo-flavio.png" 
+                     alt="FlávioDev Logo - Arquitetura Web" 
+                     class="h-8 w-auto mr-2"
+                     width="32"
+                     height="32"
+                     loading="lazy">
+                FlávioDev
+            </a>
+            
+            <nav class="hidden md:flex space-x-8" aria-label="Navegação principal">
+                <a href="#diagnostico" class="text-gray-text hover:text-vibrant-orange transition">Diagnóstico Gratuito</a>
+                <a href="#pacotes" class="text-gray-text hover:text-vibrant-orange transition">Pacotes</a>
+                <a href="#portfolio" class="text-gray-text hover:text-vibrant-orange transition">Portfolio</a>
+                <a href="#faq" class="text-gray-text hover:text-vibrant-orange transition">FAQ</a>
+                <a href="#contato" class="text-gray-text hover:text-vibrant-orange transition">Contato</a>
+            </nav>
+            
+            <!-- CTA principal -->
+            <a href="https://wa.me/5543996432679?text=Olá! Quero o diagnóstico gratuito do meu site" 
+               target="_blank"
+               rel="noopener"
+               class="btn-primary hidden md:inline-flex items-center gap-2">
+                <i class="fab fa-whatsapp"></i>
+                Diagnóstico Gratuito
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION com H1 principal -->
+    <section class="py-16 md:py-24 px-4" aria-labelledby="main-heading">
+        <div class="container mx-auto text-center">
+            <span class="inline-block px-4 py-2 bg-vibrant-orange/20 text-vibrant-orange rounded-full text-sm font-semibold mb-6 animate-fade-in-up">
+                🎯 OFERTA POR TEMPO LIMITADO
+            </span>
+            
+            <h1 id="main-heading" class="text-4xl md:text-6xl font-black mb-6 animate-fade-in-up" style="animation-delay: 0.1s">
+                Sua landing page converte menos de <span class="text-gradient">3%</span>?
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-text max-w-3xl mx-auto mb-10 animate-fade-in-up" style="animation-delay: 0.2s">
+                Receba uma <strong>análise técnica GRATUITA</strong> em 15 minutos + desenvolvimento de Landing Pages otimizadas para SEO e conversão.
+            </p>
+            
+            <!-- Estatísticas para Social Proof -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto animate-fade-in-up" style="animation-delay: 0.3s">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-vibrant-orange mb-2">8.3%</div>
+                    <div class="text-sm text-gray-text">Conversão Média</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-vibrant-orange mb-2">+47%</div>
+                    <div class="text-sm text-gray-text">Aumento Vendas</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-vibrant-orange mb-2">1.8s</div>
+                    <div class="text-sm text-gray-text">Velocidade LCP</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-vibrant-orange mb-2">15min</div>
+                    <div class="text-sm text-gray-text">Análise Gratuita</div>
+                </div>
+            </div>
+            
+            <!-- CTAs principais -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.4s">
+                <a href="#diagnostico" 
+                   class="btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 text-lg">
+                    <i class="fas fa-chart-line"></i>
+                    QUERO DIAGNÓSTICO GRATUITO
+                </a>
+                <a href="#pacotes" 
+                   class="border-2 border-vibrant-orange text-vibrant-orange px-8 py-4 rounded-xl font-semibold hover:bg-vibrant-orange/10 transition">
+                    VER PACOTES COMPLETOS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DIAGNÓSTICO GRATUITO -->
+    <section id="diagnostico" class="py-16 md:py-20 px-4 bg-gradient-to-b from-deep-blue to-[#0A1425]" aria-labelledby="diagnostico-heading">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 id="diagnostico-heading" class="text-3xl md:text-4xl font-bold mb-4">
+                    📊 <span class="text-gradient">Diagnóstico Técnico Gratuito</span> (15 minutos)
+                </h2>
+                <p class="text-gray-text text-lg max-w-2xl mx-auto">
+                    Envie o link do seu site e receba uma análise completa dos 3 pontos críticos que travam suas vendas
+                </p>
+            </div>
+            
+            <!-- Cards de análise -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="card p-8 text-center">
+                    <div class="text-5xl mb-6">🚀</div>
+                    <h3 class="text-xl font-bold mb-4">Velocidade (Core Web Vitals)</h3>
+                    <p class="text-gray-text">
+                        Análise LCP, FID e CLS. Sites lentos perdem até 70% das vendas. Mostro onde otimizar.
+                    </p>
+                </div>
+                
+                <div class="card p-8 text-center">
+                    <div class="text-5xl mb-6">🔄</div>
+                    <h3 class="text-xl font-bold mb-4">Taxa de Conversão</h3>
+                    <p class="text-gray-text">
+                        Avaliação do CTA e formulários. Cada campo extra reduz conversão em 10-15%. Identifico melhorias.
+                    </p>
+                </div>
+                
+                <div class="card p-8 text-center">
+                    <div class="text-5xl mb-6">👁️</div>
+                    <h3 class="text-xl font-bold mb-4">Rastreamento (Pixel/GA4)</h3>
+                    <p class="text-gray-text">
+                        Verifico se seu site está "cego". Sem analytics, você queima 40% do investimento em ads.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Formulário de diagnóstico -->
+            <div class="max-w-2xl mx-auto card p-8">
+                <h3 class="text-2xl font-bold mb-6 text-center">Receba Seu Diagnóstico Agora</h3>
+                
+                <form id="diagnostic-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-semibold mb-2">Seu Nome *</label>
+                        <input type="text" 
+                               id="name" 
+                               name="name"
+                               required
+                               class="w-full px-4 py-3 bg-deep-blue border border-gray-text/30 rounded-lg text-white focus:outline-none focus:border-vibrant-orange"
+                               placeholder="Como prefere ser chamado">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-semibold mb-2">E-mail para contato *</label>
+                        <input type="email" 
+                               id="email" 
+                               name="email"
+                               required
+                               class="w-full px-4 py-3 bg-deep-blue border border-gray-text/30 rounded-lg text-white focus:outline-none focus:border-vibrant-orange"
+                               placeholder="seu@email.com">
+                    </div>
+                    
+                    <div>
+                        <label for="site-url" class="block text-sm font-semibold mb-2">URL do seu site *</label>
+                        <input type="url" 
+                               id="site-url" 
+                               name="site_url"
+                               required
+                               class="w-full px-4 py-3 bg-deep-blue border border-gray-text/30 rounded-lg text-white focus:outline-none focus:border-vibrant-orange"
+                               placeholder="https://seusite.com.br">
+                    </div>
+                    
+                    <button type="submit" 
+                            class="btn-primary w-full flex items-center justify-center gap-3 py-4">
+                        <i class="fas fa-paper-plane"></i>
+                        ENVIAR PARA DIAGNÓSTICO GRATUITO
+                    </button>
+                    
+                    <p class="text-sm text-gray-text text-center">
+                        Analiso e envio o relatório em até 24h. Sem spam, sem compromisso.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACOTES -->
+    <section id="pacotes" class="py-16 md:py-20 px-4" aria-labelledby="pacotes-heading">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 id="pacotes-heading" class="text-3xl md:text-4xl font-bold mb-4">
+                    Escolha seu <span class="text-gradient">Pacote de Solução</span>
+                </h2>
+                <p class="text-gray-text text-lg max-w-2xl mx-auto">
+                    Do diagnóstico gratuito ao desenvolvimento completo. Foco em resultados mensuráveis.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- GRATUITO -->
+                <div class="card p-8 relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-accent-blue text-white px-4 py-1 rounded-full text-sm font-bold">
+                            GRATUITO
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-4 text-center">Diagnóstico Técnico</h3>
+                    <p class="text-gray-text text-center mb-6">Análise completa do seu site</p>
+                    
+                    <div class="text-center mb-8">
+                        <div class="text-5xl font-bold text-accent-blue mb-2">R$ 0</div>
+                        <p class="text-gray-text text-sm">Entrega em 24h</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Análise de Core Web Vitals</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Avaliação de taxa de conversão</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Checagem Pixel/GA4</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-times text-gray-text mt-1"></i>
+                            <span class="text-gray-text">Implementação das correções</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#diagnostico" 
+                       class="btn-primary w-full text-center block py-3 bg-accent-blue hover:bg-[#0891b2]">
+                        SOLICITAR DIAGNÓSTICO
+                    </a>
+                </div>
+                
+                <!-- BÁSICO -->
+                <div class="card p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Landing Básica</h3>
+                    <p class="text-gray-text text-center mb-6">Implementação com seu layout</p>
+                    
+                    <div class="text-center mb-8">
+                        <div class="text-5xl font-bold text-white mb-2">R$ 500</div>
+                        <p class="text-gray-text text-sm">2-5 dias • Pagamento único</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Implementação WordPress</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Design responsivo</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Formulário + WhatsApp</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-times text-gray-text mt-1"></i>
+                            <span class="text-gray-text">Copy otimizada</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/5543996432679?text=Olá! Quero o pacote LANDING BÁSICA (R$500)"
+                       target="_blank"
+                       rel="noopener"
+                       class="btn-primary w-full text-center block py-3">
+                        <i class="fab fa-whatsapp"></i> CONTRATAR
+                    </a>
+                </div>
+                
+                <!-- ESTRATÉGICO (DESTAQUE) -->
+                <div class="card p-8 relative border-2 border-vibrant-orange">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-vibrant-orange text-white px-4 py-1 rounded-full text-sm font-bold">
+                            MAIS PEDIDO
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-4 text-center">Landing Estratégica</h3>
+                    <p class="text-gray-text text-center mb-6">Implementação + otimização completa</p>
+                    
+                    <div class="text-center mb-8">
+                        <div class="text-5xl font-bold text-vibrant-orange mb-2">R$ 1.200</div>
+                        <p class="text-gray-text text-sm">5-7 dias • 3x R$400</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span><strong>Tudo do Básico +</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Copy otimizada para conversão</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Google Analytics + Meta Pixel</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>SEO on-page básico</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/5543996432679?text=Olá! Quero o pacote LANDING ESTRATÉGICA (R$1.200)"
+                       target="_blank"
+                       rel="noopener"
+                       class="btn-primary w-full text-center block py-3 bg-vibrant-orange hover:bg-orange-600">
+                        <i class="fas fa-bolt"></i> QUERO ESTE PACOTE
+                    </a>
+                </div>
+                
+                <!-- PREMIUM -->
+                <div class="card p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Máquina de Clientes</h3>
+                    <p class="text-gray-text text-center mb-6">Sistema completo de captura</p>
+                    
+                    <div class="text-center mb-8">
+                        <div class="text-5xl font-bold text-white mb-2">R$ 1.800</div>
+                        <p class="text-gray-text text-sm">10-14 dias • 4x R$450</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span><strong>Tudo do Estratégico +</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Google Tag Manager avançado</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Eventos de conversão</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Estrutura para testes A/B</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/5543996432679?text=Olá! Quero o pacote MÁQUINA DE CLIENTES (R$1.800)"
+                       target="_blank"
+                       rel="noopener"
+                       class="btn-primary w-full text-center block py-3">
+                        <i class="fas fa-crown"></i> SOLUÇÃO COMPLETA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFÓLIO COM SWIPER -->
+    <section id="portfolio" class="py-16 md:py-20 px-4 bg-gradient-to-b from-deep-blue to-[#0A1425]" aria-labelledby="portfolio-heading">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 id="portfolio-heading" class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="text-gradient">Portfólio Técnico</span>
+                </h2>
+                <p class="text-gray-text text-lg max-w-2xl mx-auto">
+                    Projetos desenvolvidos com foco em performance, SEO e alta conversão
+                </p>
+            </div>
+            
+            <!-- Swiper Container -->
+            <div class="swiper portfolio-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="E-commerce Fashion Store desenvolvido por FlávioDev"
+                                 class="w-full h-full object-cover"
+                                 loading="lazy">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">E-commerce Fashion Store</h3>
+                            <p class="text-gray-text mb-4">
+                                Loja WooCommerce com otimização de performance. LCP de 1.8s, redução de 35% no abandono do carrinho.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded-full">WordPress</span>
+                                <span class="px-3 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded-full">WooCommerce</span>
+                                <span class="px-3 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded-full">Performance</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Clínica Odontológica - Site institucional com alta conversão"
+                                 class="w-full h-full object-cover"
+                                 loading="lazy">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Clínica Odontológica Premium</h3>
+                            <p class="text-gray-text mb-4">
+                                Site institucional + landing page de captura. Aumento de 60% nos agendamentos via WhatsApp.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded-full">WordPress</span>
+                                <span class="px-3 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded-full">Conversão</span>
+                                <span class="px-3 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded-full">WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Indústria Metalúrgica - Landing page B2B de alta conversão"
+                                 class="w-full h-full object-cover"
+                                 loading="lazy">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Indústria Metalúrgica B2B</h3>
+                            <p class="text-gray-text mb-4">
+                                Landing page B2B com foco em leads qualificados. Aumento de 47% nas conversões em 30 dias.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded-full">Landing Page</span>
+                                <span class="px-3 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded-full">B2B</span>
+                                <span class="px-3 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded-full">SEO Técnico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination e Navigation -->
+                <div class="swiper-pagination mt-8"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ AVANÇADO -->
+    <section id="faq" class="py-16 md:py-20 px-4" aria-labelledby="faq-heading">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 id="faq-heading" class="text-3xl md:text-4xl font-bold mb-4">
+                    Perguntas <span class="text-gradient">Frequentes</span>
+                </h2>
+                <p class="text-gray-text text-lg max-w-2xl mx-auto">
+                    Tire suas dúvidas sobre diagnóstico, desenvolvimento e otimização
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3 class="text-lg font-semibold">O diagnóstico gratuito realmente não tem custo?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-text py-4">
+                            Sim, é 100% gratuito. Você recebe uma análise completa do seu site em 15 minutos, sem compromisso de contratação. É minha forma de demonstrar valor antes de qualquer proposta comercial.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3 class="text-lg font-semibold">Preciso ter o layout pronto?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-text py-4">
+                            Sim, meu foco é desenvolvimento técnico e otimização. Você precisa fornecer o layout (Figma, Adobe XD, PSD) ou referência visual clara. Se não tiver layout, posso indicar designers parceiros.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3 class="text-lg font-semibold">Quanto tempo leva para desenvolver uma landing page?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-text py-4">
+                            Depende do pacote: <br>
+                            • Básico: 2-5 dias úteis <br>
+                            • Estratégico: 5-7 dias úteis <br>
+                            • Máquina de Clientes: 10-14 dias úteis <br>
+                            O prazo começa após aprovação do briefing e fornecimento de todo material.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3 class="text-lg font-semibold">Você oferece garantia?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-text py-4">
+                            Sim. Ofereço 2 revisões gratuitas nos pacotes Estratégico e Máquina de Clientes. Além disso, se sua landing page não tiver pelo menos 5% de taxa de conversão após otimizações básicas nos primeiros 30 dias, devolvo 50% do seu investimento (condições no contrato).
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3 class="text-lg font-semibold">Como funciona o pagamento?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-text py-4">
+                            Trabalho com 50% para iniciar e 50% na entrega, via PIX ou transferência. Para orçamentos acima de R$ 1.000, ofereço parcelamento em até 4x sem juros. Todo processo é formalizado com contrato digital.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3 class="text-lg font-semibold">Preciso ter hospedagem e domínio?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-text py-4">
+                            Sim, você precisa ter domínio e hospedagem WordPress. Se não tiver, posso indicar as melhores opções técnicas considerando performance e custo-benefício. A instalação e configuração estão inclusas em todos os pacotes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="contato" class="py-16 md:py-20 px-4 bg-gradient-to-br from-vibrant-orange/10 to-accent-blue/10" aria-labelledby="cta-heading">
+        <div class="container mx-auto text-center">
+            <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold mb-6">
+                Pronto para <span class="text-gradient">transformar seu site</span> em máquina de vendas?
+            </h2>
+            
+            <p class="text-xl text-gray-text max-w-2xl mx-auto mb-10">
+                Comece com o diagnóstico gratuito ou escolha seu pacote de desenvolvimento. Atendimento direto via WhatsApp.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#diagnostico" 
+                   class="btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 text-lg">
+                    <i class="fas fa-chart-line"></i>
+                    QUERO DIAGNÓSTICO GRATUITO
+                </a>
+                
+                <a href="https://wa.me/5543996432679?text=Olá! Quero conversar sobre desenvolvimento de landing page"
+                   target="_blank"
+                   rel="noopener"
+                   class="border-2 border-vibrant-orange text-vibrant-orange px-8 py-4 rounded-xl font-semibold hover:bg-vibrant-orange/10 transition inline-flex items-center justify-center gap-3">
+                    <i class="fab fa-whatsapp"></i>
+                    FALAR NO WHATSAPP
+                </a>
+            </div>
+            
+            <p class="mt-6 text-gray-text text-sm">
+                Resposta em menos de 15 minutos durante horário comercial
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER COMPLETO -->
+    <footer class="bg-deep-blue border-t border-gray-text/20 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Coluna 1: Logo e Descrição -->
+                <div>
+                    <a href="/" class="text-2xl font-extrabold text-vibrant-orange flex items-center mb-4">
+                        FlávioDev
+                    </a>
+                    <p class="text-gray-text text-sm">
+                        Arquitetura de Soluções Web especializada em Landing Pages otimizadas para SEO e alta conversão.
+                    </p>
+                </div>
+                
+                <!-- Coluna 2: Links Rápidos -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#diagnostico" class="text-gray-text hover:text-vibrant-orange transition">Diagnóstico Gratuito</a></li>
+                        <li><a href="#pacotes" class="text-gray-text hover:text-vibrant-orange transition">Pacotes</a></li>
+                        <li><a href="#portfolio" class="text-gray-text hover:text-vibrant-orange transition">Portfolio</a></li>
+                        <li><a href="#faq" class="text-gray-text hover:text-vibrant-orange transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 3: Serviços -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-gray-text">Landing Pages</span></li>
+                        <li><span class="text-gray-text">SEO Técnico</span></li>
+                        <li><span class="text-gray-text">Otimização Performance</span></li>
+                        <li><span class="text-gray-text">Configuração Analytics</span></li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 4: Contato -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-gray-text">
+                            <i class="fab fa-whatsapp text-green-500"></i>
+                            <a href="https://wa.me/5543996432679" 
+                               target="_blank"
+                               rel="noopener"
+                               class="hover:text-vibrant-orange transition">
+                                (43) 99643-2679
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-text">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contato@flaviodev.reviewnexus.blog"
+                               class="hover:text-vibrant-orange transition">
+                                contato@flaviodev.reviewnexus.blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Direitos Autorais e Links Legais -->
+            <div class="pt-8 border-t border-gray-text/20 text-center">
+                <p class="text-gray-text text-sm mb-4">
+                    © 2025 FlávioDev Arquitetura Web. Todos os direitos reservados.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-xs text-gray-text">
+                    <a href="/politica-de-privacidade" class="hover:text-vibrant-orange transition">Política de Privacidade</a>
+                    <a href="/termos-de-uso" class="hover:text-vibrant-orange transition">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO WHATSAPP -->
+    <a href="https://wa.me/5543996432679?text=Olá! Vi seu site e quero saber mais sobre diagnóstico gratuito"
+       target="_blank"
+       rel="noopener"
+       class="whatsapp-btn"
+       aria-label="Conversar no WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Google Analytics (opcional) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5CE8GNQK4"></script> -->
+    
+    <script>
+        // Swiper Carrossel
+        const swiper = new Swiper('.portfolio-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
+        
+        // FAQ Accordion
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isOpen = element.classList.contains('active');
+            
+            // Fecha todos os outros
+            document.querySelectorAll('.faq-question').forEach(q => {
+                if (q !== element) {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('open');
+                }
+            });
+            
+            // Toggle atual
+            element.classList.toggle('active');
+            answer.classList.toggle('open');
+        }
+        
+        // Formulário de Diagnóstico
+        document.getElementById('diagnostic-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const siteUrl = document.getElementById('site-url').value;
+            
+            // Validação
+            if (!name || !email || !siteUrl) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+            
+            // Prepara mensagem WhatsApp
+            const message = `*NOVO DIAGNÓSTICO SOLICITADO*%0A%0A` +
+                           `*Nome:* ${name}%0A` +
+                           `*Email:* ${email}%0A` +
+                           `*Site:* ${siteUrl}%0A%0A` +
+                           `*Enviar análise em 24h*`;
+            
+            // Redireciona para WhatsApp
+            window.open(`https://wa.me/5543996432679?text=${message}`, '_blank');
+            
+            // Mensagem de confirmação
+            this.innerHTML = `
+                <div class="text-center p-8">
+                    <div class="text-5xl text-green-500 mb-4">✅</div>
+                    <h3 class="text-xl font-bold mb-2">Solicitação Enviada!</h3>
+                    <p class="text-gray-text">
+                        <strong>${name}</strong>, vou analisar seu site <strong>${siteUrl}</strong> e enviar o diagnóstico para <strong>${email}</strong> em até 24h.
+                    </p>
+                </div>
+            `;
+        });
+        
+        // Lazy Loading Images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(img => imageObserver.observe(img));
+        });
+        
+        // Smooth Scroll para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Google Analytics (se tiver)
+        /*
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-B5CE8GNQK4');
+        */
+    </script>
+</body>
+</html>

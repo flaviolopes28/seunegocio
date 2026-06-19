@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5CE8GNQK4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B5CE8GNQK4');
+  </script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flávio Lopes (Tom) | Desenvolvedor Web & Marketing Digital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* PALETA LARANJA + PRETO */
+    :root {
+      --primary: #FF6B35;     /* Laranja vibrante */
+      --primary-dark: #E55A2B; /* Laranja mais escuro */
+      --primary-light: #FF8C5A; /* Laranja mais claro */
+      --secondary: #000000;    /* Preto */
+      --secondary-light: #1A1A1A; /* Preto mais claro */
+      --secondary-lighter: #2D2D2D; /* Cinza muito escuro */
+      --accent: #FF9E6D;       /* Laranja suave para detalhes */
+      --light: #F8F9FA;        /* Cinza muito claro */
+      --text: #333333;         /* Cinza escuro para texto */
+      --text-light: #666666;   /* Cinza médio */
+      --white: #FFFFFF;
+      --shadow: rgba(255, 107, 53, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: linear-gradient(135deg, var(--secondary-light) 0%, var(--secondary) 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      background: var(--white);
+      margin: 0 auto;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      border: 1px solid rgba(255, 107, 53, 0.1);
+    }
+
+    /* CABEÇALHO COM FOTO */
+    .header {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-lighter) 100%);
+      color: var(--white);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      position: relative;
+      border-bottom: 4px solid var(--primary);
+    }
+
+    
+
+    .header-info {
+      flex: 1;
+    }
+
+    .name {
+      font-size: 2.8rem;
+      margin-bottom: 5px;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--white) 60%, var(--primary-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+
+    .nickname {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--primary-light);
+      margin-bottom: 10px;
+      display: inline-block;
+      background: rgba(255, 107, 53, 0.1);
+      padding: 3px 15px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 107, 53, 0.3);
+    }
+
+    .title {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .title:before {
+      content: "";
+      width: 30px;
+      height: 3px;
+      background: var(--primary);
+      display: block;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      background: rgba(255, 107, 53, 0.1);
+      padding: 10px 18px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 107, 53, 0.2);
+      transform: translateY(-2px);
+      border-color: var(--primary);
+    }
+
+    .contact-item i {
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    /* LAYOUT PRINCIPAL */
+    .main-content {
+      display: flex;
+      flex: 1;
+    }
+
+    .left-column {
+      flex: 1;
+      background: var(--light);
+      padding: 35px;
+      border-right: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .right-column {
+      flex: 2;
+      padding: 35px;
+    }
+
+    /* GRÁFICO DE HABILIDADES - LARANJA */
+    .skills-section {
+      margin-top: 25px;
+    }
+
+    .skill-category {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-category:last-child {
+      border-bottom: none;
+    }
+
+    .skill-category h3 {
+      color: var(--secondary);
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+    }
+
+    .skill-category h3 i {
+      color: var(--primary);
+      background: rgba(255, 107, 53, 0.1);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .skill-item {
+      margin-bottom: 18px;
+    }
+
+    .skill-name {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .skill-name span {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .skill-bar {
+      height: 10px;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .skill-bar:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        transparent 50%, 
+        rgba(255, 255, 255, 0.3) 50%, 
+        rgba(255, 255, 255, 0.3) 100%);
+      background-size: 10px 100%;
+      border-radius: 10px;
+      opacity: 0.3;
+    }
+
+    .skill-level {
+      height: 100%;
+      border-radius: 10px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+      position: relative;
+      transition: width 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      width: 0;
+      box-shadow: 0 2px 5px rgba(255, 107, 53, 0.3);
+    }
+
+    /* SEÇÕES DE CONTEÚDO */
+    .section {
+      margin-bottom: 35px;
+    }
+
+    .section-title {
+      color: var(--secondary);
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      position: relative;
+    }
+
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    .section-title i {
+      color: var(--primary);
+      background: rgba(255, 107, 53, 0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .summary {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 12px;
+      border-left: 4px solid var(--primary);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .highlight {
+      color: var(--primary);
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    .highlight:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+      opacity: 0.3;
+    }
+
+    /* EXPERIÊNCIA */
+    .experience-item {
+      margin-bottom: 30px;
+      padding-bottom: 25px;
+      border-bottom: 2px dashed rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    .experience-item:last-child {
+      border-bottom: none;
+    }
+
+    .experience-item:before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--primary);
+      border-radius: 3px;
+      opacity: 0.5;
+    }
+
+    .exp-title {
+      font-size: 1.3rem;
+      color: var(--secondary);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .exp-details {
+      color: var(--primary);
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+    }
+
+    .exp-details i {
+      color: var(--primary);
+    }
+
+    .exp-list {
+      padding-left: 20px;
+    }
+
+    .exp-list li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 5px;
+    }
+
+    .exp-list li:before {
+      content: "▸";
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      left: -15px;
+      font-size: 1.2rem;
+    }
+
+    /* FORMAÇÃO E IDIOMAS */
+    .education-item, .language-item {
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .education-item:last-child, .language-item:last-child {
+      border-bottom: none;
+    }
+
+    .lang-name {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    .lang-level {
+      font-size: 0.9rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* TAGS DE HABILIDADES */
+    .tag {
+      display: inline-block;
+      background: rgba(255, 107, 53, 0.1);
+      color: var(--primary-dark);
+      padding: 6px 15px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      margin: 5px;
+      font-weight: 600;
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .tag:hover {
+      background: var(--primary);
+      color: var(--white);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px var(--shadow);
+    }
+
+    /* BOTÃO WHATSAPP - LARANJA */
+    .whatsapp-container {
+      text-align: center;
+      padding: 25px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      background: linear-gradient(to right, var(--light), var(--white));
+    }
+
+    .whatsapp-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      background: #25D366;
+      color: var(--white);
+      padding: 18px 40px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px var(--shadow);
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .whatsapp-button:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.7s;
+    }
+
+    .whatsapp-button:hover:before {
+      left: 100%;
+    }
+
+    .whatsapp-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
+    }
+
+    .whatsapp-button i {
+      font-size: 1.5rem;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 900px) {
+      .main-content {
+        flex-direction: column;
+      }
+      
+      .left-column {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+      
+      .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 25px;
+      }
+      
+      .contact-info {
+        justify-content: center;
+      }
+      
+      .name {
+        font-size: 2.3rem;
+      }
+      
+      .photo-container {
+        width: 160px;
+        height: 160px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        padding: 25px 15px;
+      }
+      
+      .photo-container {
+        width: 140px;
+        height: 140px;
+      }
+      
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+      
+      .contact-item {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .name {
+        font-size: 2rem;
+      }
+      
+      .whatsapp-button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+      }
+    }
+
+    /* ANIMAÇÕES */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 107, 53, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    /* DECORAÇÕES LARANJA */
+    .orange-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container fade-in">
+    <!-- CABEÇALHO COM FOTO -->
+    <div class="header">
+      <div class="photo-container">
+        <div class="photo-circle pulse">
+          <!-- Troque "avatar.png" pelo caminho da sua foto -->
+          <img src="../assets/img/flaviodev.jpg" alt="Flávio Lopes (Tom)">
+          <!-- Caso não tenha foto, use este placeholder -->
+          <!-- <div class="photo-placeholder">INSIRA SUA FOTO AQUI</div> -->
+        </div>
+      </div>
+      
+      <div class="header-info">
+        <h1 class="name">FLÁVIO LOPES <span class="nickname">(Tom)</span></h1>
+        <div class="title">Desenvolvedor Web • WordPress • SEO • Tráfego Pago</div>
+        
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i> (43) 99643-2679
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i> flanegociosonline@gmail.com
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-birthday-cake"></i> 04/05/1988
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i> Home-Office / Remoto
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="main-content">
+      <!-- COLUNA ESQUERDA -->
+      <div class="left-column">
+        <!-- HABILIDADES TÉCNICAS -->
+        <div class="skills-section">
+          <h2 class="section-title"><i class="fas fa-code"></i> Habilidades Técnicas</h2>
+          
+          <div class="skill-category">
+            <h3><i class="fab fa-wordpress"></i> WordPress & Web</h3>
+            <div class="skill-item">
+              <div class="skill-name">WordPress <span>100%</span></div>
+              <div class="skill-bar"><div class="skill-level" data-width="100"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">HTML5/CSS3 <span>100%</span></div>
+              <div class="skill-bar"><div class="skill-level" data-width="100"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Config. Hospedagem <span>100%</span></div>
+              <div class="skill-bar"><div class="skill-level" data-width="95"></div></div>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h3><i class="fas fa-chart-line"></i> Marketing Digital</h3>
+            <div class="skill-item">
+              <div class="skill-name">SEO <span>95%</span></div>
+              <div class="skill-bar"><div class="skill-level" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Google Ads <span>90%</span></div>
+              <div class="skill-bar"><div class="skill-level" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Facebook Ads <span>90%</span></div>
+              <div class="skill-bar"><div class="skill-level" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Google Analytics <span>90%</span></div>
+              <div class="skill-bar"><div class="skill-level" data-width="90"></div></div>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h3><i class="fas fa-tools"></i> Ferramentas</h3>
+            <div class="skill-item">
+              <div class="skill-name">VSCode/GitHub <span>85%</span></div>
+              <div class="skill-bar"><div class="skill-level" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Photoshop/Canva <span>85%</span></div>
+              <div class="skill-bar"><div class="skill-level" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Automação (n8n) <span>80%</span></div>
+              <div class="skill-bar"><div class="skill-level" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- IDIOMAS -->
+        <div class="section">
+          <h2 class="section-title"><i class="fas fa-language"></i> Idiomas</h2>
+          <div class="language-item">
+            <div class="lang-name">Português <span>Nativo</span></div>
+          </div>
+          <div class="language-item">
+            <div class="lang-name">Inglês <span>Intermediário/Avançado</span></div>
+            <div class="skill-bar"><div class="skill-level" data-width="75"></div></div>
+          </div>
+          <div class="language-item">
+            <div class="lang-name">Espanhol <span>Básico</span></div>
+            <div class="skill-bar"><div class="skill-level" data-width="40"></div></div>
+          </div>
+        </div>
+        
+        <!-- FORMAÇÃO -->
+        <div class="section">
+          <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formação</h2>
+          <div class="education-item">
+            <div class="exp-title">Ensino Médio Completo</div>
+          </div>
+          <div class="education-item">
+            <div class="exp-title">Cursos Superiores em Tecnologia</div>
+            <div class="lang-level">Cursos iniciados em tecnologia e comunicação</div>
+          </div>
+          <div class="education-item">
+            <div class="exp-title">Experiência Prática</div>
+            <div class="lang-level">Mais de 20 anos de experiência na internet</div>
+          </div>
+        </div>
+        
+        <!-- TAGS DE HABILIDADES -->
+        <div class="section">
+          <h2 class="section-title"><i class="fas fa-tags"></i> Conhecimentos</h2>
+          <div style="margin-top: 15px;">
+            <span class="tag">WordPress</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">SEO</span>
+            <span class="tag">Google Ads</span>
+            <span class="tag">Facebook Ads</span>
+            <span class="tag">Google Analytics</span>
+            <span class="tag">GTM</span>
+            <span class="tag">Hosting</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">VSCode</span>
+            <span class="tag">ChatGPT</span>
+            <span class="tag">ElevenLabs</span>
+            <span class="tag">n8n</span>
+            <span class="tag">Photoshop</span>
+            <span class="tag">Canva</span>
+            <span class="tag">CorelDRAW</span>
+            <span class="tag">Design Gráfico</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- COLUNA DIREITA -->
+      <div class="right-column">
+        <!-- RESUMO PROFISSIONAL -->
+        <div class="section">
+          <h2 class="section-title"><i class="fas fa-user"></i> Resumo Profissional</h2>
+          <div class="summary">
+            Olá, sou <span class="highlight">Flávio Santos (Tom)</span>, tenho experiência como <span class="highlight">Web Designer e Desenvolvedor</span>, criando e mantendo sites em <span class="highlight">WordPress</span>, ajustando layouts com <span class="highlight">HTML e CSS</span> e configurando hospedagens e domínios. Também aplico estratégias de <span class="highlight">SEO, Google Analytics e GTM</span> e gerencio campanhas de <span class="highlight">tráfego pago (Google Ads e Facebook Ads)</span>. 
+            <br><br>
+            <span class="orange-dot"></span><strong>Persistente, dedicado e criativo</strong> - aprendo na prática, busco entregar soluções completas e estou sempre em busca de novos desafios no ambiente digital.
+          </div>
+        </div>
+        
+        <!-- EXPERIÊNCIA PROFISSIONAL -->
+        <div class="section">
+          <h2 class="section-title"><i class="fas fa-briefcase"></i> Experiência Profissional</h2>
+          
+          <div class="experience-item">
+            <div class="exp-title">Desenvolvedor Web Freelancer / Web Designer</div>
+            <div class="exp-details"><i class="far fa-calendar-alt"></i> Atual • Home-Office / Remoto</div>
+            <ul class="exp-list">
+              <li>Criação e personalização de sites e Landing Pages com WordPress</li>
+              <li>Ajustes avançados de layout utilizando HTML e CSS</li>
+              <li>Configuração de hospedagens e domínios (HostGator, Laragon, Localhost)</li>
+              <li>Estratégias de SEO para otimização de sites e melhor posicionamento</li>
+              <li>Integração e configuração de Google Analytics e Google Tag Manager</li>
+              <li>Gestão completa de campanhas de tráfego pago no Google Ads e Facebook Ads</li>
+              <li>Automação de processos com n8n e integração com APIs</li>
+              <li>Controle de versão com GitHub e desenvolvimento em VSCode</li>
+              <li>Utilização de IA (ChatGPT, ElevenLabs) para otimização de processos</li>
+              <li>Apoio em design gráfico utilizando Photoshop, CorelDRAW e Canva</li>
+              <li>Passagem por agências de desenvolvimento com projetos reais</li>
+            </ul>
+          </div>
+          
+          <div class="experience-item">
+            <div class="exp-title">Experiência Complementar</div>
+            <div class="exp-details"><i class="far fa-clock"></i> +20 anos de experiência na internet</div>
+            <ul class="exp-list">
+              <li>Conhecimento profundo do ecossistema digital</li>
+              <li>Adaptação a novas tecnologias e tendências do mercado</li>
+              <li>Visão estratégica para soluções web completas</li>
+              <li>Capacidade de aprendizado rápido e autodidata</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- PERFIL PROFISSIONAL -->
+        <div class="section">
+          <h2 class="section-title"><i class="fas fa-star"></i> Perfil Profissional</h2>
+          <div class="summary">
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 10px;">
+              <div style="flex: 1; min-width: 200px;">
+                <h3 style="color: var(--secondary); font-size: 1.1rem; margin-bottom: 12px; display: flex; align-items: center;">
+                  <i class="fas fa-brain" style="color: var(--primary); margin-right: 10px;"></i> Soft Skills
+                </h3>
+                <ul style="padding-left: 20px;">
+                  <li>Persistente e dedicado</li>
+                  <li>Criativo e inovador</li>
+                  <li>Resolvedor de problemas</li>
+                  <li>Aprendizado contínuo</li>
+                  <li>Foco em resultados</li>
+                  <li>Trabalho em equipe</li>
+                </ul>
+              </div>
+              <div style="flex: 1; min-width: 200px;">
+                <h3 style="color: var(--secondary); font-size: 1.1rem; margin-bottom: 12px; display: flex; align-items: center;">
+                  <i class="fas fa-cogs" style="color: var(--primary); margin-right: 10px;"></i> Metodologia
+                </h3>
+                <ul style="padding-left: 20px;">
+                  <li>Aprendizado na prática</li>
+                  <li>Soluções completas</li>
+                  <li>Otimização contínua</li>
+                  <li>Foco em performance</li>
+                  <li>Entrega de valor</li>
+                  <li>Evolução constante</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- BOTÃO WHATSAPP -->
+    <div class="whatsapp-container">
+      <a href="https://wa.me/5543996432679" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i> Fale comigo no WhatsApp
+      </a>
+      <p style="margin-top: 15px; color: var(--text-light); font-size: 0.95rem; font-weight: 500;">
+        Resposta rápida • Orçamentos • Projetos • Consultoria
+      </p>
+    </div>
+  </div>
+
+  <!-- SCRIPTS PARA ANIMAÇÃO DAS BARRAS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const skillBars = document.querySelectorAll('.skill-level');
+      
+      function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+      
+      function animateSkillBars() {
+        skillBars.forEach(bar => {
+          if (isElementInViewport(bar)) {
+            const width = bar.getAttribute('data-width');
+            bar.style.width = width + '%';
+          }
+        });
+      }
+      
+      animateSkillBars();
+      window.addEventListener('scroll', animateSkillBars);
+      
+      setTimeout(() => {
+        skillBars.forEach(bar => {
+          const width = bar.getAttribute('data-width');
+          bar.style.width = width + '%';
+        });
+      }, 500);
+      
+      // Efeito de digitação no nome (opcional)
+      const nameElement = document.querySelector('.name');
+      const originalName = nameElement.textContent;
+      nameElement.textContent = '';
+      let i = 0;
+      
+      function typeWriter() {
+        if (i < originalName.length) {
+          nameElement.textContent += originalName.charAt(i);
+          i++;
+          setTimeout(typeWriter, 50);
+        }
+      }
+      
+      // Iniciar efeito de digitação após 300ms
+      setTimeout(typeWriter, 300);
+    });
+  </script>
+</body>
+</html>

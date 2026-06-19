@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>FlávioDev | Web designer e Desenvolvedor Web, SEO Técnico e Landing Pages que Convertem</title>
+    
+    <!-- SEO: Meta Tags de SEO e Social (Open Graph) -->
+    <meta name="description" content="Arquiteto de Soluções Web: Landing Pages estratégicas que vendem no WhatsApp, otimizadas para SEO, velocidade e rastreamento. Do projeto simples ao mais completo.">
+    <meta name="keywords" content="landing page, whatsapp, conversão, arquiteto de soluções web, seo técnico, performance web, otimização de sites, e-commerce, google tag manager, core web vitals, flaviodev">
+    <meta property="og:title" content="FlávioDev | Landing Pages Estratégicas + SEO Técnico">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flaviodev.reviewnexus.blog/"> 
+    <meta property="og:image" content="https://flaviodev.reviewnexus.blog/logo-flavio.png">
+
+    <!-- Carregamento do Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Configuração Customizada -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'deep-blue': '#0A192F', // Azul Escuro Profundo (Fundo principal)
+              'vibrant-orange': '#FF4500', // Laranja Vibrante (Destaque e Botões)
+              'light-bg': '#CCD6F6', // Cinza Claro (Para títulos em fundos escuros)
+              'gray-text': '#8892B0', // Cinza Claro Suave (Para corpo de texto)
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.8s ease-out forwards',
+              'slide-up': 'slideUp 0.6s ease-out forwards',
+              'float': 'float 3s ease-in-out infinite',
+              'gradient': 'gradient 8s ease infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(30px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              gradient: {
+                '0%, 100%': { 'background-position': '0% 50%' },
+                '50%': { 'background-position': '100% 50%' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+        /* Estilos base */
+        html {
+            scroll-behavior: smooth; /* Para rolagem suave dos links */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A192F; 
+            color: #CCD6F6;
+            overflow-x: hidden;
+        }
+        /* Gradiente para Títulos de Alto Impacto */
+        .text-gradient {
+            background-image: linear-gradient(to right, #FF4500, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: gradient 8s ease infinite;
+        }
+        /* Efeito de botão primário */
+        .btn-primary {
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 69, 0, 0.6);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.8);
+            background-color: #FF5A1A;
+        }
+        .card-shadow {
+            transition: all 0.4s ease;
+            background-color: #0A192F;
+            border: 1px solid rgba(255, 69, 0, 0.2);
+        }
+        .card-shadow:hover {
+            transform: translateY(-5px);
+            border-color: #FF4500;
+        }
+        .card-destaque {
+            border: 2px solid #FF4500 !important;
+            background: rgba(255, 69, 0, 0.05) !important;
+            transform: translateY(-5px);
+        }
+
+        /* Botão flutuante do WhatsApp - NOVO ESTILO */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px; 
+            background-color: #25D366; /* Cor do WhatsApp */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+        }
+        .whatsapp-button svg {
+            fill: white;
+            width: 32px;
+            height: 32px;
+        }
+
+        /* Estilos para a seção de perfil */
+        .profile-section h3 {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .profile-section h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px; 
+            height: 3px;
+            background-color: #FF4500;
+        }
+        .bg-deep-blue\/80 {background-color: rgb(10 25 47 / 0.7) !important;}
+        
+        /* HEADER CORRIGIDO - Sem piscar */
+        header {
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease;
+            transform: translateY(0);
+            opacity: 1;
+        }
+        header.hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        /* Hamburguer Menu */
+        .hamburger {
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            display: none;
+        }
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #CCD6F6;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 8px; }
+        .hamburger span:nth-child(3) { top: 16px; }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 8px;
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 8px;
+        }
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(10, 25, 47, 0.98);
+            padding: 1rem;
+            border-top: 1px solid rgba(255,69,0,0.3);
+            z-index: 40;
+        }
+        .mobile-menu.active {
+            display: block;    top: 70px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(255, 69, 0, 0.3);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 10000;
+        }
+        .lightbox-close:hover {
+            color: #FF4500;
+        }
+        .lightbox-nav {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 10000;
+        }
+        .lightbox-nav button {
+            background: rgba(255, 69, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .lightbox-nav button:hover {
+            background: rgba(255, 69, 0, 1);
+        }
+
+        .photo-container {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      flex-shrink: 0;
+      margin:0 auto;
+    }
+
+    .photo-circle {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 5px solid var(--primary);
+      overflow: hidden;
+      background: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 5px rgba(255, 107, 53, 0.2), 0 10px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .photo-circle:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 5px rgba(255, 107, 53, 0.3), 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .photo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-placeholder {
+      color: var(--text-light);
+      text-align: center;
+      font-size: 14px;
+      padding: 20px;
+    }
+
+    /* ANIMAÇÕES */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 107, 53, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+
+        /* Animações de entrada */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Efeito hover para imagens do portfólio */
+        .portfolio-image {
+            position: relative;
+            overflow: hidden;
+        }
+        .portfolio-image img {
+            transition: transform 0.5s ease;
+        }
+        .portfolio-image:hover img {
+            transform: scale(1.05);
+        }
+        .portfolio-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 69, 0, 0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .portfolio-image:hover::after {
+            opacity: 1;
+        }
+
+        .lg\:text-8xl, .sm\:text-5xl {font-size: 4em !important;
+        line-height: 1.3em !important;}
+
+        .sm\:text-2xl {font-size: 1.2rem !important;}
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .lightbox-nav button {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+
+
+        i.fas.fa-star  {
+    font-size: 26px;
+    margin: 10px;
+    margin-bottom: 20px;}
+
+/* =====================
+   RESPONSIVO PARA MOBILE
+   ===================== */
+
+@media (max-width: 768px) {
+    /* Ajustes gerais */
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    /* HEADER MOBILE */
+    header .max-w-7xl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* HERO SECTION */
+    .min-h-\[90vh\] {
+        min-height: 85vh;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+    
+    /* TÍTULOS PRINCIPAIS - REDUZIDOS */
+    h1.text-5xl {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    h1.sm\:text-7xl {
+        font-size: 3rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    h2.text-4xl,
+    h2.text-5xl {
+        font-size: 2rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    h3.text-3xl {
+        font-size: 1.5rem !important;
+    }
+    
+    h3.text-2xl {
+        font-size: 1.25rem !important;
+    }
+    
+    /* SUBTÍTULOS E PARÁGRAFOS */
+    p.text-xl {
+        font-size: 1.1rem !important;
+    }
+    
+    p.text-lg {
+        font-size: 1rem !important;
+    }
+    
+    .text-2xl {
+        font-size: 1.25rem !important;
+    }
+    
+    /* BOTÕES */
+    .btn-primary,
+    a.px-8.py-4 {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+    
+    /* ESPAÇAMENTOS ENTRE SEÇÕES */
+    .py-20 {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+    }
+    
+    .py-28 {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+    
+    .mb-16 {
+        margin-bottom: 3rem !important;
+    }
+    
+    .mb-12 {
+        margin-bottom: 2.5rem !important;
+    }
+    
+    /* GRIDS E LAYOUTS */
+    .gap-8 {
+        gap: 1.5rem !important;
+    }
+    
+    .gap-12 {
+        gap: 2rem !important;
+    }
+    
+    /* CARDS */
+    .card-shadow,
+    .p-6,
+    .p-8 {
+        padding: 1.5rem !important;
+    }
+    
+    .rounded-2xl {
+        border-radius: 1rem !important;
+    }
+    
+    /* SEÇÃO HERO ESPECÍFICA */
+    .hero-content h1 {
+        font-size: 2.8rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    /* SEÇÃO PLANOS - MELHOR ORGANIZAÇÃO */
+    #planos-landing .grid-cols-1 {
+        gap: 2rem;
+    }
+    
+    /* DEPOIMENTOS - AJUSTE DE LAYOUT */
+    #depoimentos .card-shadow {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* CASE DE SUCESSO - STACK VERTICAL */
+    .lg\:grid-cols-2 {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    /* CTA FINAL */
+    #cta h2 {
+        font-size: 2rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    #cta a.text-xl {
+        font-size: 1.1rem !important;
+        padding: 1rem 2rem !important;
+    }
+    
+    /* FOOTER */
+    footer {
+        padding: 2rem 1rem !important;
+    }
+    
+    /* ICONES E ELEMENTOS VISUAIS */
+    .text-5xl {
+        font-size: 3rem !important;
+    }
+    
+    .text-4xl {
+        font-size: 2.5rem !important;
+    }
+    
+    /* AJUSTES DE ALTURA DE SEÇÕES */
+    section {
+        overflow-x: hidden;
+    }
+    
+    /* PADDING LATERAL GERAL */
+    .px-4 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* =====================
+   RESPONSIVO PARA TELAS MUITO PEQUENAS (SMARTPHONES)
+   ===================== */
+@media (max-width: 480px) {
+    /* TÍTULOS AINDA MENORES */
+    h1.text-5xl {
+        font-size: 2rem !important;
+    }
+    
+    h1.sm\:text-7xl {
+        font-size: 2.2rem !important;
+    }
+    
+    h2.text-4xl {
+        font-size: 1.75rem !important;
+    }
+    
+    /* ESPAÇAMENTOS REDUZIDOS */
+    .py-20 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    /* BOTÕES MAIS COMPACTOS */
+    .btn-primary,
+    a.px-8.py-4 {
+        padding: 0.6rem 1.2rem !important;
+        font-size: 0.95rem !important;
+    }
+    
+    /* CARDS MAIS COMPACTOS */
+    .card-shadow,
+    .p-6,
+    .p-8 {
+        padding: 1.25rem !important;
+    }
+    
+    /* GRIDS COM MAIS ESPAÇO */
+    .gap-8 {
+        gap: 1.25rem !important;
+    }
+    
+    /* SEÇÃO HERO PARA TELAS PEQUENAS */
+    .min-h-\[90vh\] {
+        min-height: 80vh;
+        padding-top: 5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem !important;
+    }
+    
+    /* BOTÃO DO WHATSAPP MENOR */
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-button svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* =====================
+   CORREÇÕES ESPECÍFICAS PARA PROBLEMAS VISUAIS
+   ===================== */
+
+/* Evitar que textos vazem para fora */
+.text-gradient, .text-light-bg, .text-gray-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Ajuste para grids de 3 colunas em mobile */
+@media (max-width: 768px) {
+    .md\:grid-cols-3,
+    .md\:grid-cols-2,
+    .lg\:grid-cols-4 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Correção para espaçamento entre linhas em mobile */
+p, li, span {
+    line-height: 1.6 !important;
+}
+
+/* Ajuste para elementos com ícones ao lado */
+.flex.items-start {
+    align-items: flex-start;
+}
+
+.flex.items-start span.text-3xl {
+    margin-top: 0.25rem;
+}
+
+/* Ajuste para seção de depoimentos em mobile */
+@media (max-width: 768px) {
+    #depoimentos .flex-wrap {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    #depoimentos .text-center {
+        text-align: center;
+    }
+}
+
+/* Ajuste para o menu mobile */
+.mobile-menu.active {
+    top: 70px;
+    padding: 1.5rem;
+}
+
+/* Ajuste para a seção de cases/portfólio */
+@media (max-width: 768px) {
+    .portfolio-image img {
+        max-height: 200px;
+        object-fit: cover;
+    }
+}
+
+/* Correção para o vídeo de fundo não sobrecarregar mobile */
+@media (max-width: 768px) {
+    video {
+        display: none; /* Opcional: remover vídeo em mobile para performance */
+    }
+    
+    .bg-deep-blue\/80 {
+        background-color: rgb(10 25 47 / 0.9) !important;
+    }
+}
+
+/* Ajuste para os preços nos planos */
+@media (max-width: 480px) {
+    .text-4xl.font-bold {
+        font-size: 2rem !important;
+    }
+}
+
+/* Ajuste para ícones de estrelas */
+@media (max-width: 768px) {
+    i.fas.fa-star {
+        font-size: 20px;
+        margin: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*manutencao
+body {
+    position: relative;
+}
+
+
+body::before {
+    content: "Em manutenção";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    z-index: 999999;
+}
+
+
+body > * {
+    visibility: hidden;
+}
+*/
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B5CE8GNQK4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B5CE8GNQK4');
+</script>
+</head>
+
+<body>
+
+    <!-- Header Fixo - CORRIGIDO -->
+      <header class="sticky top-0 z-50 bg-deep-blue/95 backdrop-blur-sm shadow-lg"></header>
+    <!--<header class="sticky top-0 z-50 bg-deep-blue/95 backdrop-blur-sm shadow-lg"> -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="text-3xl font-extrabold text-vibrant-orange cursor-pointer">
+            <img src="https://flaviodev.reviewnexus.blog/logo-flavio.png" alt="FlávioDev Logo" class="h-8 w-auto inline-block mr-2">
+            </h1>
+
+            
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#sites" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Sites</a>
+                <a href="#planos-landing" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Landing Pages</a>
+                <a href="#marketing" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">SEO & Rastreamento</a>
+                <a href="#profile" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Minha Expertise</a>
+                <a href="#depoimentos" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Depoimentos</a>
+            </nav>
+            
+            <!-- CTA Desktop -->
+            <a href="#cta" class="hidden md:block px-5 py-2 text-sm font-semibold rounded-lg bg-vibrant-orange text-deep-blue transition duration-300 hover:bg-orange-600">
+                Orçamento Rápido
+            </a>
+            
+            <!-- Hamburguer Icon (Mobile) -->
+            <div class="md:hidden hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="flex flex-col gap-4">
+                <a href="#sites" class="py-2 hover:text-vibrant-orange transition border-b border-gray-text/20">Sites</a>
+                <a href="#planos-landing" class="py-2 hover:text-vibrant-orange transition border-b border-gray-text/20">Landing Pages</a>
+                <a href="#marketing" class="py-2 hover:text-vibrant-orange transition border-b border-gray-text/20">SEO & Rastreamento</a>
+                <a href="#profile" class="py-2 hover:text-vibrant-orange transition border-b border-gray-text/20">Minha Expertise</a>
+                <a href="#depoimentos" class="py-2 hover:text-vibrant-orange transition border-b border-gray-text/20">Depoimentos</a>
+                <a href="#cta" class="py-2 bg-vibrant-orange text-deep-blue font-semibold rounded-lg text-center mt-4">Orçamento Rápido</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Hero - Atualizada para o perfil de Arquiteto/SEO Técnico -->
+    <section class="min-h-[90vh] flex items-center pt-20 pb-16 px-4 relative overflow-hidden border-b-2 border-vibrant-orange/10">
+        
+        <!-- INÍCIO: Estrutura do Vídeo de Fundo -->
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            
+            <source src="https://flaviodev.reviewnexus.blog/bg.mp4" type="video/mp4">
+            
+        </video>
+        <!-- Overlay Escuro para Legibilidade do Texto (Z-index 10) -->
+        <div class="absolute inset-0 bg-deep-blue/80 z-10"></div>
+        <!-- FIM: Estrutura do Vídeo de Fundo -->
+
+
+        <!-- Conteúdo do Hero (Z-index 20) -->
+        <div class="max-w-6xl mx-auto text-center relative z-20 animate-on-scroll">
+            <!-- NOVO SUBTÍTULO: Foco em Arquitetura e SEO -->
+            <h2 class="text-2xl sm:text-3xl font-bold text-vibrant-orange mb-4 tracking-wider animate-on-scroll" style="animation-delay: 0.1s">
+                ARQUITETO DE SOLUÇÕES WEB 
+            </h2>
+            <!-- NOVO TÍTULO PRINCIPAL: Foco em Fundação e Performance -->
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black mb-6 leading-tight text-light-bg animate-on-scroll" style="animation-delay: 0.2s">
+                Seu site é só uma vitrine digital <br>
+                <span class="text-gradient">ou uma máquina de gerar negócios?</span>
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-text max-w-4xl mx-auto mb-12 animate-on-scroll" style="animation-delay: 0.3s">
+                Eu projeto a infraestrutura digital do seu negócio: Sites, E-commerces e Landing Pages otimizadas desde o código para ranqueamento, velocidade (Core Web Vitals) e rastreabilidade. Crio landing pages com a infraestrutura técnica (analytics, pixels, GTM) e copy persuasiva para vender direto no seu WhatsApp. Do projeto mais simples ao mais completo.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll" style="animation-delay: 0.4s">
+                <a href="#planos-landing" class="btn-primary inline-block px-8 py-4 text-lg font-bold rounded-xl bg-vibrant-orange text-deep-blue">
+                    Ver Planos 
+                </a>
+                <a href="#profile" class="px-8 py-4 border border-vibrant-orange text-vibrant-orange rounded-xl font-semibold hover:bg-vibrant-orange/10 transition">
+                     Minha Expertise
+                </a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Seção de Soluções (Lojas, Sites, Landing Pages, WP)-->
+    <section id="solucoes" class="py-20 sm:py-28 px-4 bg-deep-blue">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-center mb-16 text-light-bg animate-on-scroll">
+                Arquitetura Web: <span class="text-vibrant-orange">Projetando a Sua Máquina de Vendas</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Serviço 1: Lojas Virtuais -->
+                <div class="p-6 rounded-xl card-shadow animate-on-scroll" style="animation-delay: 0.1s">
+                    <span class="text-5xl text-vibrant-orange mb-4 block">🛍️</span>
+                    <h3 class="text-2xl font-bold mb-3 text-light-bg">E-commerces de Arquitetura Limpa</h3>
+                    <p class="text-gray-text leading-relaxed text-sm">Projetamos e construímos lojas virtuais (WooCommerce ou Customizadas) com foco em velocidade de carregamento, estrutura de URL otimizada e checkout fluido, essenciais para o SEO e para as vendas.</p>
+                </div>
+
+                <!-- Serviço 2: Websites Institucionais -->
+                <div class="p-6 rounded-xl card-shadow animate-on-scroll" style="animation-delay: 0.2s">
+                    <span class="text-5xl text-vibrant-orange mb-4 block">🏢</span>
+                    <h3 class="text-2xl font-bold mb-3 text-light-bg">Websites Corporativos Otimizados (SEO)</h3>
+                    <p class="text-gray-text leading-relaxed text-sm">Criamos a espinha dorsal digital da sua marca. Sites otimizados para Core Web Vitals e com toda a fundação técnica necessária para ganhar a confiança do Google e aparecer nas buscas.</p>
+                </div>
+
+                <!-- Serviço 3: Landing Pages -->
+                <div class="p-6 rounded-xl card-shadow animate-on-scroll" style="animation-delay: 0.3s">
+                    <span class="text-5xl text-vibrant-orange mb-4 block">📈</span>
+                    <h3 class="text-2xl font-bold mb-3 text-light-bg">Landing Pages de Alta Conversão </h3>
+                    <p class="text-gray-text leading-relaxed text-sm">Páginas de vendas e captura construídas para ter a menor taxa de carregamento possível. Com rastreamento nativo e design focado em um único objetivo: a conversão do tráfego pago.</p>
+                </div>
+
+                <!-- Serviço 4: Especialista em WordPress -->
+                <div class="p-6 rounded-xl card-shadow animate-on-scroll" style="animation-delay: 0.4s">
+                    <span class="text-5xl text-vibrant-orange mb-4 block">⚙️</span>
+                    <h3 class="text-2xl font-bold mb-3 text-light-bg">Consultoria e Otimização WordPress (WP)</h3>
+                    <p class="text-gray-text leading-relaxed text-sm">Transforme seu WordPress em uma plataforma de alta performance. Realizamos auditoria técnica, correção de falhas de segurança e ajustes de infraestrutura para suportar picos de tráfego e SEO.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: SITES (Adicionada após Arquitetura) -->
+    <section id="sites" class="py-20 px-4 bg-light-bg/5">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-center mb-4 text-light-bg animate-on-scroll">
+                Sites que <span class="text-gradient">Performam e Convertem</span>
+            </h2>
+            <p class="text-xl text-gray-text text-center mb-16 max-w-3xl mx-auto animate-on-scroll" style="animation-delay: 0.1s">
+                Cada tipo de negócio exige uma abordagem única. Escolha a arquitetura ideal para sua presença digital.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Site 1: WordPress Personalizado -->
+                <div class="card-shadow p-8 rounded-2xl animate-on-scroll" style="animation-delay: 0.2s">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-vibrant-orange/20 to-vibrant-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-wordpress text-3xl text-vibrant-orange"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-light-bg">WordPress Personalizado</h3>
+                        <p class="text-gray-text mb-4">Para quem precisa de flexibilidade e escalabilidade</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">CMS completo para você editar conteúdo facilmente</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">Plugins premium para funcionalidades avançadas</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">Otimizado para SEO com estrutura de URLs amigáveis</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">Design responsivo e personalizado para sua marca</span>
+                        </li>
+                    </ul>
+                    <a href="#cta" class="block w-full py-3 text-center border border-vibrant-orange text-vibrant-orange rounded-xl font-semibold hover:bg-vibrant-orange/10 transition">
+                        Quero um Site WordPress
+                    </a>
+                </div>
+                
+                <!-- Site 2: Site Estático de Alta Performance -->
+                <div class="card-destaque p-8 rounded-2xl relative animate-on-scroll" style="animation-delay: 0.3s">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-vibrant-orange text-deep-blue px-4 py-1 rounded-full text-sm font-bold">ALTA VELOCIDADE</span>
+                    </div>
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-vibrant-orange/20 to-vibrant-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bolt text-3xl text-vibrant-orange"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-light-bg">Site Estático Ultra-Rápido</h3>
+                        <p class="text-gray-text mb-4">Para máxima performance e segurança</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">✓</div>
+                            <span class="text-gray-text">Carregamento instantâneo (Core Web Vitals 99+)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">✓</div>
+                            <span class="text-gray-text">Segurança máxima (sem banco de dados vulnerável)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">✓</div>
+                            <span class="text-gray-text">Costo de hospedagem extremamente baixo</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">✓</div>
+                            <span class="text-gray-text">Perfeito para sites institucionais e portfólios</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">✓</div>
+                            <span class="text-gray-text">Integração com headless CMS (opcional)</span>
+                        </li>
+                    </ul>
+                    <a href="#cta" class="block w-full py-3 text-center bg-vibrant-orange text-deep-blue rounded-xl font-bold hover:opacity-90 transition">
+                        Quero Performance Máxima
+                    </a>
+                </div>
+                
+                <!-- Site 3: E-commerce Completo -->
+                <div class="card-shadow p-8 rounded-2xl animate-on-scroll" style="animation-delay: 0.4s">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-vibrant-orange/20 to-vibrant-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shopping-cart text-3xl text-vibrant-orange"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-light-bg">E-commerce WooCommerce</h3>
+                        <p class="text-gray-text mb-4">Para vender online com profissionalismo</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">Catálogo de produtos ilimitado</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">Checkout otimizado para máxima conversão</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">Integração com métodos de pagamento brasileiros</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">Sistema de gestão de pedidos completo</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">Otimizado para Google Shopping e anúncios</span>
+                        </li>
+                    </ul>
+                    <a href="#cta" class="block w-full py-3 text-center border border-vibrant-orange text-vibrant-orange rounded-xl font-semibold hover:bg-vibrant-orange/10 transition">
+                        Quero Vender Online
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: PLANOS DE LANDING PAGES (Adicionada do index.html) -->
+    <section id="planos-landing" class="py-20 px-4 bg-deep-blue">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 text-light-bg animate-on-scroll">Não é Só Preço. É <span class="text-gradient">Resultado.</span></h2>
+            <p class="text-gray-text text-center text-lg mb-16 max-w-2xl mx-auto animate-on-scroll" style="animation-delay: 0.1s">Escolha o nível de investimento que combina com seu objetivo.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Plano BÁSICO -->
+                <div class="card-shadow p-8 rounded-2xl animate-on-scroll" style="animation-delay: 0.2s">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2 text-light-bg">Landing Básica</h3>
+                        <p class="text-gray-text mb-4">"Já sei exatamente o que quero"</p>
+                        <div class="text-4xl font-bold text-light-bg">R$ 350<span class="text-lg text-gray-text">-500</span></div>
+                        <p class="text-sm text-gray-text mt-2">Entrega em 2-5 dias</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">Implementação do seu layout no WordPress/Elementor</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">100% responsiva (mobile/tablet)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">Botão WhatsApp integrado</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange/30 flex items-center justify-center mt-1">
+                                <div class="w-2 h-2 rounded-full bg-vibrant-orange"></div>
+                            </div>
+                            <span class="text-gray-text">Hospedagem por 1 mês</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5543996432679?text=Oi%2C%20quero%20a%20Landing%20B%C3%A1sica%20(R%24250-400)" target="_blank" class="block w-full py-3 text-center border border-vibrant-orange text-vibrant-orange rounded-xl font-semibold hover:bg-vibrant-orange/10 transition">
+                        Pedir Landing Básica
+                    </a>
+                </div>
+                
+                <!-- Plano ESTRATÉGICO (DESTAQUE) -->
+                <div class="card-destaque p-8 rounded-2xl relative animate-on-scroll" style="animation-delay: 0.3s">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-vibrant-orange text-deep-blue px-4 py-1 rounded-full text-sm font-bold">MAIS PEDIDO</span>
+                    </div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2 text-light-bg">Landing Estratégica</h3>
+                        <p class="text-gray-text mb-4">"Quero uma página que venda por mim"</p>
+                        <div class="text-4xl font-bold text-light-bg">R$ 800<span class="text-lg text-gray-text">-1200</span></div>
+                        <p class="text-sm text-gray-text mt-2">Entrega em 5-7 dias</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">✓</div>
+                            <span class="text-gray-text"><strong>Tudo do Básico +</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">✓</div>
+                            <span class="text-gray-text">Copy persuasiva (texto que converte)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">✓</div>
+                            <span class="text-gray-text">Análise de concorrência</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">✓</div>
+                            <span class="text-gray-text">Google Analytics + Meta Pixel instalados</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">✓</div>
+                            <span class="text-gray-text">SEO on-page básico</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">✓</div>
+                            <span class="text-gray-text">Otimização de velocidade</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">✓</div>
+                            <span class="text-gray-text">1 revisão pós-entrega</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5543996432679?text=Oi%2C%20quero%20a%20Landing%20Estrat%C3%A9gica%20(R%24800-1.200)" target="_blank" class="block w-full py-3 text-center bg-vibrant-orange text-deep-blue rounded-xl font-bold hover:opacity-90 transition">
+                        Quero Vender Mais
+                    </a>
+                </div>
+                
+                <!-- Plano COMPLETO -->
+                <div class="card-shadow p-8 rounded-2xl animate-on-scroll" style="animation-delay: 0.4s">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2 text-light-bg">Máquina de Clientes</h3>
+                        <p class="text-gray-text mb-4">"Quero um parceiro técnico completo"</p>
+                        <div class="text-4xl font-bold text-light-bg">R$ 1.800<span class="text-lg text-gray-text">+</span></div>
+                        <p class="text-sm text-gray-text mt-2">Entrega em 10-14 dias</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">★</div>
+                            <span class="text-gray-text"><strong>Tudo do Estratégico +</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">★</div>
+                            <span class="text-gray-text">Google Tag Manager configurado</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">★</div>
+                            <span class="text-gray-text">Eventos de conversão (clicks, scroll, tempo)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">★</div>
+                            <span class="text-gray-text">Google Ads Conversion Tracking</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">★</div>
+                            <span class="text-gray-text">Remarketing dinâmico configurado</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">★</div>
+                            <span class="text-gray-text">Estrutura para testes A/B</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-vibrant-orange flex items-center justify-center text-deep-blue text-xs mt-1">★</div>
+                            <span class="text-gray-text">Consultoria estratégica 30min + suporte 15 dias</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5543996432679?text=Oi%2C%20quero%20saber%20mais%20sobre%20o%20pacote%20M%C3%A1quina%20de%20Clientes%20(R%241.800%2B)" target="_blank" class="block w-full py-3 text-center border border-vibrant-orange text-vibrant-orange rounded-xl font-semibold hover:bg-vibrant-orange/10 transition">
+                        Falar Sobre Projeto Completo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: Performance Digital e Rastreamento (Tráfego Pago) -->
+    <section id="marketing" class="py-20 sm:py-28 px-4 bg-light-bg/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-light-bg mb-4 animate-on-scroll">
+                    SEO Técnico & <span class="text-vibrant-orange">Rastreamento de Resultados</span>
+                </h2>
+                <p class="text-xl text-gray-text max-w-3xl mx-auto animate-on-scroll" style="animation-delay: 0.1s">
+                    Como Arquiteto, eu asseguro que o código e a estrutura do seu site não sejam um obstáculo para o SEO e que cada campanha de tráfego pago seja perfeitamente rastreável.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- Coluna 1: Ferramentas e Configuração -->
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 text-vibrant-orange border-b-2 border-vibrant-orange/50 pb-2 animate-on-scroll">
+                        Configuração de Rastreamento (Hard Skills)
+                    </h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start animate-on-scroll" style="animation-delay: 0.1s">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🎯</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Instalação de Pixels e APIs</h4>
+                                <p class="text-gray-text">Implementação correta do Pixel do Facebook (Meta Ads) e da Tag do Google Ads, incluindo a API de Conversão para máxima precisão de dados, mesmo com as restrições de privacidade.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start animate-on-scroll" style="animation-delay: 0.2s">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🚀</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Google Tag Manager (GTM)</h4>
+                                <p class="text-gray-text">Configuração avançada de GTM para disparar eventos específicos (cliques em botões, visualizações de formulários, rolagens de página) que são cruciais para a segmentação de campanhas.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start animate-on-scroll" style="animation-delay: 0.3s">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">📊</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Google Analytics 4 (GA4)</h4>
+                                <p class="text-gray-text">Estrutura completa do GA4, garantindo que você visualize o funil de vendas, entenda o comportamento do usuário e descubra gargalos que impedem a conversão.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2: Estratégia e Plataformas -->
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 text-vibrant-orange border-b-2 border-vibrant-orange/50 pb-2 animate-on-scroll">
+                        Otimização de Campanhas (Soft Skills)
+                    </h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start animate-on-scroll" style="animation-delay: 0.1s">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🧠</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Estratégias de Remarketing Dinâmico</h4>
+                                <p class="text-gray-text">Preparo a estrutura do site para que você possa mostrar o produto exato que o cliente viu, aumentando a chance de compra em até 40%.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start animate-on-scroll" style="animation-delay: 0.2s">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">📱</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Face Ads & Google Ads Compliance</h4>
+                                <p class="text-gray-text">Garanto que sua landing page esteja 100% em conformidade com as políticas do Facebook/Instagram e do Google, minimizando bloqueios de conta.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start animate-on-scroll" style="animation-delay: 0.3s">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🔬</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Estrutura para Testes A/B</h4>
+                                <p class="text-gray-text">Sites prontos para receber testes de elementos (CTA, títulos, cores), permitindo que você tome decisões baseadas em dados, e não em achismos.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: Minha Expertise (Perfil Profissional Detalhado) -->
+    <section id="profile" class="py-20 sm:py-28 px-4 bg-deep-blue profile-section">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-light-bg mb-4 animate-on-scroll">
+                    Minha <span class="text-gradient">Expertise e Compromisso</span>
+                </h2>
+                 <div class="photo-container">
+        <div class="photo-circle pulse">
+        
+          <img src="assets/img/flaviodev.jpg" alt="Flávio Lopes (Tom)">
+        
+        </div>
+      </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Coluna 1: Desenvolvimento Web e Infraestrutura (Revisado para Arquitetura) -->
+                <div>
+                    <h3 class="text-3xl font-bold text-light-bg animate-on-scroll">Arquitetura de Sistemas e Infraestrutura Web</h3>
+                    <ul class="space-y-6 mt-8">
+                        <li class="flex items-start animate-on-scroll" style="animation-delay: 0.1s">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">💻</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Criação e Otimização de Ativos Digitais (WordPress)</h4>
+                                <p class="text-gray-text">Proficiência total na criação de ativos digitais dinâmicos e responsivos, com foco em usabilidade (UX/UI), utilizando a plataforma WordPress como base para projetos robustos e escaláveis.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start animate-on-scroll" style="animation-delay: 0.2s">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">📐</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Refinamento de Código (HTML/CSS) e Design System</h4>
+                                <p class="text-gray-text">Sólida habilidade em manipulação de codificação front-end para refinar o design e garantir a precisão do layout, além de manter um padrão de código limpo e otimizado para performance.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start animate-on-scroll" style="animation-delay: 0.3s">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🌐</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Configuração Estratégica de Hospedagens e Domínios</h4>
+                                <p class="text-gray-text">Experiência na configuração de hospedagens (HostGator, etc.) e domínios, garantindo que o ambiente seja o mais rápido e estável possível para suportar alto volume de acessos e melhorar o SEO Técnico.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2: Marketing, Ferramentas e Visão Estratégica -->
+                <div>
+                    <h3 class="text-3xl font-bold text-light-bg animate-on-scroll">Marketing, Ferramentas e Visão Estratégica</h3>
+                    <ul class="space-y-6 mt-8">
+                        <li class="flex items-start animate-on-scroll" style="animation-delay: 0.1s">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🔍</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Estratégias de SEO Técnico e Conteúdo</h4>
+                                <p class="text-gray-text">Implementação de táticas avançadas de Otimização para Mecanismos de Busca (SEO), com foco na parte técnica (velocidade, estrutura e rastreamento), que é a base para o sucesso do conteúdo.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start animate-on-scroll" style="animation-delay: 0.2s">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">💰</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Gestão de Campanhas em Google Ads e Facebook Ads</h4>
+                                <p class="text-gray-text">Expertise na Gestão de Campanhas em Google Ads e Facebook Ads, focando em ROI e segmentação precisa para atingir metas de negócios.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start animate-on-scroll" style="animation-delay: 0.3s">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🛠️</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Ferramentas Essenciais e Automação (n8n, GTM, GitHub)</h4>
+                                <p class="text-gray-text">Contato com n8n, GitHub, VSCode, ChatGPT e ElevenLabs para otimizar fluxos de trabalho e criar conteúdo inovador, além de apoio em design com Photoshop, CorelDRAW e Canva.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: PORTFÓLIO COM LIGHTBOX - REVISADO -->
+    <section id="cases" class="py-20 px-4 bg-deep-blue">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 text-light-bg animate-on-scroll">Meu código não é só  <span class="text-gradient">Arte</span></h2>
+            <p class="text-gray-text text-center text-lg mb-16 max-w-2xl mx-auto animate-on-scroll" style="animation-delay: 0.1s">É ferramenta de vendas.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Projeto 1 -->
+                <div class="p-6 rounded-xl card-shadow animate-on-scroll" style="animation-delay: 0.2s">
+                    <div class="aspect-video bg-gradient-to-br from-vibrant-orange/20 to-vibrant-orange/5 rounded-xl mb-4 flex items-center justify-center cursor-pointer portfolio-image" data-index="0">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-commerce Moderno" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-light-bg">E-commerce Moderno</h3>
+                    <p class="text-gray-text text-sm mb-4">Loja virtual completa com WooCommerce, checkout otimizado e integração com pagamentos. Performance otimizada para Core Web Vitals.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-2 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded">WordPress</span>
+                        <span class="px-2 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded">WooCommerce</span>
+                        <span class="px-2 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded">SEO</span>
+                    </div>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="p-6 rounded-xl card-shadow animate-on-scroll" style="animation-delay: 0.3s">
+                    <div class="aspect-video bg-gradient-to-br from-vibrant-orange/20 to-vibrant-orange/5 rounded-xl mb-4 flex items-center justify-center cursor-pointer portfolio-image" data-index="1">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dashboard Analytics" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-light-bg">Site Corporativo + Analytics</h3>
+                    <p class="text-gray-text text-sm mb-4">Website institucional com GA4, Google Tag Manager e Meta Pixel configurados. Estrutura otimizada para campanhas de tráfego pago.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-2 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded">HTML/CSS</span>
+                        <span class="px-2 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded">JavaScript</span>
+                        <span class="px-2 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded">GTM</span>
+                    </div>
+                </div>
+                
+                <!-- Projeto 3 -->
+                <div class="p-6 rounded-xl card-shadow animate-on-scroll" style="animation-delay: 0.4s">
+                    <div class="aspect-video bg-gradient-to-br from-vibrant-orange/20 to-vibrant-orange/5 rounded-xl mb-4 flex items-center justify-center cursor-pointer portfolio-image" data-index="2">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Landing Page Conversão" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-light-bg">Landing Page de Alta Conversão</h3>
+                    <p class="text-gray-text text-sm mb-4">Página de vendas focada em WhatsApp. Copy persuasiva, design otimizado para mobile e estrutura para remarketing dinâmico.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-2 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded">Landing Page</span>
+                        <span class="px-2 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded">Copywriting</span>
+                        <span class="px-2 py-1 bg-vibrant-orange/20 text-vibrant-orange text-xs rounded">Conversão</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 animate-on-scroll" style="animation-delay: 0.5s">
+                <p class="text-gray-text mb-6">Meu trabalho não é só fazer site bonito. É criar máquinas de gerar clientes. Se não converter, falhei.</p>
+                <a href="https://wa.me/5543996432679?text=Oi%2C%20quero%20ver%20mais%20projetos%20do%20meu%20nicho" target="_blank" class="inline-block px-8 py-3 border border-vibrant-orange text-vibrant-orange rounded-xl font-semibold hover:bg-vibrant-orange/10 transition">
+                    Pedir um Orçamento
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox para portfólio -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-close" id="lightboxClose">&times;</div>
+        <div class="lightbox-nav">
+            <button id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+            <button id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="" class="w-full h-full object-contain">
+        </div>
+    </div>
+
+    <!-- SEÇÃO: DEPOIMENTOS DE CLIENTES -->
+    <section id="depoimentos" class="py-20 px-4 bg-light-bg/5">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-center mb-4 text-light-bg animate-on-scroll">
+                O Que Meus <span class="text-gradient">Clientes Dizem</span>
+            </h2>
+            <p class="text-xl text-gray-text text-center mb-16 max-w-3xl mx-auto animate-on-scroll" style="animation-delay: 0.1s">
+                Resultados reais de quem já transformou sua presença digital com minha arquitetura de soluções.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="card-shadow p-8 rounded-2xl animate-on-scroll" style="animation-delay: 0.2s">
+                    <div class="flex items-center mb-6">
+                        <!--<div class="w-16 h-16 rounded-full bg-gradient-to-r from-vibrant-orange/20 to-vibrant-orange/10 flex items-center justify-center mr-4">
+                            <span class="text-2xl">👨‍💼</span>
+                        </div>-->
+                        <div>
+                            <h4 class="text-xl font-bold text-light-bg">Carlos Mendes</h4>
+                            <p class="text-gray-text">Empresário - Indústria Pesada</p>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-text italic">
+                            "O Flávio não só criou uma landing page, mas uma verdadeira máquina de vendas. Em 2 semanas, meu WhatsApp recebeu 30% mais contatos qualificados. A velocidade do site e a otimização para SEO foram diferenciais."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-text/20">
+                        <span class="text-sm text-vibrant-orange font-semibold">+47% conversões em 30 dias</span>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="card-shadow p-8 rounded-2xl animate-on-scroll" style="animation-delay: 0.3s">
+                    <div class="flex items-center mb-6">
+                        <!--<div class="w-16 h-16 rounded-full bg-gradient-to-r from-vibrant-orange/20 to-vibrant-orange/10 flex items-center justify-center mr-4">
+                            <span class="text-2xl">👩‍⚕️</span>
+                        </div>-->
+                        <div>
+                            <h4 class="text-xl font-bold text-light-bg">Dra. Ana Lúcia</h4>
+                            <p class="text-gray-text">Clínica Odontológica</p>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-text italic">
+                            "Como profissional da saúde, precisava de um site que transmitisse autoridade e confiança. O Flávio entendeu perfeitamente e criou uma estrutura que não só é bonita, mas também converte. Agendamentos via WhatsApp aumentaram 60%."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-text/20">
+                        <span class="text-sm text-vibrant-orange font-semibold">+60% agendamentos</span>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="card-shadow p-8 rounded-2xl animate-on-scroll" style="animation-delay: 0.4s">
+                    <div class="flex items-center mb-6">
+                        <!-- <div class="w-16 h-16 rounded-full bg-gradient-to-r from-vibrant-orange/20 to-vibrant-orange/10 flex items-center justify-center mr-4">
+                            <span class="text-2xl">👨‍💻</span>
+                        </div>-->
+                        <div>
+                            <h4 class="text-xl font-bold text-light-bg">Ricardo Silva</h4>
+                            <p class="text-gray-text">E-commerce de Moda</p>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-text italic">
+                            "Migrei meu e-commerce para uma arquitetura otimizada pelo Flávio e os resultados foram impressionantes. O site carrega 3x mais rápido, o que reduziu minha taxa de abandono no checkout em 35%. O investimento valeu cada centavo."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-text/20">
+                        <span class="text-sm text-vibrant-orange font-semibold">-35% abandono no checkout</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Depoimento em Destaque -->
+            <div class="mt-12 card-destaque p-8 rounded-2xl animate-on-scroll" style="animation-delay: 0.5s">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-light-bg mb-4">Case de Sucesso: Transformação Digital Completa</h3>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="flex items-center mb-6">
+                            <!-- <div class="w-20 h-20 rounded-full bg-gradient-to-r from-vibrant-orange/20 to-vibrant-orange/10 flex items-center justify-center mr-6">
+                                <span class="text-3xl">🏭</span>
+                            </div>-->
+                            <div>
+                                <h4 class="text-xl font-bold text-light-bg">Marcelo Torres</h4>
+                                <p class="text-gray-text">Diretor - Primo Máquinas Industriais</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-text mb-6">
+                            "Contratamos o Flávio para uma solução completa: site institucional + landing page de produtos + configuração de analytics. Em 90 dias, nossa visibilidade no Google aumentou 200% e as vendas via WhatsApp cresceram consistentemente 15% ao mês."
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-vibrant-orange">+200%</div>
+                                <div class="text-sm text-gray-text">Visibilidade Google</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-vibrant-orange">+45%</div>
+                                <div class="text-sm text-gray-text">Leads Qualificados</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-vibrant-orange">15%</div>
+                                <div class="text-sm text-gray-text">Crescimento Mensal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-vibrant-orange/10 to-vibrant-orange/5 p-6 rounded-xl border border-vibrant-orange/20">
+                        <h4 class="text-lg font-bold text-light-bg mb-4">Resultados Alcançados:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-vibrant-orange mt-1 mr-3"></i>
+                                <span class="text-gray-text">Site otimizado para Core Web Vitals (Nota 98/100)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-vibrant-orange mt-1 mr-3"></i>
+                                <span class="text-gray-text">GA4 + GTM configurados com eventos personalizados</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-vibrant-orange mt-1 mr-3"></i>
+                                <span class="text-gray-text">Landing page convertendo em 8.3% dos visitantes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-vibrant-orange mt-1 mr-3"></i>
+                                <span class="text-gray-text">Estrutura pronta para campanhas de remarketing</span>
+                            </li>
+                        </ul>
+                        <div class="mt-6 pt-6 border-t border-gray-text/20">
+                            <p class="text-gray-text text-sm">
+                                "O Flávio foi além do desenvolvimento - atuou como um verdadeiro arquiteto de soluções, entendendo nosso negócio e propondo melhorias que nem imaginávamos."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 animate-on-scroll" style="animation-delay: 0.6s">
+                <p class="text-gray-text mb-6">Quer resultados como esses para o seu negócio?</p>
+                <a href="https://wa.me/5543996432679?text=Oi%2C%20vim%20dos%20depoimentos%20e%20quero%20resultados%20similares%20para%20meu%20neg%C3%B3cio" target="_blank" class="btn-primary inline-block px-8 py-4 text-lg font-bold rounded-xl bg-vibrant-orange text-deep-blue">
+                    Quero Resultados Assim Também
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Seção CTA Final/Contacto (Azul Escuro com Botão Laranja) -->
+    <section id="cta" class="py-20 sm:py-28 px-4 bg-deep-blue border-t-2 border-vibrant-orange/30">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl sm:text-5xl font-extrabold mb-4 text-light-bg animate-on-scroll">
+                Chega de Páginas e Sites que Não Convertem.<br>
+                <span class="text-gradient">Vamos Criar a Sua hoje mesmo.</span>
+            </h2>
+            <p class="text-xl text-gray-text max-w-2xl mx-auto mb-10 font-medium animate-on-scroll" style="animation-delay: 0.1s">
+                Do básico ao completo: Sites e landing pages com copy, tecnologia e suporte técnico inclusos. Fale comigo no WhatsApp.
+            </p>
+            <a href="https://wa.me/5543996432679?text=Oi%2C%20vim%20do%20seu%20site%20e%20quero%20saber%20mais%20sobre%20Landing%20Pages" target="_blank" class="btn-primary inline-block px-12 py-5 text-xl font-extrabold rounded-xl bg-vibrant-orange text-deep-blue uppercase shadow-lg hover:bg-orange-600 animate-on-scroll" style="animation-delay: 0.2s">
+                <span class="mr-2">💬</span> Falar no WhatsApp Agora
+            </a>
+            <p class="mt-4 text-sm text-gray-text/70 animate-on-scroll" style="animation-delay: 0.3s">Orçamento sem compromisso em até 24h.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-blue py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-text/70 text-xs">
+            <p>&copy; 2025 FlávioDev | Arquiteto de Soluções Web. Todos os direitos reservados. | Desenvolvendo a Performance Digital.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5543996432679" target="_blank" class="whatsapp-button">
+        <!-- Ícone Oficial do WhatsApp (Telefone dentro do balão) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12.04 2C7.03 2 3 6.03 3 11.04C3 13.06 3.69 14.88 4.8 16.32L3.5 20.5L7.81 19.22C9.25 20.07 10.87 20.5 12.04 20.5C17.05 20.5 21.08 16.47 21.08 11.46C21.08 6.45 17.05 2 12.04 2ZM17.26 15.34C17.15 15.54 16.94 15.75 16.5 15.89C16.06 16.03 15.5 16.14 14.87 16.11C14.24 16.08 13.67 15.93 13.1 15.74C12.53 15.54 11.45 15.22 10.42 14.2C9.39 13.17 9.07 12.09 8.87 11.52C8.68 10.95 8.79 10.38 8.92 9.75C9.05 9.12 9.17 8.56 9.31 8.12C9.45 7.68 9.66 7.47 9.86 7.36C10.06 7.25 10.27 7.25 10.47 7.36C10.67 7.47 10.88 7.68 11.09 7.89L12.01 8.81C12.19 9 12.28 9.21 12.28 9.42C12.28 9.63 12.2 9.84 12.01 10.02L11.55 10.47C11.42 10.6 11.35 10.81 11.35 11.02C11.35 11.23 11.43 11.44 11.56 11.57C11.69 11.7 11.83 11.85 11.97 12C12.1 12.15 12.24 12.3 12.37 12.43C12.5 12.56 12.71 12.63 12.92 12.63C13.13 12.63 13.34 12.56 13.47 12.43L13.93 11.97C14.11 11.78 14.32 11.69 14.53 11.69C14.74 11.69 14.95 11.78 15.13 11.97L16.05 12.89C16.26 13.1 16.37 13.31 16.37 13.52C16.37 13.73 16.28 13.94 16.09 14.13L15.63 14.59C15.44 14.78 15.35 15 15.35 15.21C15.35 15.42 15.44 15.63 15.63 15.82L17.26 17.45C17.47 17.66 17.7 17.81 17.84 17.81C17.98 17.81 18.12 17.73 18.26 17.65C18.4 17.57 18.54 17.49 18.68 17.41C18.82 17.33 18.96 17.25 19.1 17.17C19.24 17.09 19.38 17.01 19.52 16.93C19.66 16.85 19.8 16.77 19.94 16.69L20.5 16.32L17.26 15.34Z"/>
+        </svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Hamburguer Menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Fecha menu ao clicar em um link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // HEADER CORRIGIDO - Sem piscar
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        let ticking = false;
+        
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    // Aumentei o threshold para 150px para evitar piscar
+                    if (scrollTop > lastScrollTop && scrollTop > 150) {
+                        // Rolando para baixo - esconde
+                        header.classList.add('hidden');
+                    } else {
+                        // Rolando para cima - mostra
+                        header.classList.remove('hidden');
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Animação ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Lightbox para portfólio
+        const portfolioImages = document.querySelectorAll('.portfolio-image');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        
+        const portfolioItems = [
+            {
+                src: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                alt: 'E-commerce Moderno'
+            },
+            {
+                src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                alt: 'Dashboard Analytics'
+            },
+            {
+                src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                alt: 'Landing Page Conversão'
+            }
+        ];
+        
+        let currentImageIndex = 0;
+        
+        portfolioImages.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentImageIndex = index;
+                openLightbox();
+            });
+        });
+        
+        function openLightbox() {
+            lightbox.classList.add('active');
+            updateLightboxImage();
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        function updateLightboxImage() {
+            lightboxImage.src = portfolioItems[currentImageIndex].src;
+            lightboxImage.alt = portfolioItems[currentImageIndex].alt;
+        }
+        
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % portfolioItems.length;
+            updateLightboxImage();
+        }
+        
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + portfolioItems.length) % portfolioItems.length;
+            updateLightboxImage();
+        }
+        
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxNext.addEventListener('click', nextImage);
+        lightboxPrev.addEventListener('click', prevImage);
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        
+        // Teclado navegação no lightbox
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+    </script>
+
+</body>
+</html>

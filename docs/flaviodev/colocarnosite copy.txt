@@ -1,0 +1,77 @@
+Especialização Técnica:
+Elementor Pro: Desenvolvimento de 100+ sites com Elementor (tema próprio + Hello Elementor)
+
+Figma to WordPress: Conversão precisa de designs com atenção a espaçamento, tipografia e estados interativos
+
+Responsividade Avançada: Mobile-first, breakpoints customizados, testes em dispositivos reais
+
+Performance: Otimização de sites para Core Web Vitals (90+ no PageSpeed)
+
+Fluxo de Trabalho Organizado:
+Versionamento com Git (GitHub/GitLab)
+
+Documentação de projetos em Notion
+
+Metodologia ágil (Jira, Trello)
+
+Comunicação clara e atualizações regulares
+
+Inglês Fluente (C1):
+Reuniões em inglês diárias com equipe internacional atual
+
+Documentação técnica em inglês
+
+Client-facing communication
+
+💼 EXPERIÊNCIA RELEVANTE:
+Desenvolvedor WordPress Sênior | Remoto | 2022-Presente
+
+Desenvolvimento de 30+ sites com Elementor para agências EU/EUA
+
+Criação de bibliotecas de templates reutilizáveis em Elementor
+
+Integração com APIs (CRM, pagamento, booking)
+
+Frontend Developer | Agência Digital | 2020-2022
+
+Implementação de designs do Figma/Adobe XD em WordPress
+
+Trabalho em equipe com designers e PMs
+
+Manutenção de sites em escala
+
+🛠️ STACK TÉCNICA:
+text
+WordPress • Elementor Pro • Custom CSS/JS • PHP básico
+Figma • Adobe Suite • Git • WP-CLI
+SiteGround • Cloudways • Cloudflare
+📱 RESPONSIVIDADE & DETALHES:
+Entendo que "100% responsivo" significa:
+
+Testes em viewports reais (iPhone SE a 4K)
+
+Estados hover/focus/active em todos dispositivos
+
+Otimização de imagens por breakpoint
+
+Performance mobile como prioridade
+
+🎨 UI/UX APLICADO:
+Não apenas implemento designs, mas:
+
+Sugiro melhorias de usabilidade
+
+Mantenho consistência do design system
+
+Garanto acessibilidade (contraste, navegação por teclado)
+
+Animações sutis para melhor experiência
+
+📞 DISPONIBILIDADE:
+Full-time imediato (40h/semana)
+
+Horário flexível (prefiro 9h-18h BRT)
+
+Reuniões semanais sem problemas
+
+Período de experiência conforme necessário

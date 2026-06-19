@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO: Título Otimizado (Novo Foco: Arquiteto de Soluções Web e SEO Técnico) -->
+    <title>FlávioDev | Arquiteto de Soluções Web, SEO Técnico e Alta Performance</title>
+    
+    <!-- SEO: Meta Tags de SEO e Social (Open Graph) -->
+    <meta name="description" content="Arquiteto de Soluções Web especialista em SEO Técnico, Performance e conversão máxima em WordPress e E-commerces. Criamos a fundação digital que o Google ama.">
+    <meta name="keywords" content="arquiteto de soluções web, seo técnico, performance web, otimização de sites, landing pages, e-commerce, google tag manager, core web vitals, flaviodev">
+    <meta property="og:title" content="FlávioDev | Arquiteto de Soluções Web e SEO Técnico">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flaviodev.reviewnexus.blog/"> 
+
+    <!-- Carregamento do Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Configuração Customizada -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'deep-blue': '#0A192F', // Azul Escuro Profundo (Fundo principal)
+              'vibrant-orange': '#FF4500', // Laranja Vibrante (Destaque e Botões)
+              'light-bg': '#CCD6F6', // Cinza Claro (Para títulos em fundos escuros)
+              'gray-text': '#8892B0', // Cinza Claro Suave (Para corpo de texto)
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+
+    <style>
+        /* Estilos base */
+        html {
+            scroll-behavior: smooth; /* Para rolagem suave dos links */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A192F; 
+            color: #CCD6F6;
+            overflow-x: hidden;
+        }
+        /* Gradiente para Títulos de Alto Impacto */
+        .text-gradient {
+            background-image: linear-gradient(to right, #FF4500, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Efeito de botão primário */
+        .btn-primary {
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 69, 0, 0.6);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.8);
+            background-color: #FF5A1A;
+        }
+        .card-shadow {
+            transition: all 0.4s ease;
+            background-color: #0A192F;
+            border: 1px solid rgba(255, 69, 0, 0.2);
+        }
+        .card-shadow:hover {
+            transform: translateY(-5px);
+            border-color: #FF4500;
+        }
+
+        /* Botão flutuante do WhatsApp - NOVO ESTILO */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px; 
+            background-color: #25D366; /* Cor do WhatsApp */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+        }
+        .whatsapp-button svg {
+            fill: white;
+            width: 32px;
+            height: 32px;
+        }
+
+        /* Estilos para a seção de perfil */
+        .profile-section h3 {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .profile-section h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px; 
+            height: 3px;
+            background-color: #FF4500;
+        }
+        .bg-deep-blue\/80 {background-color: rgb(10 25 47 / 0.7) !important;}
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Fixo -->
+    <header class="sticky top-0 z-50 bg-deep-blue/95 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="text-3xl font-extrabold text-vibrant-orange cursor-pointer">
+            <img src="https://flaviodev.reviewnexus.blog/logo-flavio.png" alt="FlávioDev Logo" class="h-8 w-auto inline-block mr-2">
+            </h1>
+
+            
+            <!-- Navegação: Link "Metodologia" trocado por "Contacto" para #cta -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#solucoes" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Arquitetura Web</a>
+                <a href="#marketing" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">SEO & Rastreamento</a>
+                <a href="#profile" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Minha Expertise</a>
+                <a href="#cta" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Contato</a>
+            </nav>
+            <a href="#cta" class="hidden md:block px-5 py-2 text-sm font-semibold rounded-lg bg-vibrant-orange text-deep-blue transition duration-300 hover:bg-orange-600">
+                Orçamento Rápido
+            </a>
+        </div>
+    </header>
+
+    <!-- Seção Hero - Atualizada para o perfil de Arquiteto/SEO Técnico -->
+    <section class="min-h-[90vh] flex items-center pt-20 pb-16 px-4 relative overflow-hidden border-b-2 border-vibrant-orange/10">
+        
+        <!-- INÍCIO: Estrutura do Vídeo de Fundo -->
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            
+            <source src="https://flaviodev.reviewnexus.blog/bg.mp4" type="video/mp4">
+            
+        </video>
+        <!-- Overlay Escuro para Legibilidade do Texto (Z-index 10) -->
+        <div class="absolute inset-0 bg-deep-blue/80 z-10"></div>
+        <!-- FIM: Estrutura do Vídeo de Fundo -->
+
+
+        <!-- Conteúdo do Hero (Z-index 20) -->
+        <div class="max-w-6xl mx-auto text-center relative z-20">
+            <!-- NOVO SUBTÍTULO: Foco em Arquitetura e SEO -->
+            <h2 class="text-2xl sm:text-3xl font-bold text-vibrant-orange mb-4 tracking-wider">
+                ARQUITETO DE SOLUÇÕES WEB 
+            </h2>
+            <!-- NOVO TÍTULO PRINCIPAL: Foco em Fundação e Performance -->
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black mb-6 leading-tight text-light-bg">
+                Fundação Sólida, <span class="text-gradient">Performance Máxima</span> <br>
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-text max-w-4xl mx-auto mb-12">
+                Eu projeto a infraestrutura digital do seu negócio: Sites, E-commerces e Landing Pages otimizadas desde o código para ranqueamento, velocidade (Core Web Vitals) e máxima rastreabilidade.
+            </p>
+            <a href="#cta" class="btn-primary inline-block px-12 py-5 text-xl font-extrabold rounded-xl bg-vibrant-orange text-deep-blue uppercase">
+                Quero Projetar Minha Estrutura Digital!
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção de Soluções (Lojas, Sites, Landing Pages, WP) - Renomeada -->
+    <section id="solucoes" class="py-20 sm:py-28 px-4 bg-deep-blue">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-center mb-16 text-light-bg">
+                Arquitetura Web: <span class="text-vibrant-orange">Projetando a Sua Máquina de Vendas</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Serviço 1: Lojas Virtuais -->
+                <div class="p-6 rounded-xl card-shadow">
+                    <span class="text-5xl text-vibrant-orange mb-4 block">🛍️</span>
+                    <h3 class="text-2xl font-bold mb-3 text-light-bg">E-commerces de Arquitetura Limpa</h3>
+                    <p class="text-gray-text leading-relaxed text-sm">Projetamos e construímos lojas virtuais (WooCommerce ou Customizadas) com foco em velocidade de carregamento, estrutura de URL otimizada e checkout fluido, essenciais para o SEO e para as vendas.</p>
+                </div>
+
+                <!-- Serviço 2: Websites Institucionais -->
+                <div class="p-6 rounded-xl card-shadow">
+                    <span class="text-5xl text-vibrant-orange mb-4 block">🏢</span>
+                    <h3 class="text-2xl font-bold mb-3 text-light-bg">Websites Corporativos Otimizados (SEO)</h3>
+                    <p class="text-gray-text leading-relaxed text-sm">Criamos a espinha dorsal digital da sua marca. Sites otimizados para Core Web Vitals e com toda a fundação técnica necessária para ganhar a confiança do Google e aparecer nas buscas.</p>
+                </div>
+
+                <!-- Serviço 3: Landing Pages -->
+                <div class="p-6 rounded-xl card-shadow">
+                    <span class="text-5xl text-vibrant-orange mb-4 block">📈</span>
+                    <h3 class="text-2xl font-bold mb-3 text-light-bg">Landing Pages de Conversão Absoluta</h3>
+                    <p class="text-gray-text leading-relaxed text-sm">Páginas de vendas e captura construídas para ter a menor taxa de carregamento possível. Com rastreamento nativo e design focado em um único objetivo: a conversão do tráfego pago.</p>
+                </div>
+
+                <!-- Serviço 4: Especialista em WordPress -->
+                <div class="p-6 rounded-xl card-shadow">
+                    <span class="text-5xl text-vibrant-orange mb-4 block">⚙️</span>
+                    <h3 class="text-2xl font-bold mb-3 text-light-bg">Consultoria e Otimização WordPress (WP)</h3>
+                    <p class="text-gray-text leading-relaxed text-sm">Transforme seu WordPress em uma plataforma de alta performance. Realizamos auditoria técnica, correção de falhas de segurança e ajustes de infraestrutura para suportar picos de tráfego e SEO.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: Performance Digital e Rastreamento (Tráfego Pago) -->
+    <section id="marketing" class="py-20 sm:py-28 px-4 bg-light-bg/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-light-bg mb-4">
+                    SEO Técnico & <span class="text-vibrant-orange">Rastreamento de Resultados</span>
+                </h2>
+                <p class="text-xl text-gray-text max-w-3xl mx-auto">
+                    Como Arquiteto, eu asseguro que o código e a estrutura do seu site não sejam um obstáculo para o SEO e que cada campanha de tráfego pago seja perfeitamente rastreável.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- Coluna 1: Ferramentas e Configuração -->
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 text-vibrant-orange border-b-2 border-vibrant-orange/50 pb-2">
+                        Configuração de Rastreamento (Hard Skills)
+                    </h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🎯</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Instalação de Pixels e APIs</h4>
+                                <p class="text-gray-text">Implementação correta do Pixel do Facebook (Meta Ads) e da Tag do Google Ads, incluindo a API de Conversão para máxima precisão de dados, mesmo com as restrições de privacidade.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🚀</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Google Tag Manager (GTM)</h4>
+                                <p class="text-gray-text">Configuração avançada de GTM para disparar eventos específicos (cliques em botões, visualizações de formulários, rolagens de página) que são cruciais para a segmentação de campanhas.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">📊</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Google Analytics 4 (GA4)</h4>
+                                <p class="text-gray-text">Estrutura completa do GA4, garantindo que você visualize o funil de vendas, entenda o comportamento do usuário e descubra gargalos que impedem a conversão.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2: Estratégia e Plataformas -->
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 text-vibrant-orange border-b-2 border-vibrant-orange/50 pb-2">
+                        Otimização de Campanhas (Soft Skills)
+                    </h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🧠</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Estratégias de Remarketing Dinâmico</h4>
+                                <p class="text-gray-text">Preparo a estrutura do site para que você possa mostrar o produto exato que o cliente viu, aumentando a chance de compra em até 40%.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">📱</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Face Ads & Google Ads Compliance</h4>
+                                <p class="text-gray-text">Garanto que sua landing page esteja 100% em conformidade com as políticas do Facebook/Instagram e do Google, minimizando bloqueios de conta.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🔬</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Estrutura para Testes A/B</h4>
+                                <p class="text-gray-text">Sites prontos para receber testes de elementos (CTA, títulos, cores), permitindo que você tome decisões baseadas em dados, e não em achismos.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: Minha Expertise (Perfil Profissional Detalhado) -->
+    <section id="profile" class="py-20 sm:py-28 px-4 bg-deep-blue profile-section">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-light-bg mb-4">
+                    Minha <span class="text-gradient">Expertise e Compromisso</span>
+                </h2>
+                <p class="text-xl text-gray-text max-w-3xl mx-auto">
+                    Conheça as habilidades e a experiência que me permitem atuar como um Arquiteto de Soluções, transformando sua visão digital em resultados tangíveis.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Coluna 1: Desenvolvimento Web e Infraestrutura (Revisado para Arquitetura) -->
+                <div>
+                    <h3 class="text-3xl font-bold text-light-bg">Arquitetura de Sistemas e Infraestrutura Web</h3>
+                    <ul class="space-y-6 mt-8">
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">💻</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Criação e Otimização de Ativos Digitais (WordPress)</h4>
+                                <p class="text-gray-text">Proficiência total na criação de ativos digitais dinâmicos e responsivos, com foco em usabilidade (UX/UI), utilizando a plataforma WordPress como base para projetos robustos e escaláveis.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">📐</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Refinamento de Código (HTML/CSS) e Design System</h4>
+                                <p class="text-gray-text">Sólida habilidade em manipulação de codificação front-end para refinar o design e garantir a precisão do layout, além de manter um padrão de código limpo e otimizado para performance.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🌐</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Configuração Estratégica de Hospedagens e Domínios</h4>
+                                <p class="text-gray-text">Experiência na configuração de hospedagens (HostGator, etc.) e domínios, garantindo que o ambiente seja o mais rápido e estável possível para suportar alto volume de acessos e melhorar o SEO Técnico.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2: Marketing, Ferramentas e Visão Estratégica -->
+                <div>
+                    <h3 class="text-3xl font-bold text-light-bg">Marketing, Ferramentas e Visão Estratégica</h3>
+                    <ul class="space-y-6 mt-8">
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🔍</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Estratégias de SEO Técnico e Conteúdo</h4>
+                                <p class="text-gray-text">Implementação de táticas avançadas de Otimização para Mecanismos de Busca (SEO), com foco na parte técnica (velocidade, estrutura e rastreamento), que é a base para o sucesso do conteúdo.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">💰</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Gestão de Campanhas em Google Ads e Facebook Ads</h4>
+                                <p class="text-gray-text">Expertise na Gestão de Campanhas em Google Ads e Facebook Ads, focando em ROI e segmentação precisa para atingir metas de negócios.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🛠️</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Ferramentas Essenciais e Automação (n8n, GTM, GitHub)</h4>
+                                <p class="text-gray-text">Contato com n8n, GitHub, VSCode, ChatGPT e ElevenLabs para otimizar fluxos de trabalho e criar conteúdo inovador, além de apoio em design com Photoshop, CorelDRAW e Canva.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-vibrant-orange text-3xl mr-4 flex-shrink-0">🌟</span>
+                            <div>
+                                <h4 class="text-xl font-semibold text-light-bg">Mais de 20 Anos de Experiência em Soluções Web</h4>
+                                <p class="text-gray-text">Profissional com vivência em agências de desenvolvimento, com mais de duas décadas de experiência, garantindo um ciclo de vida de projeto robusto e focado em resultados.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Seção CTA Final/Contacto (Azul Escuro com Botão Laranja) -->
+    <section id="cta" class="py-20 sm:py-28 px-4 bg-deep-blue border-t-2 border-vibrant-orange/30">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl sm:text-5xl font-extrabold mb-4 text-light-bg">
+                Fale Conosco: <span class="text-vibrant-orange">Vamos Projetar o Seu Sucesso.</span>
+            </h2>
+            <p class="text-xl text-gray-text max-w-2xl mx-auto mb-10 font-medium">
+                Seu próximo projeto deve ser seu maior ativo de vendas. Solicite um orçamento e receba uma análise detalhada sobre como otimizar sua presença digital.
+            </p>
+            <a href="https://wa.me/5543996432679" target="_blank" class="btn-primary inline-block px-12 py-5 text-xl font-extrabold rounded-xl bg-vibrant-orange text-deep-blue uppercase shadow-lg hover:bg-orange-600">
+                <span class="mr-2">💬</span> Iniciar Conversa por WhatsApp
+            </a>
+            <p class="mt-4 text-sm text-gray-text/70">Orçamento sem compromisso em até 24h.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-blue py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-text/70 text-xs">
+            <p>&copy; 2025 FlávioDev | Arquiteto de Soluções Web. Todos os direitos reservados. | Desenvolvendo a Performance Digital.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5543996432679" target="_blank" class="whatsapp-button">
+        <!-- Ícone Oficial do WhatsApp (Telefone dentro do balão) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12.04 2C7.03 2 3 6.03 3 11.04C3 13.06 3.69 14.88 4.8 16.32L3.5 20.5L7.81 19.22C9.25 20.07 10.87 20.5 12.04 20.5C17.05 20.5 21.08 16.47 21.08 11.46C21.08 6.45 17.05 2 12.04 2ZM17.26 15.34C17.15 15.54 16.94 15.75 16.5 15.89C16.06 16.03 15.5 16.14 14.87 16.11C14.24 16.08 13.67 15.93 13.1 15.74C12.53 15.54 11.45 15.22 10.42 14.2C9.39 13.17 9.07 12.09 8.87 11.52C8.68 10.95 8.79 10.38 8.92 9.75C9.05 9.12 9.17 8.56 9.31 8.12C9.45 7.68 9.66 7.47 9.86 7.36C10.06 7.25 10.27 7.25 10.47 7.36C10.67 7.47 10.88 7.68 11.09 7.89L12.01 8.81C12.19 9 12.28 9.21 12.28 9.42C12.28 9.63 12.2 9.84 12.01 10.02L11.55 10.47C11.42 10.6 11.35 10.81 11.35 11.02C11.35 11.23 11.43 11.44 11.56 11.57C11.69 11.7 11.83 11.85 11.97 12C12.1 12.15 12.24 12.3 12.37 12.43C12.5 12.56 12.71 12.63 12.92 12.63C13.13 12.63 13.34 12.56 13.47 12.43L13.93 11.97C14.11 11.78 14.32 11.69 14.53 11.69C14.74 11.69 14.95 11.78 15.13 11.97L16.05 12.89C16.26 13.1 16.37 13.31 16.37 13.52C16.37 13.73 16.28 13.94 16.09 14.13L15.63 14.59C15.44 14.78 15.35 15 15.35 15.21C15.35 15.42 15.44 15.63 15.63 15.82L17.26 17.45C17.47 17.66 17.7 17.81 17.84 17.81C17.98 17.81 18.12 17.73 18.26 17.65C18.4 17.57 18.54 17.49 18.68 17.41C18.82 17.33 18.96 17.25 19.1 17.17C19.24 17.09 19.38 17.01 19.52 16.93C19.66 16.85 19.8 16.77 19.94 16.69L20.5 16.32L17.26 15.34Z"/>
+        </svg>
+    </a>
+
+</body>
+</html>

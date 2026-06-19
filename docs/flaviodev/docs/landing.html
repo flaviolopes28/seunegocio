@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico GRATUITO de Landing Page | FlávioDev</title>
+    <meta name="description" content="Descubra em 15 minutos os 3 pontos críticos que estão travando suas vendas online. Análise técnica sem custo.">
+    <style>
+        /* ESTILOS OTIMIZADOS PARA VELOCIDADE */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', system-ui, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        header { 
+            text-align: center; 
+            padding: 40px 20px; 
+            color: white;
+        }
+        h1 { 
+            font-size: 2.8rem; 
+            margin-bottom: 15px; 
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        .subtitle { 
+            font-size: 1.3rem; 
+            opacity: 0.9; 
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+        .form-group { 
+            margin-bottom: 20px; 
+        }
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 600;
+            color: #555;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            margin-top: 15px;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .benefit-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        .benefit-item h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        .cta-box {
+            text-align: center;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 20px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #667eea;
+            display: block;
+        }
+        .social-proof {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 5px solid #25D366;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .card { padding: 25px; }
+            .btn { padding: 15px 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Seu site recebe visitas <span class="highlight">mas não converte?</span></h1>
+            <p class="subtitle">Em 15 minutos, descubra os 3 pontos críticos que estão travando suas vendas. Análise técnica <strong>100% gratuita</strong>.</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>🎯 O que eu analiso no seu site:</h2>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h3>🚀 Velocidade (Core Web Vitals)</h3>
+                        <p>Nota de performance do Google. Sites lentos perdem até 70% das vendas. Vejo LCP, FID e CLS.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>🔄 Taxa de Conversão</h3>
+                        <p>Análise do CTA principal e formulários. Cada campo extra reduz conversão em 10-15%.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>👁️ Rastreamento (Pixel/GA4)</h3>
+                        <p>Verifico se seu site está "cego". Sem analytics, você queima 40% do investimento em ads.</p>
+                    </div>
+
+                                </div>
+                
+                <div class="cta-box">
+                    <h2>⚡ Resultado dos Meus Últimos Diagnósticos:</h2>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">+47%</span>
+                            Conversões em 30 dias
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">-35%</span>
+                            Abandono no checkout
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2.1s</span>
+                            Média de ganho em velocidade
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FORMULÁRIO SIMPLIFICADO (WhatsApp OU Email) -->
+                <div id="form-section">
+                    <h2 style="text-align: center; margin-bottom: 25px;">📝 Receba Seu Diagnóstico Gratuito Agora</h2>
+                    <p style="text-align: center; margin-bottom: 25px; color: #666;">
+                        Preencha <strong>apenas um</strong> dos campos abaixo. Eu entrarei em contato em até 2 horas.
+                    </p>
+                    
+                    <form id="diagnostic-form">
+                        <div class="form-group">
+                            <label for="name">Seu Nome Completo *</label>
+                            <input type="text" id="name" name="name" required placeholder="Como prefere ser chamado">
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                            <div class="form-group">
+                                <label for="whatsapp">📱 WhatsApp (Recomendado)</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999">
+                                <small style="color: #666; font-size: 0.9rem;">Resposta em minutos</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">📧 E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com">
+                                <small style="color: #666; font-size: 0.9rem;">Se preferir por email</small>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="site-url">🔗 URL da Sua Página/Site *</label>
+                            <input type="url" id="site-url" name="site_url" required placeholder="https://seusite.com.br">
+                            <small style="color: #666; font-size: 0.9rem;">É só colar o link aqui</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="goal">🎯 Qual seu principal objetivo com o site? (opcional)</label>
+                            <select id="goal" name="goal" style="width: 100%; padding: 15px; border: 2px solid #e1e5e9; border-radius: 10px; font-size: 1rem;">
+                                <option value="">Selecione uma opção</option>
+                                <option value="vendas">Aumentar vendas online</option>
+                                <option value="leads">Captar mais leads/clientes</option>
+                                <option value="visibilidade">Aparecer mais no Google</option>
+                                <option value="performance">Melhorar velocidade do site</option>
+                                <option value="outro">Outro objetivo</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn">
+                            🚀 QUERO MEU DIAGNÓSTICO GRATUITO AGORA
+                        </button>
+                        
+                        <p style="text-align: center; margin-top: 15px; color: #666; font-size: 0.9rem;">
+                            <strong>Sem spam.</strong> Analiso seu site e envio os pontos críticos em até 2 horas.
+                        </p>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- PROVA SOCIAL - CASES REAIS -->
+            <div class="social-proof">
+                <h2 style="text-align: center; margin-bottom: 25px;">✅ O que clientes dizem sobre o diagnóstico:</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <div style="background: white; padding: 20px; border-radius: 10px;">
+                        <p style="font-style: italic; margin-bottom: 15px;">"Flávio identificou em 10 minutos que meu Pixel não estava funcionando. Corrigimos e as conversões do Facebook Ads dobraram em uma semana."</p>
+                        <p style="font-weight: bold; color: #667eea;">— Carlos Mendes, Indústria Pesada</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px;">
+                        <p style="font-style: italic; margin-bottom: 15px;">"O formulário tinha 8 campos! Reduzimos para 3 e aumentamos leads em 65%. Diagnóstico simples que mudou meu negócio."</p>
+                        <p style="font-weight: bold; color: #667eea;">— Dra. Ana Lúcia, Clínica Odontológica</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CHAMADA FINAL PARA WHATSAPP -->
+            <div style="text-align: center; padding: 40px; background: #f8f9fa; border-radius: 20px; margin: 30px 0;">
+                <h2 style="margin-bottom: 15px;">⏳ Vagas Limitadas Para Esta Semana</h2>
+                <p style="margin-bottom: 25px; font-size: 1.1rem;">
+                    Faço apenas <strong>3 diagnósticos detalhados por dia</strong> para garantir qualidade.<br>
+                    Restam <span style="color: #f5576c; font-weight: bold;">7 vagas</span> até sexta-feira.
+                </p>
+                
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Vi%20sua%20oferta%20de%20diagn%C3%B3stico%20gratuito%20e%20quero%20saber%20mais." 
+                   class="btn whatsapp-btn" 
+                   target="_blank">
+                   💬 FALAR DIRETAMENTE NO WHATSAPP
+                </a>
+                
+                <p style="margin-top: 15px; color: #666;">
+                    Resposta em <strong>menos de 5 minutos</strong> em horário comercial.
+                </p>
+            </div>
+            
+            <!-- ETAPAS DO PROCESSO -->
+            <div class="card" style="margin-top: 30px;">
+                <h2 style="text-align: center; margin-bottom: 30px;">🔄 Como funciona o diagnóstico:</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+                    <div>
+                        <div style="background: #667eea; color: white; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; margin: 0 auto 15px; font-weight: bold;">1</div>
+                        <h4>Você envia o link</h4>
+                        <p style="color: #666; font-size: 0.95rem;">Preenche o formulário com sua página</p>
+                    </div>
+                    
+                    <div>
+                        <div style="background: #667eea; color: white; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; margin: 0 auto 15px; font-weight: bold;">2</div>
+                        <h4>Eu analiso tudo</h4>
+                        <p style="color: #666; font-size: 0.95rem;">Velocidade, conversão e rastreamento</p>
+                    </div>
+                    
+                    <div>
+                        <div style="background: #667eea; color: white; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; margin: 0 auto 15px; font-weight: bold;">3</div>
+                        <h4>Você recebe o relatório</h4>
+                        <p style="color: #666; font-size: 0.95rem;">Áudio ou texto com os 3 pontos críticos</p>
+                    </div>
+                    
+                    <div>
+                        <div style="background: #25D366; color: white; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; margin: 0 auto 15px; font-weight: bold;">4</div>
+                        <h4>Decide o próximo passo</h4>
+                        <p style="color: #666; font-size: 0.95rem;">Implementa sozinho ou contrata minha ajuda</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2025 FlávioDev - Arquitetura de Soluções Web</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">
+                Este é um diagnóstico técnico gratuito. Não há obrigação de contratação.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // SCRIPT OTIMIZADO PARA CONVERSÃO
+        document.getElementById('diagnostic-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const email = document.getElementById('email').value;
+            const siteUrl = document.getElementById('site-url').value;
+            const goal = document.getElementById('goal').value;
+            
+            // Validação básica
+            if (!name || !siteUrl) {
+                alert('Por favor, preencha pelo menos seu nome e a URL do site.');
+                return;
+            }
+            
+            if (!whatsapp && !email) {
+                alert('Por favor, preencha pelo menos WhatsApp ou E-mail para contato.');
+                return;
+            }
+            
+            // Prepara mensagem para WhatsApp
+            let message = `*Novo Diagnóstico Solicitado!*%0A%0A`;
+            message += `*Nome:* ${name}%0A`;
+            if (whatsapp) message += `*WhatsApp:* ${whatsapp}%0A`;
+            if (email) message += `*E-mail:* ${email}%0A`;
+            message += `*Site:* ${siteUrl}%0A`;
+            if (goal) message += `*Objetivo:* ${goal}%0A`;
+            message += `%0A---%0A`;
+            message += `*Enviar diagnóstico em até 2 horas*`;
+            
+            // Se tem WhatsApp, vai direto pro WhatsApp
+            if (whatsapp) {
+                window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+            } 
+            // Se só tem email, mostra confirmação
+            else {
+                const formSection = document.getElementById('form-section');
+                formSection.innerHTML = `
+                    <div style="text-align: center; padding: 40px;">
+                        <div style="font-size: 4rem; margin-bottom: 20px;">✅</div>
+                        <h2>Diagnóstico Solicitado!</h2>
+                        <p style="margin: 20px 0; font-size: 1.1rem;">
+                            <strong>${name}</strong>, vou analisar seu site <strong>${siteUrl}</strong> e enviar o diagnóstico para <strong>${email}</strong> em até 2 horas.
+                        </p>
+                        <p style="color: #666;">
+                            Caso prefira resposta mais rápida, clique abaixo:
+                        </p>
+                        <a href="https://wa.me/5511999999999?text=Olá! Acabei de solicitar o diagnóstico por email." 
+                           class="btn whatsapp-btn" 
+                           style="margin-top: 20px;">
+                           💬 RECEBER NO WHATSAPP (MAIS RÁPIDO)
+                        </a>
+                    </div>
+                `;
+                
+                // Rolagem suave para o topo
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            
+            // Aqui você pode adicionar código para enviar para um backend/Google Sheets
+            console.log('Lead capturado:', { name, whatsapp, email, siteUrl, goal });
+        });
+        
+        // Foca no campo de WhatsApp quando clicar no campo de email (e vice-versa)
+        document.getElementById('whatsapp').addEventListener('focus', function() {
+            document.getElementById('email').value = '';
+        });
+        
+        document.getElementById('email').addEventListener('focus', function() {
+            document.getElementById('whatsapp').value = '';
+        });
+        
+        // Contador de vagas (opcional - cria urgência)
+        let slots = 7;
+        function updateSlotCounter() {
+            const slotElement = document.querySelector('span[style*="color: #f5576c"]');
+            if (slotElement && slots > 0) {
+                slots--;
+                slotElement.textContent = `${slots} vagas`;
+                
+                // Atualiza a cada 30 minutos
+                if (slots > 0) {
+                    setTimeout(updateSlotCounter, 30 * 60 * 1000); // 30 minutos
+                }
+            }
+        }
+        // Inicia depois de 2 minutos da página carregada
+        setTimeout(updateSlotCounter, 2 * 60 * 1000);
+    </script>
+</body>
+</html>    

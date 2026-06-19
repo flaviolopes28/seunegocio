@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>FlávioDev | Lojas Prontas & Estruturas Premium</title>
+
+<meta name="description" content="Lojas prontas, estruturas para Shopee, Mercado Livre e e-commerce profissional. Sites premium para começar a vender rápido.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+dark: '#0A0A0F',
+charcoal: '#111115',
+slate: '#1A1A1F',
+accent: '#FF6B35',
+accentDark: '#E55A2A',
+grayMuted: '#8E8E9E'
+},
+fontFamily: {
+sans: ['Inter', 'sans-serif']
+}
+}
+}
+}
+</script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#0A0A0F;
+color:#fff;
+overflow-x:hidden;
+}
+
+.gradient-text{
+background:linear-gradient(135deg,#FF6B35 0%,#FF8C5A 100%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-bg{
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at top left, rgba(255,107,53,0.15), transparent 35%),
+radial-gradient(circle at bottom right, rgba(255,107,53,0.08), transparent 30%);
+z-index:0;
+}
+
+.card{
+background:rgba(26,26,31,0.7);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,107,53,0.15);
+transition:0.35s ease;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:rgba(255,107,53,0.45);
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#FF6B35 0%,#E55A2A 100%);
+transition:0.3s ease;
+box-shadow:0 10px 30px rgba(255,107,53,0.25);
+}
+
+.btn-primary:hover{
+transform:translateY(-2px);
+box-shadow:0 14px 35px rgba(255,107,53,0.4);
+}
+
+.btn-outline{
+border:1px solid rgba(255,107,53,0.4);
+transition:0.3s ease;
+}
+
+.btn-outline:hover{
+background:rgba(255,107,53,0.08);
+transform:translateY(-2px);
+}
+
+.mockup{
+border:1px solid rgba(255,107,53,0.15);
+background:#16161C;
+overflow:hidden;
+transition:0.4s ease;
+}
+
+.mockup:hover{
+transform:translateY(-6px) scale(1.01);
+}
+
+.glow{
+position:absolute;
+width:400px;
+height:400px;
+background:rgba(255,107,53,0.12);
+filter:blur(120px);
+z-index:0;
+}
+
+.glow1{
+top:-120px;
+left:-120px;
+}
+
+.glow2{
+bottom:-120px;
+right:-120px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:24px;
+right:24px;
+width:58px;
+height:58px;
+border-radius:50%;
+background:linear-gradient(135deg,#25D366,#128C7E);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+color:#fff;
+z-index:999;
+box-shadow:0 12px 25px rgba(37,211,102,0.4);
+transition:0.3s ease;
+}
+
+.whatsapp:hover{
+transform:scale(1.08);
+}
+
+.badge{
+background:rgba(255,107,53,0.1);
+border:1px solid rgba(255,107,53,0.2);
+}
+
+section{
+position:relative;
+z-index:2;
+}
+
+@media(max-width:768px){
+
+.hero-title{
+font-size:2.5rem !important;
+line-height:1.1;
+}
+
+.hero-sub{
+font-size:1rem !important;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/40 border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+<div class="flex items-center gap-2">
+<i class="fas fa-code text-accent text-2xl"></i>
+<span class="font-bold text-xl">
+<span class="text-white">Flávio</span>
+<span class="gradient-text">Dev</span>
+</span>
+</div>
+
+<nav class="hidden md:flex items-center gap-8 text-sm">
+
+<a href="#demos" class="text-gray-400 hover:text-accent transition">
+Demos
+</a>
+
+<a href="#beneficios" class="text-gray-400 hover:text-accent transition">
+Benefícios
+</a>
+
+<a href="#planos" class="text-gray-400 hover:text-accent transition">
+Planos
+</a>
+
+<a href="#faq" class="text-gray-400 hover:text-accent transition">
+FAQ
+</a>
+
+</nav>
+
+<a href="https://wa.me/5543996432679" target="_blank"
+class="btn-primary px-5 py-3 rounded-xl text-sm font-semibold">
+Falar no WhatsApp
+</a>
+
+</div>
+</header>
+
+<section class="min-h-screen flex items-center px-6 relative overflow-hidden">
+
+<div class="hero-bg"></div>
+
+<div class="max-w-7xl mx-auto w-full relative z-10">
+
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+
+<div>
+
+<div class="badge inline-flex items-center gap-2 px-4 py-2 rounded-full mb-7">
+<i class="fas fa-store text-accent"></i>
+<span class="text-sm text-accent font-medium">
+Estruturas Premium para Negócios Digitais
+</span>
+</div>
+
+<h1 class="hero-title text-6xl font-extrabold leading-tight mb-7">
+Lojas prontas para
+<span class="gradient-text">vender</span>
+</h1>
+
+<p class="hero-sub text-xl text-gray-400 leading-relaxed mb-10 max-w-xl">
+Sites profissionais, estruturas para Shopee, Mercado Livre e e-commerce completos para quem quer começar rápido com aparência premium e foco em conversão.
+</p>
+
+<div class="flex flex-wrap gap-4">
+
+<a href="#demos"
+class="btn-primary px-8 py-4 rounded-2xl font-semibold">
+Ver Demos
+</a>
+
+<a href="https://wa.me/5543996432679"
+target="_blank"
+class="btn-outline px-8 py-4 rounded-2xl font-medium">
+Solicitar Projeto
+</a>
+
+</div>
+
+<div class="grid grid-cols-3 gap-6 mt-14">
+
+<div>
+<h3 class="text-3xl font-bold gradient-text">
++40
+</h3>
+<p class="text-sm text-gray-400 mt-1">
+Projetos Criados
+</p>
+</div>
+
+<div>
+<h3 class="text-3xl font-bold gradient-text">
+100%
+</h3>
+<p class="text-sm text-gray-400 mt-1">
+Responsivo
+</p>
+</div>
+
+<div>
+<h3 class="text-3xl font-bold gradient-text">
+SEO
+</h3>
+<p class="text-sm text-gray-400 mt-1">
+Estruturado
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="relative">
+
+<div class="grid gap-6">
+
+<div class="mockup rounded-3xl p-4">
+<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop"
+class="rounded-2xl w-full h-[260px] object-cover">
+
+<div class="flex items-center justify-between mt-5">
+
+<div>
+<h3 class="font-bold text-xl">
+Loja Premium
+</h3>
+<p class="text-gray-400 text-sm mt-1">
+Estrutura otimizada para vendas
+</p>
+</div>
+
+<div class="flex gap-2">
+
+<span class="px-3 py-1 rounded-full bg-accent/10 text-accent text-xs">
+WooCommerce
+</span>
+
+<span class="px-3 py-1 rounded-full bg-accent/10 text-accent text-xs">
+SEO
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="grid grid-cols-2 gap-6">
+
+<div class="mockup rounded-3xl p-4">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+class="rounded-2xl w-full h-[180px] object-cover">
+
+<h3 class="font-bold mt-4">
+Shopee Store
+</h3>
+
+</div>
+
+<div class="mockup rounded-3xl p-4">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+class="rounded-2xl w-full h-[180px] object-cover">
+
+<h3 class="font-bold mt-4">
+Mercado Livre
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="demos" class="py-28 px-6 bg-charcoal">
+
+<div class="max-w-7xl mx-auto">
+
+<div class="text-center mb-16">
+
+<span class="text-accent uppercase tracking-widest text-sm font-medium">
+Demos Profissionais
+</span>
+
+<h2 class="text-5xl font-bold mt-4">
+Escolha seu
+<span class="gradient-text">
+nicho
+</span>
+</h2>
+
+<p class="text-gray-400 max-w-2xl mx-auto mt-5 text-lg">
+Estruturas criadas para gerar autoridade visual, aumentar conversão e acelerar o início do negócio.
+</p>
+
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<div class="card rounded-3xl overflow-hidden">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop"
+class="w-full h-64 object-cover">
+
+<div class="p-7">
+
+<div class="flex items-center justify-between mb-4">
+
+<h3 class="text-2xl font-bold">
+Pet Shop
+</h3>
+
+<span class="text-accent text-sm">
+Premium
+</span>
+
+</div>
+
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+Estrutura moderna com banners profissionais, área de produtos e integração completa para vendas.
+</p>
+
+<div class="flex gap-3">
+
+<a href="#"
+class="btn-primary flex-1 py-3 rounded-xl text-center font-semibold">
+Ver Demo
+</a>
+
+<a href="https://wa.me/5543996432679"
+target="_blank"
+class="btn-outline flex-1 py-3 rounded-xl text-center">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card rounded-3xl overflow-hidden">
+
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
+class="w-full h-64 object-cover">
+
+<div class="p-7">
+
+<div class="flex items-center justify-between mb-4">
+
+<h3 class="text-2xl font-bold">
+Moda Feminina
+</h3>
+
+<span class="text-accent text-sm">
+Novo
+</span>
+
+</div>
+
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+Design premium focado em valor percebido, branding elegante e experiência visual moderna.
+</p>
+
+<div class="flex gap-3">
+
+<a href="#"
+class="btn-primary flex-1 py-3 rounded-xl text-center font-semibold">
+Ver Demo
+</a>
+
+<a href="https://wa.me/5543996432679"
+target="_blank"
+class="btn-outline flex-1 py-3 rounded-xl text-center">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card rounded-3xl overflow-hidden">
+
+<img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1200&auto=format&fit=crop"
+class="w-full h-64 object-cover">
+
+<div class="p-7">
+
+<div class="flex items-center justify-between mb-4">
+
+<h3 class="text-2xl font-bold">
+Eletrônicos
+</h3>
+
+<span class="text-accent text-sm">
+Escalável
+</span>
+
+</div>
+
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+Estrutura criada para marketplaces, alta quantidade de produtos e campanhas de tráfego pago.
+</p>
+
+<div class="flex gap-3">
+
+<a href="#"
+class="btn-primary flex-1 py-3 rounded-xl text-center font-semibold">
+Ver Demo
+</a>
+
+<a href="https://wa.me/5543996432679"
+target="_blank"
+class="btn-outline flex-1 py-3 rounded-xl text-center">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="beneficios" class="py-28 px-6 bg-dark">
+
+<div class="max-w-7xl mx-auto">
+
+<div class="text-center mb-16">
+
+<span class="text-accent uppercase tracking-widest text-sm font-medium">
+O que você recebe
+</span>
+
+<h2 class="text-5xl font-bold mt-4">
+Tudo pronto para
+<span class="gradient-text">
+começar
+</span>
+</h2>
+
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+<div class="card p-7 rounded-3xl">
+
+<i class="fas fa-mobile-alt text-accent text-3xl mb-6"></i>
+
+<h3 class="text-xl font-bold mb-3">
+100% Responsivo
+</h3>
+
+<p class="text-gray-400 text-sm leading-relaxed">
+Experiência premium em desktop, tablet e celular.
+</p>
+
+</div>
+
+<div class="card p-7 rounded-3xl">
+
+<i class="fas fa-rocket text-accent text-3xl mb-6"></i>
+
+<h3 class="text-xl font-bold mb-3">
+Alta Performance
+</h3>
+
+<p class="text-gray-400 text-sm leading-relaxed">
+Estrutura otimizada para carregamento rápido e melhor conversão.
+</p>
+
+</div>
+
+<div class="card p-7 rounded-3xl">
+
+<i class="fas fa-chart-line text-accent text-3xl mb-6"></i>
+
+<h3 class="text-xl font-bold mb-3">
+SEO Estruturado
+</h3>
+
+<p class="text-gray-400 text-sm leading-relaxed">
+Arquitetura pronta para posicionamento no Google.
+</p>
+
+</div>
+
+<div class="card p-7 rounded-3xl">
+
+<i class="fab fa-whatsapp text-accent text-3xl mb-6"></i>
+
+<h3 class="text-xl font-bold mb-3">
+WhatsApp Integrado
+</h3>
+
+<p class="text-gray-400 text-sm leading-relaxed">
+Contato rápido e automatizado para aumentar leads.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="planos" class="py-28 px-6 bg-charcoal">
+
+<div class="max-w-6xl mx-auto">
+
+<div class="text-center mb-16">
+
+<span class="text-accent uppercase tracking-widest text-sm font-medium">
+Planos
+</span>
+
+<h2 class="text-5xl font-bold mt-4">
+Escolha sua
+<span class="gradient-text">
+estrutura
+</span>
+</h2>
+
+</div>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card p-8 rounded-3xl">
+
+<h3 class="text-2xl font-bold mb-3">
+Starter
+</h3>
+
+<p class="text-gray-400 text-sm mb-7">
+Para começar rápido.
+</p>
+
+<div class="text-5xl font-bold mb-8">
+R$297
+</div>
+
+<ul class="space-y-4 text-sm text-gray-300 mb-10">
+
+<li class="flex gap-3">
+<i class="fas fa-check text-accent mt-1"></i>
+Estrutura pronta
+</li>
+
+<li class="flex gap-3">
+<i class="fas fa-check text-accent mt-1"></i>
+Mobile otimizado
+</li>
+
+<li class="flex gap-3">
+<i class="fas fa-check text-accent mt-1"></i>
+SEO básico
+</li>
+
+</ul>
+
+<a href="https://wa.me/5543996432679"
+target="_blank"
+class="btn-outline block py-4 rounded-2xl text-center font-semibold">
+Solicitar
+</a>
+
+</div>
+
+<div class="card p-8 rounded-3xl border border-accent relative">
+
+<div class="absolute -top-3 left-1/2 -translate-x-1/2">
+<span class="bg-accent px-4 py-1 rounded-full text-xs font-bold">
+Mais Vendido
+</span>
+</div>
+
+<h3 class="text-2xl font-bold mb-3">
+Professional
+</h3>
+
+<p class="text-gray-400 text-sm mb-7">
+Estrutura premium completa.
+</p>
+
+<div class="text-5xl font-bold mb-8">
+R$697
+</div>
+
+<ul class="space-y-4 text-sm text-gray-300 mb-10">
+
+<li class="flex gap-3">
+<i class="fas fa-check text-accent mt-1"></i>
+Tudo do Starter
+</li>
+
+<li class="flex gap-3">
+<i class="fas fa-check text-accent mt-1"></i>
+Banners profissionais
+</li>
+
+<li class="flex gap-3">
+<i class="fas fa-check text-accent mt-1"></i>
+WooCommerce
+</li>
+
+<li class="flex gap-3">
+<i class="fas fa-check text-accent mt-1"></i>
+Copy estratégica
+</li>
+
+</ul>
+
+<a href="https://wa.me/5543996432679"
+target="_blank"
+class="btn-primary block py-4 rounded-2xl text-center font-semibold">
+Comprar Agora
+</a>
+
+</div>
+
+<div class="card p-8 rounded-3xl">
+
+<h3 class="text-2xl font-bold mb-3">
+Ultimate
+</h3>
+
+<p class="text-gray-400 text-sm mb-7">
+Projeto completo personalizado.
+</p>
+
+<div class="text-5xl font-bold mb-8">
+R$1497+
+</div>
+
+<ul class="space-y-4 text-sm text-gray-300 mb-10">
+
+<li class="flex gap-3">
+<i class="fas fa-check text-accent mt-1"></i>
+Estrutura personalizada
+</li>
+
+<li class="flex gap-3">
+<i class="fas fa-check text-accent mt-1"></i>
+Branding premium
+</li>
+
+<li class="flex gap-3">
+<i class="fas fa-check text-accent mt-1"></i>
+Integrações avançadas
+</li>
+
+</ul>
+
+<a href="https://wa.me/5543996432679"
+target="_blank"
+class="btn-outline block py-4 rounded-2xl text-center font-semibold">
+Conversar
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="faq" class="py-28 px-6 bg-dark">
+
+<div class="max-w-4xl mx-auto text-center">
+
+<span class="text-accent uppercase tracking-widest text-sm font-medium">
+FAQ
+</span>
+
+<h2 class="text-5xl font-bold mt-4 mb-14">
+Dúvidas
+<span class="gradient-text">
+frequentes
+</span>
+</h2>
+
+<div class="space-y-6 text-left">
+
+<div class="card p-7 rounded-3xl">
+<h3 class="font-bold text-xl mb-3">
+Recebo a loja pronta?
+</h3>
+<p class="text-gray-400 leading-relaxed">
+Sim. Você recebe a estrutura completa pronta para começar a adicionar produtos e vender.
+</p>
+</div>
+
+<div class="card p-7 rounded-3xl">
+<h3 class="font-bold text-xl mb-3">
+Posso personalizar?
+</h3>
+<p class="text-gray-400 leading-relaxed">
+Sim. Também ofereço personalizações premium, branding e ajustes estratégicos.
+</p>
+</div>
+
+<div class="card p-7 rounded-3xl">
+<h3 class="font-bold text-xl mb-3">
+Funciona no celular?
+</h3>
+<p class="text-gray-400 leading-relaxed">
+Todas as estruturas são criadas com foco em experiência mobile e performance.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="py-28 px-6 border-t border-white/5 bg-charcoal">
+
+<div class="max-w-4xl mx-auto text-center">
+
+<div class="badge inline-flex items-center gap-2 px-4 py-2 rounded-full mb-7">
+<i class="fas fa-rocket text-accent"></i>
+<span class="text-accent text-sm font-medium">
+Seu negócio pode começar hoje
+</span>
+</div>
+
+<h2 class="text-5xl font-bold leading-tight mb-6">
+Escolha sua estrutura e
+<span class="gradient-text">
+comece a vender
+</span>
+</h2>
+
+<p class="text-gray-400 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+Transforme sua ideia em um negócio profissional com aparência premium, estrutura moderna e foco em conversão.
+</p>
+
+<a href="https://wa.me/5543996432679"
+target="_blank"
+class="btn-primary inline-flex items-center gap-3 px-10 py-5 rounded-2xl text-lg font-bold">
+
+<i class="fab fa-whatsapp text-2xl"></i>
+
+Falar no WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+<footer class="py-14 px-6 border-t border-white/5 bg-dark">
+
+<div class="max-w-7xl mx-auto">
+
+<div class="grid md:grid-cols-4 gap-10">
+
+<div>
+
+<div class="flex items-center gap-2 mb-5">
+<i class="fas fa-code text-accent text-2xl"></i>
+
+<span class="text-xl font-bold">
+<span class="text-white">Flávio</span>
+<span class="gradient-text">Dev</span>
+</span>
+
+</div>
+
+<p class="text-gray-400 text-sm leading-relaxed">
+Estruturas digitais premium para negócios modernos, e-commerce, Shopee, Mercado Livre e vendas online.
+</p>
+
+</div>
+
+<div>
+
+<h3 class="font-bold mb-5">
+Links
+</h3>
+
+<ul class="space-y-3 text-sm text-gray-400">
+
+<li>
+<a href="#demos" class="hover:text-accent transition">
+Demos
+</a>
+</li>
+
+<li>
+<a href="#beneficios" class="hover:text-accent transition">
+Benefícios
+</a>
+</li>
+
+<li>
+<a href="#planos" class="hover:text-accent transition">
+Planos
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3 class="font-bold mb-5">
+Contato
+</h3>
+
+<ul class="space-y-3 text-sm text-gray-400">
+
+<li>
+<i class="fab fa-whatsapp text-accent mr-2"></i>
+(43) 99643-2679
+</li>
+
+<li>
+<i class="far fa-envelope text-accent mr-2"></i>
+flanegociosonline@gmail.com
+</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3 class="font-bold mb-5">
+Performance
+</h3>
+
+<ul class="space-y-3 text-sm text-gray-400">
+
+<li>
+<i class="fas fa-check text-accent mr-2"></i>
+SEO Estruturado
+</li>
+
+<li>
+<i class="fas fa-check text-accent mr-2"></i>
+Alta Conversão
+</li>
+
+<li>
+<i class="fas fa-check text-accent mr-2"></i>
+100% Responsivo
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="border-t border-white/5 mt-12 pt-8 text-center">
+
+<p class="text-gray-500 text-sm">
+© 2026 FlávioDev. Todos os direitos reservados.
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<a href="https://wa.me/5543996432679"
+target="_blank"
+class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
