@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OdontoClínica · Sua Marca Aqui</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+        body {
+            background: #f0f7f9;
+            color: #1a2e3f;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* HEADER */
+        .navbar {
+            background: #ffffff;
+            padding: 16px 0;
+            box-shadow: 0 2px 30px rgba(0, 40, 60, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0a2b3b;
+        }
+        .logo i {
+            color: #0a7e8c;
+            font-size: 2.2rem;
+        }
+        .logo span {
+            font-weight: 300;
+            color: #0a7e8c;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #1e3b4f;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: #0a7e8c;
+        }
+        .nav-cta {
+            background: #0a7e8c;
+            color: #fff !important;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+        .nav-cta:hover {
+            background: #065e6a !important;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #0a2b3b;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 80px 0 100px;
+            background: linear-gradient(135deg, #e8f4f7 0%, #ffffff 70%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '🦷';
+            position: absolute;
+            right: -50px;
+            bottom: -50px;
+            font-size: 300px;
+            opacity: 0.04;
+        }
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-text .badge {
+            background: #d4ecee;
+            color: #0a7e8c;
+            padding: 6px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        .hero-text h1 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #0a2b3b;
+        }
+        .hero-text h1 span {
+            color: #0a7e8c;
+            border-bottom: 4px solid #b2dbe3;
+            display: inline-block;
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #3d5a70;
+            max-width: 500px;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        .hero-image {
+            flex: 1;
+            background: #d4ecee;
+            border-radius: 100px 30px 100px 30px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 40px 60px -30px rgba(10, 126, 140, 0.2);
+        }
+        .hero-image i {
+            font-size: 10rem;
+            color: #0a7e8c;
+        }
+        .hero-image p {
+            background: #fff;
+            padding: 12px 24px;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-weight: 600;
+            color: #0a2b3b;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: #0a7e8c;
+            color: #fff;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            box-shadow: 0 15px 30px -10px rgba(10, 126, 140, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px -10px rgba(10, 126, 140, 0.4);
+            background: #065e6a;
+        }
+        .btn-secondary {
+            background: transparent;
+            color: #0a7e8c;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 2px solid #0a7e8c;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .btn-secondary:hover {
+            background: #0a7e8c;
+            color: #fff;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* SERVIÇOS ODONTO */
+        .services {
+            padding: 80px 0;
+            background: #fff;
+        }
+        .services-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .services-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0a2b3b;
+        }
+        .services-header p {
+            color: #4b6a8b;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .service-card {
+            background: #f8fbfc;
+            padding: 40px 30px;
+            border-radius: 30px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #eef4f6;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -15px rgba(10, 126, 140, 0.15);
+            border-color: #0a7e8c;
+        }
+        .service-card .icon {
+            width: 80px;
+            height: 80px;
+            background: #e8f4f7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5rem;
+            color: #0a7e8c;
+        }
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: #0a2b3b;
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            color: #4b6a8b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* DIFERENCIAIS */
+        .differentials {
+            background: #0a2b3b;
+            padding: 80px 0;
+            color: #fff;
+        }
+        .differentials h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        .differentials>p {
+            text-align: center;
+            color: #8ab3c4;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+        }
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .diff-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .diff-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+        }
+        .diff-item i {
+            font-size: 2.8rem;
+            color: #6bc4d1;
+            margin-bottom: 15px;
+        }
+        .diff-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .diff-item p {
+            color: #8ab3c4;
+            font-size: 0.95rem;
+        }
+
+        /* DEPOIMENTOS */
+        .testimonials {
+            padding: 80px 0;
+            background: #f8fbfc;
+        }
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #0a2b3b;
+            margin-bottom: 50px;
+        }
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .test-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+        }
+        .test-card .stars {
+            color: #f5b342;
+            margin-bottom: 12px;
+        }
+        .test-card p {
+            color: #2d4a62;
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        .test-card .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .test-card .author .avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #d4ecee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #0a7e8c;
+        }
+        .test-card .author .name {
+            font-weight: 600;
+            color: #0a2b3b;
+        }
+        .test-card .author .role {
+            font-size: 0.85rem;
+            color: #4b6a8b;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #0a1f2a;
+            color: #b2cbdd;
+            padding: 50px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 18px;
+        }
+        .footer-col p,
+        .footer-col a {
+            color: #8ab3c4;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            transition: 0.2s;
+        }
+        .footer-col a:hover {
+            color: #fff;
+        }
+        .footer-col .social i {
+            font-size: 1.8rem;
+            margin-right: 15px;
+            color: #8ab3c4;
+            transition: 0.2s;
+        }
+        .footer-col .social i:hover {
+            color: #fff;
+        }
+        .footer-copy {
+            border-top: 1px solid #1a3b4a;
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6b8f9e;
+        }
+
+        /* WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: #fff;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+            transition: 0.3s;
+            z-index: 1000;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .diff-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .test-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            .nav-links {
+                position: absolute;
+                top: 74px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                flex-direction: column;
+                padding: 30px;
+                gap: 20px;
+                transform: translateY(-200%);
+                transition: 0.3s;
+                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+            }
+            .nav-links.open {
+                transform: translateY(0);
+            }
+            .hero-grid {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text p {
+                max-width: 100%;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .test-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 2.3rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            .services-header h2 {
+                font-size: 2rem;
+            }
+            .diff-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-tooth"></i> SuaLogo <span>Odonto</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#diferenciais">Diferenciais</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato" class="nav-cta"><i class="fas fa-calendar-check"></i> Agende</a></li>
+            </ul>
+            <button class="hamburger" id="hamburgerBtn">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="badge"><i class="fas fa-star"></i> +500 sorrisos transformados</span>
+                <h1>Seu sorriso <span>merece o melhor</span> cuidado</h1>
+                <p>Transforme sua clínica odontológica com um site profissional. Atraia mais pacientes e mostre sua excelência.</p>
+                <div class="hero-actions">
+                    <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Quero meu site</a>
+                    <a href="#" class="btn-secondary"><i class="fas fa-play-circle"></i> Ver cases</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-user-md"></i>
+                <p><i class="fas fa-quote-left"></i> Sua clínica, nossa paixão</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="services-header">
+                <h2>Especialidades que <span style="color:#0a7e8c;">transformam</span></h2>
+                <p>Tratamentos de ponta com tecnologia e cuidado humanizado</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-teeth"></i></div>
+                    <h3>Implantes</h3>
+                    <p>Reabilitação completa com técnica avançada e materiais de alta qualidade.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-smile"></i></div>
+                    <h3>Clareamento</h3>
+                    <p>Procedimento seguro e eficaz para um sorriso mais branco e confiante.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-baby"></i></div>
+                    <h3>Odontopediatria</h3>
+                    <p>Atendimento acolhedor para crianças, com foco em prevenção e educação.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-x-ray"></i></div>
+                    <h3>Diagnóstico 3D</h3>
+                    <p>Tecnologia de ponta para planejamento preciso e resultados previsíveis.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-crown"></i></div>
+                    <h3>Próteses</h3>
+                    <p>Estética e função em harmonia para devolver qualidade de vida.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-tooth"></i></div>
+                    <h3>Endodontia</h3>
+                    <p>Tratamento de canal com excelência e conforto para o paciente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="differentials" id="diferenciais">
+        <div class="container">
+            <h2>Por que ter um site <span style="color:#6bc4d1;">odontológico</span>?</h2>
+            <p>Destaque-se no mercado e conquiste mais pacientes com uma presença digital profissional</p>
+            <div class="diff-grid">
+                <div class="diff-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Responsivo</h4>
+                    <p>Seu site perfeito em qualquer dispositivo</p>
+                </div>
+                <div class="diff-item">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h4>Copy Especializada</h4>
+                    <p>Textos pensados para o universo odontológico</p>
+                </div>
+                <div class="diff-item">
+                    <i class="fas fa-heart"></i>
+                    <h4>Identidade Visual</h4>
+                    <p>Sua marca em destaque com design exclusivo</p>
+                </div>
+                <div class="diff-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Alta Conversão</h4>
+                    <p>Layout otimizado para agendamentos e contatos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <h2>O que nossos <span style="color:#0a7e8c;">clientes</span> dizem</h2>
+            <div class="test-grid">
+                <div class="test-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"O site transformou completamente a imagem da minha clínica. Os pacientes confiam mais e os agendamentos aumentaram 40%."</p>
+                    <div class="author">
+                        <div class="avatar">DR</div>
+                        <div>
+                            <div class="name">Dr. Renato Silva</div>
+                            <div class="role">Clínica Sorriso Perfeito</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Design impecável e funcionalidades que facilitam o dia a dia. Recomendo para toda clínica que quer crescer."</p>
+                    <div class="author">
+                        <div class="avatar">CS</div>
+                        <div>
+                            <div class="name">Dra. Carolina Souza</div>
+                            <div class="role">Odonto Kids</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Atendimento excelente e site super intuitivo. Nossos pacientes elogiam muito a experiência digital."</p>
+                    <div class="author">
+                        <div class="avatar">MR</div>
+                        <div>
+                            <div class="name">Dr. Marcelo Ribeiro</div>
+                            <div class="role">Clínica Bem Sorrir</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><i class="fas fa-tooth"></i> SuaLogo Odonto</h4>
+                    <p>Cuidando de sorrisos com excelência e tecnologia.</p>
+                    <div class="social">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <a href="#">Implantes</a>
+                    <a href="#">Clareamento</a>
+                    <a href="#">Odontopediatria</a>
+                    <a href="#">Próteses</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#diferenciais">Diferenciais</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone-alt"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@suamarca.com</p>
+                    <p><i class="fas fa-map-pin"></i> Seu endereço, cidade</p>
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 SuaLogo Odonto · Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5543996432679" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.getElementById('hamburgerBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>

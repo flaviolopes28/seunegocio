@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocacia · Sua Marca Aqui</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Georgia, serif;
+        }
+        body {
+            background: #f5f2ed;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* HEADER */
+        .navbar {
+            background: #1a1a1a;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: #d4af37;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+        .logo i {
+            margin-right: 10px;
+        }
+        .logo span {
+            font-weight: 300;
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            color: #8a8a8a;
+        }
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #cccccc;
+            text-decoration: none;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+        .nav-cta {
+            background: #d4af37;
+            color: #1a1a1a !important;
+            padding: 10px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .nav-cta:hover {
+            background: #c4a032 !important;
+            color: #1a1a1a !important;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 2px;
+            background: #d4af37;
+            border-radius: 2px;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            position: relative;
+        }
+        .hero::after {
+            content: '⚖️';
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+            font-size: 200px;
+            opacity: 0.03;
+        }
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-text .badge {
+            color: #d4af37;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+            border-left: 3px solid #d4af37;
+            padding-left: 15px;
+        }
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+        .hero-text h1 span {
+            color: #d4af37;
+            border-bottom: 3px solid #d4af37;
+            display: inline-block;
+        }
+        .hero-text p {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 1.15rem;
+            color: #aaaaaa;
+            max-width: 500px;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        .hero-image i {
+            font-size: 12rem;
+            color: #d4af37;
+            opacity: 0.8;
+        }
+        .hero-image p {
+            color: #8a8a8a;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-style: italic;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        .btn-primary {
+            background: #d4af37;
+            color: #1a1a1a;
+            padding: 16px 40px;
+            border: none;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .btn-primary:hover {
+            background: #c4a032;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: #d4af37;
+            padding: 14px 36px;
+            border: 2px solid #d4af37;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .btn-secondary:hover {
+            background: #d4af37;
+            color: #1a1a1a;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* ÁREAS */
+        .areas {
+            padding: 80px 0;
+            background: #f5f2ed;
+        }
+        .areas-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .areas-header h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        .areas-header h2 span {
+            color: #d4af37;
+        }
+        .areas-header p {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .area-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 8px;
+            transition: 0.3s;
+            border: 1px solid #e8e0d8;
+            position: relative;
+        }
+        .area-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #d4af37;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .area-card:hover::before {
+            opacity: 1;
+        }
+        .area-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px -15px rgba(0, 0, 0, 0.1);
+        }
+        .area-card i {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+        .area-card h3 {
+            font-size: 1.3rem;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        .area-card p {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* ESTATÍSTICAS */
+        .stats {
+            background: #1a1a1a;
+            padding: 70px 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+        .stat-item .number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #d4af37;
+            font-family: 'Times New Roman', serif;
+        }
+        .stat-item .label {
+            color: #8a8a8a;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        /* DIFERENCIAIS */
+        .diff-adv {
+            padding: 80px 0;
+            background: #f5f2ed;
+        }
+        .diff-adv h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+        }
+        .diff-adv h2 span {
+            color: #d4af37;
+        }
+        .diff-adv-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .diff-adv-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #d4af37;
+        }
+        .diff-adv-item i {
+            font-size: 2.2rem;
+            color: #d4af37;
+            min-width: 50px;
+        }
+        .diff-adv-item h4 {
+            font-size: 1.2rem;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+        .diff-adv-item p {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #0d0d0d;
+            color: #8a8a8a;
+            padding: 50px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            color: #d4af37;
+            margin-bottom: 18px;
+            font-size: 1.1rem;
+        }
+        .footer-col p,
+        .footer-col a {
+            color: #8a8a8a;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            transition: 0.2s;
+        }
+        .footer-col a:hover {
+            color: #d4af37;
+        }
+        .footer-col .social i {
+            font-size: 1.8rem;
+            margin-right: 15px;
+            color: #8a8a8a;
+            transition: 0.2s;
+        }
+        .footer-col .social i:hover {
+            color: #d4af37;
+        }
+        .footer-copy {
+            border-top: 1px solid #2a2a2a;
+            padding-top: 25px;
+            text-align: center;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: #fff;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+            transition: 0.3s;
+            z-index: 1000;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            .nav-links {
+                position: absolute;
+                top: 74px;
+                left: 0;
+                width: 100%;
+                background: #1a1a1a;
+                flex-direction: column;
+                padding: 30px;
+                gap: 20px;
+                transform: translateY(-200%);
+                transition: 0.3s;
+            }
+            .nav-links.open {
+                transform: translateY(0);
+            }
+            .hero-grid {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+            .hero-text p {
+                max-width: 100%;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+            .diff-adv-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 2.3rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-scale-balanced"></i> SuaLogo <span>ADVOCACIA</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#areas">Áreas</a></li>
+                <li><a href="#diferenciais">Diferenciais</a></li>
+                <li><a href="#contato" class="nav-cta"><i class="fas fa-calendar-check"></i> Consulta</a></li>
+            </ul>
+            <button class="hamburger" id="hamburgerBtn">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="badge">Excelência jurídica</span>
+                <h1>Justiça e <span>resultados</span> que falam por si</h1>
+                <p>Transforme seu escritório com um site profissional. Mostre sua autoridade e conquiste clientes que confiam em sua expertise.</p>
+                <div class="hero-actions">
+                    <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Quero meu site</a>
+                    <a href="#" class="btn-secondary"><i class="fas fa-play-circle"></i> Ver cases</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-gavel"></i>
+                <p>— Sua marca jurídica em destaque</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="areas" id="areas">
+        <div class="container">
+            <div class="areas-header">
+                <h2>Áreas de <span>atuação</span></h2>
+                <p>Especialidades jurídicas com excelência e compromisso</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Direito Civil</h3>
+                    <p>Contratos, responsabilidade civil, indenizações e defesa dos direitos individuais.</p>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Direito Trabalhista</h3>
+                    <p>Defesa dos direitos dos trabalhadores e empregadores com excelência.</p>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Direito Empresarial</h3>
+                    <p>Consultoria jurídica para empresas, contratos e compliance.</p>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-family"></i>
+                    <h3>Direito de Família</h3>
+                    <p>Divórcios, guarda de filhos, pensão alimentícia e inventários.</p>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Direito do Trânsito</h3>
+                    <p>Recursos, defesas e orientações para motoristas e pedestres.</p>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-scale-balanced"></i>
+                    <h3>Direito Tributário</h3>
+                    <p>Planejamento tributário, defesas e consultoria fiscal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="number">98%</div>
+                    <div class="label">Taxa de sucesso</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">+500</div>
+                    <div class="label">Casos resolvidos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">15</div>
+                    <div class="label">Anos de experiência</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">100+</div>
+                    <div class="label">Clientes satisfeitos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="diff-adv" id="diferenciais">
+        <div class="container">
+            <h2>Diferenciais do seu <span>site jurídico</span></h2>
+            <div class="diff-adv-grid">
+                <div class="diff-adv-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div>
+                        <h4>Design Responsivo</h4>
+                        <p>Seu site perfeito em qualquer dispositivo, transmitindo credibilidade sempre.</p>
+                    </div>
+                </div>
+                <div class="diff-adv-item">
+                    <i class="fas fa-pencil-alt"></i>
+                    <div>
+                        <h4>Conteúdo Estratégico</h4>
+                        <p>Textos que demonstram autoridade e conquistam a confiança dos clientes.</p>
+                    </div>
+                </div>
+                <div class="diff-adv-item">
+                    <i class="fas fa-heart"></i>
+                    <div>
+                        <h4>Identidade Sóbria</h4>
+                        <p>Design que transmite seriedade, confiança e profissionalismo jurídico.</p>
+                    </div>
+                </div>
+                <div class="diff-adv-item">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h4>Alta Conversão</h4>
+                        <p>Layout otimizado para transformar visitantes em clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><i class="fas fa-scale-balanced"></i> SuaLogo Advocacia</h4>
+                    <p>Excelência jurídica com resultados.</p>
+                    <div class="social">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Áreas</h4>
+                    <a href="#">Direito Civil</a>
+                    <a href="#">Direito Trabalhista</a>
+                    <a href="#">Direito Empresarial</a>
+                    <a href="#">Direito de Família</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <a href="#areas">Áreas</a>
+                    <a href="#diferenciais">Diferenciais</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone-alt"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@suamarca.com</p>
+                    <p><i class="fas fa-map-pin"></i> Seu endereço, cidade</p>
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 SuaLogo Advocacia · Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5543996432679" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.getElementById('hamburgerBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica de Estética · Sua Marca Aqui</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+        body {
+            background: #faf7f8;
+            color: #2d2a3e;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* HEADER */
+        .navbar {
+            background: #fff;
+            padding: 16px 0;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.04);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #2d2a3e;
+        }
+        .logo i {
+            color: #c47b8e;
+            font-size: 2.2rem;
+        }
+        .logo span {
+            font-weight: 300;
+            color: #c47b8e;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #2d2a3e;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: #c47b8e;
+        }
+        .nav-cta {
+            background: #c47b8e;
+            color: #fff !important;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+        .nav-cta:hover {
+            background: #a86278 !important;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #2d2a3e;
+            border-radius: 4px;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 80px 0 100px;
+            background: linear-gradient(135deg, #f8eff1 0%, #ffffff 70%);
+            position: relative;
+        }
+        .hero::before {
+            content: '🌸';
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+            font-size: 200px;
+            opacity: 0.05;
+        }
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-text .badge {
+            background: #eedde1;
+            color: #c47b8e;
+            padding: 6px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .hero-text h1 {
+            font-size: 3.6rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #2d2a3e;
+        }
+        .hero-text h1 span {
+            color: #c47b8e;
+            border-bottom: 4px solid #e6cdd4;
+            display: inline-block;
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #5a4e6e;
+            max-width: 500px;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        .hero-image {
+            flex: 1;
+            background: #eedde1;
+            border-radius: 100px 30px 100px 30px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 40px 60px -30px rgba(196, 123, 142, 0.15);
+        }
+        .hero-image i {
+            font-size: 10rem;
+            color: #c47b8e;
+        }
+        .hero-image p {
+            background: #fff;
+            padding: 12px 24px;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-weight: 600;
+            color: #2d2a3e;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: #c47b8e;
+            color: #fff;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            box-shadow: 0 15px 30px -10px rgba(196, 123, 142, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px -10px rgba(196, 123, 142, 0.4);
+            background: #a86278;
+        }
+        .btn-secondary {
+            background: transparent;
+            color: #c47b8e;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 2px solid #c47b8e;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .btn-secondary:hover {
+            background: #c47b8e;
+            color: #fff;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* TRATAMENTOS */
+        .tratamentos {
+            padding: 80px 0;
+            background: #fff;
+        }
+        .tratamentos-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .tratamentos-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #2d2a3e;
+        }
+        .tratamentos-header h2 span {
+            color: #c47b8e;
+        }
+        .tratamentos-header p {
+            color: #5a4e6e;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+        .tratamentos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .tratamento-card {
+            background: #faf7f8;
+            padding: 40px 30px;
+            border-radius: 30px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #f0e8f0;
+        }
+        .tratamento-card:hover {
+            transform: translateY(-10px);
+            border-color: #c47b8e;
+            box-shadow: 0 20px 40px -15px rgba(196, 123, 142, 0.1);
+        }
+        .tratamento-card .icon {
+            width: 80px;
+            height: 80px;
+            background: #f8eff1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5rem;
+            color: #c47b8e;
+        }
+        .tratamento-card h3 {
+            font-size: 1.3rem;
+            color: #2d2a3e;
+            margin-bottom: 10px;
+        }
+        .tratamento-card p {
+            color: #5a4e6e;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* DIFERENCIAIS */
+        .diff-est {
+            padding: 80px 0;
+            background: #faf7f8;
+        }
+        .diff-est h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #2d2a3e;
+            margin-bottom: 50px;
+        }
+        .diff-est h2 span {
+            color: #c47b8e;
+        }
+        .diff-est-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .diff-est-item {
+            background: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 20px;
+            transition: 0.3s;
+            border: 1px solid #f0e8f0;
+        }
+        .diff-est-item:hover {
+            transform: translateY(-5px);
+            border-color: #c47b8e;
+        }
+        .diff-est-item i {
+            font-size: 2.8rem;
+            color: #c47b8e;
+            margin-bottom: 15px;
+        }
+        .diff-est-item h4 {
+            font-size: 1.2rem;
+            color: #2d2a3e;
+            margin-bottom: 8px;
+        }
+        .diff-est-item p {
+            color: #5a4e6e;
+            font-size: 0.95rem;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #2d2a3e;
+            color: #c4b8cc;
+            padding: 50px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 18px;
+        }
+        .footer-col p,
+        .footer-col a {
+            color: #c4b8cc;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            transition: 0.2s;
+        }
+        .footer-col a:hover {
+            color: #eedde1;
+        }
+        .footer-col .social i {
+            font-size: 1.8rem;
+            margin-right: 15px;
+            color: #c4b8cc;
+            transition: 0.2s;
+        }
+        .footer-col .social i:hover {
+            color: #eedde1;
+        }
+        .footer-copy {
+            border-top: 1px solid #4d3f5a;
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: #fff;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+            transition: 0.3s;
+            z-index: 1000;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .tratamentos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .diff-est-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            .nav-links {
+                position: absolute;
+                top: 74px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                flex-direction: column;
+                padding: 30px;
+                gap: 20px;
+                transform: translateY(-200%);
+                transition: 0.3s;
+                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+            }
+            .nav-links.open {
+                transform: translateY(0);
+            }
+            .hero-grid {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text p {
+                max-width: 100%;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+            .tratamentos-grid {
+                grid-template-columns: 1fr;
+            }
+            .diff-est-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 2.3rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            .tratamentos-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-spa"></i> SuaLogo <span>ESTÉTICA</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#tratamentos">Tratamentos</a></li>
+                <li><a href="#diferenciais">Diferenciais</a></li>
+                <li><a href="#contato" class="nav-cta"><i class="fas fa-calendar-check"></i> Agende</a></li>
+            </ul>
+            <button class="hamburger" id="hamburgerBtn">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="badge"><i class="fas fa-star"></i> Beleza e bem-estar</span>
+                <h1>Descubra sua <span>melhor versão</span> com a gente</h1>
+                <p>Transforme sua clínica de estética com um site sofisticado que atrai clientes e transmite excelência.</p>
+                <div class="hero-actions">
+                    <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Quero meu site</a>
+                    <a href="#" class="btn-secondary"><i class="fas fa-play-circle"></i> Ver cases</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-hand-spa"></i>
+                <p><i class="fas fa-quote-left"></i> Sua beleza, nossa paixão</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tratamentos" id="tratamentos">
+        <div class="container">
+            <div class="tratamentos-header">
+                <h2>Nossos <span>tratamentos</span></h2>
+                <p>Procedimentos de alta qualidade para realçar sua beleza</p>
+            </div>
+            <div class="tratamentos-grid">
+                <div class="tratamento-card">
+                    <div class="icon"><i class="fas fa-face-smile"></i></div>
+                    <h3>Lifting Facial</h3>
+                    <p>Rejuvenescimento natural com técnicas avançadas e seguras.</p>
+                </div>
+                <div class="tratamento-card">
+                    <div class="icon"><i class="fas fa-hand-sparkles"></i></div>
+                    <h3>Limpeza de Pele</h3>
+                    <p>Renovação profunda para uma pele mais saudável e radiante.</p>
+                </div>
+                <div class="tratamento-card">
+                    <div class="icon"><i class="fas fa-wind"></i></div>
+                    <h3>Massagem Terapêutica</h3>
+                    <p>Relaxamento e alívio de tensões com técnicas especializadas.</p>
+                </div>
+                <div class="tratamento-card">
+                    <div class="icon"><i class="fas fa-sun"></i></div>
+                    <h3>Tratamento Capilar</h3>
+                    <p>Recuperação e fortalecimento para cabelos saudáveis e bonitos.</p>
+                </div>
+                <div class="tratamento-card">
+                    <div class="icon"><i class="fas fa-weight-scale"></i></div>
+                    <h3>Estética Corporal</h3>
+                    <p>Modelagem e definição corporal com procedimentos de ponta.</p>
+                </div>
+                <div class="tratamento-card">
+                    <div class="icon"><i class="fas fa-water"></i></div>
+                    <h3>Hidratação Profunda</h3>
+                    <p>Tratamento intensivo para uma pele hidratada e viçosa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="diff-est" id="diferenciais">
+        <div class="container">
+            <h2>Diferenciais do seu <span>site estético</span></h2>
+            <div class="diff-est-grid">
+                <div class="diff-est-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Responsivo</h4>
+                    <p>Perfeito em qualquer dispositivo</p>
+                </div>
+                <div class="diff-est-item">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h4>Copy Sofisticada</h4>
+                    <p>Textos elegantes que cativam</p>
+                </div>
+                <div class="diff-est-item">
+                    <i class="fas fa-heart"></i>
+                    <h4>Design Premium</h4>
+                    <p>Layout que transmite luxo e cuidado</p>
+                </div>
+                <div class="diff-est-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Alta Conversão</h4>
+                    <p>Otimizado para agendamentos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><i class="fas fa-spa"></i> SuaLogo Estética</h4>
+                    <p>Beleza e bem-estar com excelência.</p>
+                    <div class="social">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Tratamentos</h4>
+                    <a href="#">Lifting</a>
+                    <a href="#">Limpeza de Pele</a>
+                    <a href="#">Massagem</a>
+                    <a href="#">Estética Corporal</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <a href="#tratamentos">Tratamentos</a>
+                    <a href="#diferenciais">Diferenciais</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone-alt"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@suamarca.com</p>
+                    <p><i class="fas fa-map-pin"></i> Seu endereço, cidade</p>
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 SuaLogo Estética · Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5543996432679" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.getElementById('hamburgerBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>
