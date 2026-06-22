@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psicologia · Sua Marca Aqui</title>
+    <title>Consultório de Psicologia · Sua Marca Aqui</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -15,21 +15,78 @@
         body {
             background: #faf7f8;
             color: #2d2a3e;
+            line-height: 1.6;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
+        .section-title {
+            font-size: 2.6rem;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+            color: #2d2a3e;
+        }
+        .section-sub {
+            color: #7a6b82;
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+        .btn-primary {
+            background: #b088b0;
+            color: #fff;
+            border: none;
+            padding: 16px 42px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 8px 24px -8px rgba(176, 136, 176, 0.3);
+            letter-spacing: 0.5px;
+        }
+        .btn-primary:hover {
+            background: #8f6d8f;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px -10px rgba(176, 136, 176, 0.4);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #b088b0;
+            border: 1.5px solid #b088b0;
+            padding: 14px 36px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .btn-outline:hover {
+            background: #b088b0;
+            color: #fff;
+        }
 
         /* HEADER */
         .navbar {
             background: #ffffff;
             padding: 16px 0;
-            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.02);
             position: sticky;
             top: 0;
             z-index: 999;
+            border-bottom: 1px solid #f0e8f0;
         }
         .navbar .container {
             display: flex;
@@ -41,17 +98,18 @@
             align-items: center;
             gap: 10px;
             font-size: 1.6rem;
-            font-weight: 700;
+            font-weight: 600;
             color: #2d2a3e;
+            letter-spacing: -0.5px;
         }
         .logo i {
             color: #b088b0;
-            font-size: 2.2rem;
+            font-size: 2rem;
         }
         .logo span {
             font-weight: 300;
             color: #b088b0;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             letter-spacing: 2px;
         }
         .nav-links {
@@ -63,9 +121,10 @@
         .nav-links a {
             text-decoration: none;
             color: #2d2a3e;
-            font-weight: 500;
+            font-weight: 400;
             font-size: 0.95rem;
             transition: 0.2s;
+            letter-spacing: 0.3px;
         }
         .nav-links a:hover {
             color: #b088b0;
@@ -74,8 +133,8 @@
             background: #b088b0;
             color: #fff !important;
             padding: 10px 28px;
-            border-radius: 50px;
-            font-weight: 600;
+            border-radius: 40px;
+            font-weight: 500;
         }
         .nav-cta:hover {
             background: #8f6d8f !important;
@@ -91,9 +150,10 @@
         }
         .hamburger span {
             width: 28px;
-            height: 3px;
+            height: 2px;
             background: #2d2a3e;
             border-radius: 4px;
+            transition: 0.3s;
         }
 
         /* HERO */
@@ -105,10 +165,10 @@
         .hero::before {
             content: '🧠';
             position: absolute;
-            right: 0;
-            bottom: 0;
+            right: 20px;
+            bottom: 20px;
             font-size: 250px;
-            opacity: 0.04;
+            opacity: 0.03;
         }
         .hero-grid {
             display: flex;
@@ -116,36 +176,39 @@
             gap: 60px;
         }
         .hero-text {
-            flex: 1;
+            flex: 1.2;
         }
         .hero-text .badge {
             background: #ede0ed;
             color: #7b5f7b;
             padding: 6px 22px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.85rem;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.8rem;
             display: inline-block;
             margin-bottom: 20px;
+            letter-spacing: 1px;
         }
         .hero-text h1 {
             font-size: 3.6rem;
-            font-weight: 700;
+            font-weight: 300;
             line-height: 1.1;
             margin-bottom: 1.5rem;
             color: #2d2a3e;
         }
         .hero-text h1 span {
             color: #b088b0;
-            border-bottom: 4px solid #e6d6e6;
+            font-weight: 500;
+            border-bottom: 3px solid #e6d6e6;
             display: inline-block;
         }
         .hero-text p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: #5a4e6e;
             max-width: 500px;
             margin-bottom: 2rem;
             line-height: 1.8;
+            font-weight: 300;
         }
         .hero-image {
             flex: 1;
@@ -153,87 +216,90 @@
             border-radius: 100px 30px 100px 30px;
             padding: 40px;
             text-align: center;
+            box-shadow: 0 40px 60px -30px rgba(176, 136, 176, 0.1);
         }
         .hero-image i {
-            font-size: 10rem;
+            font-size: 9rem;
             color: #b088b0;
         }
         .hero-image p {
             background: #fff;
-            padding: 12px 24px;
-            border-radius: 50px;
+            padding: 10px 24px;
+            border-radius: 40px;
             margin-top: 20px;
-            font-weight: 500;
+            font-weight: 400;
             color: #2d2a3e;
             display: inline-block;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
         }
-        .btn-primary {
-            background: #b088b0;
-            color: #fff;
-            padding: 16px 40px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            box-shadow: 0 15px 30px -10px rgba(176, 136, 176, 0.3);
+
+        /* SOBRE */
+        .sobre {
+            padding: 80px 0;
+            background: #fff;
         }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px -10px rgba(176, 136, 176, 0.4);
-            background: #8f6d8f;
-        }
-        .btn-secondary {
-            background: transparent;
-            color: #b088b0;
-            padding: 14px 36px;
-            border-radius: 50px;
-            font-weight: 600;
-            border: 2px solid #b088b0;
-            cursor: pointer;
-            transition: 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-        .btn-secondary:hover {
-            background: #b088b0;
-            color: #fff;
-        }
-        .hero-actions {
+        .sobre-grid {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 60px;
+        }
+        .sobre-text {
+            flex: 1;
+        }
+        .sobre-text h2 {
+            font-size: 2.6rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: #2d2a3e;
+        }
+        .sobre-text h2 span {
+            color: #b088b0;
+            font-weight: 500;
+        }
+        .sobre-text p {
+            color: #5a4e6e;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+        .sobre-image {
+            flex: 1;
+            background: #f5edf5;
+            border-radius: 40px 100px 40px 100px;
+            padding: 40px;
+            text-align: center;
+        }
+        .sobre-image i {
+            font-size: 8rem;
+            color: #b088b0;
         }
 
         /* ABORDAGENS */
         .abordagens {
             padding: 80px 0;
-            background: #fff;
+            background: #faf7f8;
         }
         .abordagens-header {
             text-align: center;
             margin-bottom: 50px;
         }
         .abordagens-header h2 {
-            font-size: 2.8rem;
-            font-weight: 700;
+            font-size: 2.6rem;
+            font-weight: 300;
             color: #2d2a3e;
         }
         .abordagens-header h2 span {
             color: #b088b0;
+            font-weight: 500;
         }
         .abordagens-header p {
-            color: #5a4e6e;
+            color: #7a6b82;
             font-size: 1.1rem;
             max-width: 600px;
             margin: 10px auto 0;
+            font-weight: 300;
         }
         .abordagens-grid {
             display: grid;
@@ -241,7 +307,7 @@
             gap: 30px;
         }
         .abordagem-card {
-            background: #faf7f8;
+            background: #fff;
             padding: 40px 30px;
             border-radius: 30px;
             text-align: center;
@@ -249,98 +315,171 @@
             border: 1px solid #f0e8f0;
         }
         .abordagem-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px -15px rgba(176, 136, 176, 0.15);
+            transform: translateY(-8px);
             border-color: #b088b0;
+            box-shadow: 0 20px 40px -15px rgba(176, 136, 176, 0.08);
         }
         .abordagem-card .icon {
-            width: 80px;
-            height: 80px;
-            background: #ede0ed;
+            width: 70px;
+            height: 70px;
+            background: #f5edf5;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #b088b0;
         }
         .abordagem-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            font-weight: 500;
             color: #2d2a3e;
             margin-bottom: 10px;
         }
         .abordagem-card p {
-            color: #5a4e6e;
+            color: #7a6b82;
             font-size: 0.95rem;
             line-height: 1.6;
+            font-weight: 300;
         }
 
-        /* BANNER CALMA */
-        .banner-calma {
-            background: linear-gradient(135deg, #ede0ed 0%, #d9c8d9 100%);
-            padding: 60px 0;
-            text-align: center;
-        }
-        .banner-calma h2 {
-            font-size: 2.5rem;
-            color: #2d2a3e;
-            max-width: 700px;
-            margin: 0 auto 15px;
-        }
-        .banner-calma p {
-            color: #4d3f5a;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
-        /* DIFERENCIAIS PSICOLOGIA */
-        .diff-psi {
+        /* DEPOIMENTOS */
+        .depoimentos {
             padding: 80px 0;
-            background: #faf7f8;
+            background: #fff;
         }
-        .diff-psi h2 {
+        .depoimentos h2 {
             text-align: center;
-            font-size: 2.8rem;
+            font-size: 2.6rem;
+            font-weight: 300;
             color: #2d2a3e;
             margin-bottom: 50px;
         }
-        .diff-psi h2 span {
+        .depoimentos h2 span {
             color: #b088b0;
+            font-weight: 500;
         }
-        .diff-psi-grid {
+        .depoimentos-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
-        .diff-psi-item {
-            background: #fff;
+        .depoimento-card {
+            background: #faf7f8;
             padding: 30px;
             border-radius: 20px;
+            border: 1px solid #f0e8f0;
+        }
+        .depoimento-card .stars {
+            color: #f5b342;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+        .depoimento-card p {
+            color: #2d2a3e;
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        .depoimento-card .author {
             display: flex;
-            gap: 20px;
-            align-items: flex-start;
+            align-items: center;
+            gap: 12px;
+        }
+        .depoimento-card .author .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ede0ed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 400;
+            color: #b088b0;
+            font-size: 0.8rem;
+        }
+        .depoimento-card .author .name {
+            font-weight: 500;
+            color: #2d2a3e;
+        }
+        .depoimento-card .author .role {
+            font-size: 0.8rem;
+            color: #7a6b82;
+            font-weight: 300;
+        }
+
+        /* BLOG */
+        .blog {
+            padding: 80px 0;
+            background: #faf7f8;
+        }
+        .blog h2 {
+            text-align: center;
+            font-size: 2.6rem;
+            font-weight: 300;
+            color: #2d2a3e;
+            margin-bottom: 50px;
+        }
+        .blog h2 span {
+            color: #b088b0;
+            font-weight: 500;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .blog-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
             border: 1px solid #f0e8f0;
             transition: 0.3s;
         }
-        .diff-psi-item:hover {
-            border-color: #b088b0;
-            transform: translateX(5px);
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -15px rgba(176, 136, 176, 0.08);
         }
-        .diff-psi-item i {
-            font-size: 2.2rem;
+        .blog-card .img-placeholder {
+            height: 180px;
+            background: #ede0ed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
             color: #b088b0;
-            min-width: 50px;
         }
-        .diff-psi-item h4 {
-            font-size: 1.2rem;
+        .blog-card .info {
+            padding: 25px;
+        }
+        .blog-card .info .tag {
+            font-size: 0.7rem;
+            color: #b088b0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        .blog-card .info h4 {
+            font-size: 1.1rem;
+            font-weight: 500;
             color: #2d2a3e;
-            margin-bottom: 5px;
+            margin: 8px 0;
         }
-        .diff-psi-item p {
-            color: #5a4e6e;
+        .blog-card .info p {
+            color: #7a6b82;
+            font-size: 0.9rem;
+            font-weight: 300;
             line-height: 1.6;
+        }
+        .blog-card .info a {
+            color: #b088b0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: inline-block;
         }
 
         /* FOOTER */
@@ -357,7 +496,9 @@
         }
         .footer-col h4 {
             color: #ede0ed;
+            font-weight: 400;
             margin-bottom: 18px;
+            font-size: 1rem;
         }
         .footer-col p,
         .footer-col a {
@@ -366,12 +507,14 @@
             display: block;
             margin: 8px 0;
             transition: 0.2s;
+            font-weight: 300;
+            font-size: 0.95rem;
         }
         .footer-col a:hover {
             color: #ede0ed;
         }
         .footer-col .social i {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin-right: 15px;
             color: #c4b8cc;
             transition: 0.2s;
@@ -383,7 +526,8 @@
             border-top: 1px solid #4d3f5a;
             padding-top: 25px;
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            font-weight: 300;
         }
 
         .whatsapp-float {
@@ -392,21 +536,21 @@
             right: 30px;
             background: #25d366;
             color: #fff;
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.8rem;
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+            font-size: 2.5rem;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
             transition: 0.3s;
             z-index: 1000;
             text-decoration: none;
             animation: pulse 2s infinite;
         }
         .whatsapp-float:hover {
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
         @keyframes pulse {
             0% {
@@ -421,7 +565,9 @@
         }
 
         @media (max-width: 992px) {
-            .abordagens-grid {
+            .abordagens-grid,
+            .depoimentos-grid,
+            .blog-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .footer-grid {
@@ -443,28 +589,26 @@
                 gap: 20px;
                 transform: translateY(-200%);
                 transition: 0.3s;
-                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.02);
+                border-bottom: 1px solid #f0e8f0;
             }
             .nav-links.open {
                 transform: translateY(0);
             }
-            .hero-grid {
+            .hero-grid,
+            .sobre-grid {
                 flex-direction: column;
                 text-align: center;
             }
             .hero-text p {
                 max-width: 100%;
             }
-            .hero-actions {
-                justify-content: center;
-            }
             .hero-text h1 {
                 font-size: 2.8rem;
             }
-            .abordagens-grid {
-                grid-template-columns: 1fr;
-            }
-            .diff-psi-grid {
+            .abordagens-grid,
+            .depoimentos-grid,
+            .blog-grid {
                 grid-template-columns: 1fr;
             }
             .footer-grid {
@@ -474,7 +618,7 @@
             .whatsapp-float {
                 width: 55px;
                 height: 55px;
-                font-size: 2.3rem;
+                font-size: 2.2rem;
                 bottom: 20px;
                 right: 20px;
             }
@@ -483,7 +627,7 @@
             .hero-text h1 {
                 font-size: 2.2rem;
             }
-            .abordagens-header h2 {
+            .section-title {
                 font-size: 2rem;
             }
         }
@@ -493,11 +637,13 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <i class="fas fa-brain"></i> SuaLogo <span>Psicologia</span>
+                <i class="fas fa-brain"></i> SuaLogo <span>PSICOLOGIA</span>
             </div>
             <ul class="nav-links" id="navLinks">
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#abordagens">Abordagens</a></li>
-                <li><a href="#diferenciais">Diferenciais</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contato" class="nav-cta"><i class="fas fa-calendar-check"></i> Agende</a></li>
             </ul>
             <button class="hamburger" id="hamburgerBtn">
@@ -511,15 +657,29 @@
             <div class="hero-text">
                 <span class="badge"><i class="fas fa-heart"></i> Cuidado com a mente</span>
                 <h1>Sua jornada de <span>autoconhecimento</span> começa aqui</h1>
-                <p>Transforme sua clínica de psicologia com um site acolhedor e profissional. Atraia pacientes e transmita confiança.</p>
+                <p>Um espaço acolhedor para cuidar da sua saúde mental, com profissionais preparados para ouvir e acolher suas emoções.</p>
                 <div class="hero-actions">
-                    <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Quero meu site</a>
-                    <a href="#" class="btn-secondary"><i class="fas fa-play-circle"></i> Ver cases</a>
+                    <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Agende uma sessão</a>
+                    <a href="#" class="btn-outline"><i class="fas fa-play-circle"></i> Conheça nossas abordagens</a>
                 </div>
             </div>
             <div class="hero-image">
                 <i class="fas fa-hand-holding-heart"></i>
                 <p><i class="fas fa-quote-left"></i> Seu espaço de acolhimento</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="container sobre-grid">
+            <div class="sobre-image">
+                <i class="fas fa-leaf"></i>
+            </div>
+            <div class="sobre-text">
+                <h2><span>Sobre</span> o Consultório</h2>
+                <p>Com mais de 10 anos de experiência, nosso consultório oferece um espaço seguro e acolhedor para quem busca autoconhecimento e bem-estar emocional.</p>
+                <p>Nossa abordagem é humanizada e personalizada, respeitando a individualidade de cada paciente em sua jornada de crescimento.</p>
+                <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Conheça nossa história</a>
             </div>
         </div>
     </section>
@@ -565,44 +725,76 @@
         </div>
     </section>
 
-    <section class="banner-calma">
+    <section class="depoimentos" id="depoimentos">
         <div class="container">
-            <h2>🌟 Um site que transmite acolhimento desde o primeiro clique</h2>
-            <p>Design suave, cores que transmitem calma e uma experiência que faz o paciente se sentir seguro.</p>
-            <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Quero um site assim</a>
+            <h2>O que nossos <span>pacientes</span> dizem</h2>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"A terapia mudou minha vida. Me sinto mais leve, mais consciente e mais feliz. A psicóloga é incrível!"</p>
+                    <div class="author">
+                        <div class="avatar">MR</div>
+                        <div>
+                            <div class="name">Mariana R.</div>
+                            <div class="role">Paciente</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"O atendimento é muito acolhedor e humanizado. Me sinto segura para falar sobre tudo."</p>
+                    <div class="author">
+                        <div class="avatar">CS</div>
+                        <div>
+                            <div class="name">Carla S.</div>
+                            <div class="role">Paciente</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Excelente profissional! Me ajudou a entender e lidar com minhas emoções de uma forma que eu nunca consegui sozinho."</p>
+                    <div class="author">
+                        <div class="avatar">AL</div>
+                        <div>
+                            <div class="name">Ana L.</div>
+                            <div class="role">Paciente</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="diff-psi" id="diferenciais">
+    <section class="blog" id="blog">
         <div class="container">
-            <h2>Diferenciais do seu <span>site psicológico</span></h2>
-            <div class="diff-psi-grid">
-                <div class="diff-psi-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <div>
-                        <h4>Design Acolhedor</h4>
-                        <p>Paleta de cores suaves e elementos que transmitem tranquilidade e confiança.</p>
+            <h2>Dicas e <span>novidades</span></h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="img-placeholder"><i class="fas fa-newspaper"></i></div>
+                    <div class="info">
+                        <span class="tag">Bem-estar</span>
+                        <h4>5 hábitos para cuidar da saúde mental</h4>
+                        <p>Pequenas mudanças que podem transformar seu bem-estar emocional.</p>
+                        <a href="#">Leia mais →</a>
                     </div>
                 </div>
-                <div class="diff-psi-item">
-                    <i class="fas fa-pencil-alt"></i>
-                    <div>
-                        <h4>Texto Empático</h4>
-                        <p>Linguagem que acolhe, respeita e demonstra compreensão das necessidades do paciente.</p>
+                <div class="blog-card">
+                    <div class="img-placeholder"><i class="fas fa-newspaper"></i></div>
+                    <div class="info">
+                        <span class="tag">Autoconhecimento</span>
+                        <h4>A importância da terapia na vida moderna</h4>
+                        <p>Como a psicoterapia pode ajudar a lidar com os desafios do dia a dia.</p>
+                        <a href="#">Leia mais →</a>
                     </div>
                 </div>
-                <div class="diff-psi-item">
-                    <i class="fas fa-heart"></i>
-                    <div>
-                        <h4>Identidade Sensível</h4>
-                        <p>Design que reflete o cuidado e a atenção que você dedica a cada paciente.</p>
-                    </div>
-                </div>
-                <div class="diff-psi-item">
-                    <i class="fas fa-chart-line"></i>
-                    <div>
-                        <h4>Alta Conversão</h4>
-                        <p>Layout otimizado para agendamentos, com chamadas claras para ação.</p>
+                <div class="blog-card">
+                    <div class="img-placeholder"><i class="fas fa-newspaper"></i></div>
+                    <div class="info">
+                        <span class="tag">Relacionamentos</span>
+                        <h4>Terapia de casal: quando procurar?</h4>
+                        <p>Entenda os sinais de que a terapia pode fortalecer seu relacionamento.</p>
+                        <a href="#">Leia mais →</a>
                     </div>
                 </div>
             </div>
@@ -630,8 +822,10 @@
                 </div>
                 <div class="footer-col">
                     <h4>Links</h4>
+                    <a href="#sobre">Sobre</a>
                     <a href="#abordagens">Abordagens</a>
-                    <a href="#diferenciais">Diferenciais</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                    <a href="#blog">Blog</a>
                 </div>
                 <div class="footer-col">
                     <h4>Contato</h4>

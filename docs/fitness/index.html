@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness · Sua Marca Aqui</title>
+    <title>Academia · Sua Marca Aqui</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -15,21 +15,78 @@
         body {
             background: #0d0d0d;
             color: #f0f0f0;
+            line-height: 1.6;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
+        .section-title {
+            font-size: 2.6rem;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        .section-sub {
+            color: #aaa;
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+        .btn-primary {
+            background: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 16px 42px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 8px 24px -8px rgba(231, 76, 60, 0.3);
+            letter-spacing: 0.5px;
+        }
+        .btn-primary:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px -10px rgba(231, 76, 60, 0.4);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #e74c3c;
+            border: 1.5px solid #e74c3c;
+            padding: 14px 36px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .btn-outline:hover {
+            background: #e74c3c;
+            color: #fff;
+        }
 
         /* HEADER */
         .navbar {
             background: rgba(13, 13, 13, 0.95);
-            padding: 14px 0;
+            padding: 16px 0;
             position: sticky;
             top: 0;
             z-index: 999;
             backdrop-filter: blur(8px);
+            border-bottom: 1px solid #2a2a2a;
         }
         .navbar .container {
             display: flex;
@@ -41,8 +98,9 @@
             align-items: center;
             gap: 10px;
             font-size: 1.6rem;
-            font-weight: 700;
+            font-weight: 600;
             color: #fff;
+            letter-spacing: -0.5px;
         }
         .logo i {
             color: #e74c3c;
@@ -51,21 +109,22 @@
         .logo span {
             font-weight: 300;
             color: #e74c3c;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             letter-spacing: 2px;
         }
         .nav-links {
             display: flex;
-            gap: 35px;
+            gap: 40px;
             list-style: none;
             align-items: center;
         }
         .nav-links a {
-            color: #ccc;
             text-decoration: none;
-            font-weight: 500;
+            color: #cccccc;
+            font-weight: 400;
             font-size: 0.95rem;
             transition: 0.2s;
+            letter-spacing: 0.3px;
         }
         .nav-links a:hover {
             color: #e74c3c;
@@ -74,8 +133,8 @@
             background: #e74c3c;
             color: #fff !important;
             padding: 10px 28px;
-            border-radius: 50px;
-            font-weight: 600;
+            border-radius: 40px;
+            font-weight: 500;
         }
         .nav-cta:hover {
             background: #c0392b !important;
@@ -91,9 +150,10 @@
         }
         .hamburger span {
             width: 28px;
-            height: 3px;
+            height: 2px;
             background: #fff;
             border-radius: 4px;
+            transition: 0.3s;
         }
 
         /* HERO */
@@ -105,9 +165,9 @@
         .hero::before {
             content: '💪';
             position: absolute;
-            right: 50px;
-            bottom: 50px;
-            font-size: 200px;
+            right: 20px;
+            bottom: 20px;
+            font-size: 250px;
             opacity: 0.03;
         }
         .hero-grid {
@@ -116,36 +176,39 @@
             gap: 60px;
         }
         .hero-text {
-            flex: 1;
+            flex: 1.2;
         }
         .hero-text .badge {
             background: #e74c3c;
             color: #fff;
             padding: 6px 22px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.85rem;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.8rem;
             display: inline-block;
             margin-bottom: 20px;
+            letter-spacing: 1px;
         }
         .hero-text h1 {
             font-size: 4rem;
-            font-weight: 700;
+            font-weight: 300;
             line-height: 1.1;
             margin-bottom: 1.5rem;
             color: #fff;
         }
         .hero-text h1 span {
             color: #e74c3c;
-            border-bottom: 4px solid #e74c3c;
+            font-weight: 500;
+            border-bottom: 3px solid #e74c3c;
             display: inline-block;
         }
         .hero-text p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: #aaa;
             max-width: 500px;
             margin-bottom: 2rem;
             line-height: 1.8;
+            font-weight: 300;
         }
         .hero-image {
             flex: 1;
@@ -156,61 +219,64 @@
             border: 1px solid #2a2a2a;
         }
         .hero-image i {
-            font-size: 10rem;
+            font-size: 9rem;
             color: #e74c3c;
         }
         .hero-image p {
             background: #2a2a2a;
-            padding: 12px 24px;
-            border-radius: 50px;
+            padding: 10px 24px;
+            border-radius: 40px;
             margin-top: 20px;
-            font-weight: 600;
+            font-weight: 400;
             color: #fff;
             display: inline-block;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
         }
-        .btn-primary {
-            background: #e74c3c;
-            color: #fff;
-            padding: 16px 40px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            box-shadow: 0 15px 30px -10px rgba(231, 76, 60, 0.3);
+
+        /* SOBRE */
+        .sobre {
+            padding: 80px 0;
+            background: #0d0d0d;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
         }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px -10px rgba(231, 76, 60, 0.4);
-            background: #c0392b;
-        }
-        .btn-secondary {
-            background: transparent;
-            color: #e74c3c;
-            padding: 14px 36px;
-            border-radius: 50px;
-            font-weight: 600;
-            border: 2px solid #e74c3c;
-            cursor: pointer;
-            transition: 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-        .btn-secondary:hover {
-            background: #e74c3c;
-            color: #fff;
-        }
-        .hero-actions {
+        .sobre-grid {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 60px;
+        }
+        .sobre-text {
+            flex: 1;
+        }
+        .sobre-text h2 {
+            font-size: 2.6rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .sobre-text h2 span {
+            color: #e74c3c;
+            font-weight: 500;
+        }
+        .sobre-text p {
+            color: #aaa;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+        .sobre-image {
+            flex: 1;
+            background: #1a1a1a;
+            border-radius: 40px 100px 40px 100px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid #2a2a2a;
+        }
+        .sobre-image i {
+            font-size: 8rem;
+            color: #e74c3c;
         }
 
         /* MODALIDADES */
@@ -223,18 +289,20 @@
             margin-bottom: 50px;
         }
         .modalidades-header h2 {
-            font-size: 2.8rem;
-            font-weight: 700;
+            font-size: 2.6rem;
+            font-weight: 300;
             color: #fff;
         }
         .modalidades-header h2 span {
             color: #e74c3c;
+            font-weight: 500;
         }
         .modalidades-header p {
-            color: #888;
+            color: #aaa;
             font-size: 1.1rem;
             max-width: 600px;
             margin: 10px auto 0;
+            font-weight: 300;
         }
         .modalidades-grid {
             display: grid;
@@ -250,83 +318,179 @@
             border: 1px solid #2a2a2a;
         }
         .modalidade-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             border-color: #e74c3c;
-            box-shadow: 0 20px 40px -15px rgba(231, 76, 60, 0.1);
+            box-shadow: 0 20px 40px -15px rgba(231, 76, 60, 0.08);
         }
         .modalidade-card .icon {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             background: #2a1a1a;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #e74c3c;
         }
         .modalidade-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            font-weight: 500;
             color: #fff;
             margin-bottom: 10px;
         }
         .modalidade-card p {
-            color: #888;
+            color: #aaa;
             font-size: 0.95rem;
             line-height: 1.6;
+            font-weight: 300;
         }
 
-        /* DIFERENCIAIS */
-        .diff-fit {
+        /* DEPOIMENTOS */
+        .depoimentos {
             padding: 80px 0;
-            background: #1a1a1a;
+            background: #0d0d0d;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
         }
-        .diff-fit h2 {
+        .depoimentos h2 {
             text-align: center;
-            font-size: 2.8rem;
+            font-size: 2.6rem;
+            font-weight: 300;
             color: #fff;
             margin-bottom: 50px;
         }
-        .diff-fit h2 span {
+        .depoimentos h2 span {
             color: #e74c3c;
+            font-weight: 500;
         }
-        .diff-fit-grid {
+        .depoimentos-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
-        .diff-fit-item {
-            background: #0d0d0d;
-            padding: 30px 20px;
-            text-align: center;
-            border-radius: 16px;
-            transition: 0.3s;
+        .depoimento-card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 20px;
             border: 1px solid #2a2a2a;
         }
-        .diff-fit-item:hover {
-            transform: translateY(-5px);
-            border-color: #e74c3c;
+        .depoimento-card .stars {
+            color: #f5b342;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
         }
-        .diff-fit-item i {
-            font-size: 2.8rem;
-            color: #e74c3c;
+        .depoimento-card p {
+            color: #ddd;
+            font-style: italic;
+            line-height: 1.7;
             margin-bottom: 15px;
+            font-weight: 300;
         }
-        .diff-fit-item h4 {
-            font-size: 1.2rem;
+        .depoimento-card .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .depoimento-card .author .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #2a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 400;
+            color: #e74c3c;
+            font-size: 0.8rem;
+        }
+        .depoimento-card .author .name {
+            font-weight: 500;
             color: #fff;
-            margin-bottom: 8px;
         }
-        .diff-fit-item p {
-            color: #888;
-            font-size: 0.95rem;
+        .depoimento-card .author .role {
+            font-size: 0.8rem;
+            color: #aaa;
+            font-weight: 300;
+        }
+
+        /* BLOG */
+        .blog {
+            padding: 80px 0;
+            background: #0d0d0d;
+        }
+        .blog h2 {
+            text-align: center;
+            font-size: 2.6rem;
+            font-weight: 300;
+            color: #fff;
+            margin-bottom: 50px;
+        }
+        .blog h2 span {
+            color: #e74c3c;
+            font-weight: 500;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .blog-card {
+            background: #1a1a1a;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
+            transition: 0.3s;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -15px rgba(231, 76, 60, 0.08);
+        }
+        .blog-card .img-placeholder {
+            height: 180px;
+            background: #2a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #e74c3c;
+        }
+        .blog-card .info {
+            padding: 25px;
+        }
+        .blog-card .info .tag {
+            font-size: 0.7rem;
+            color: #e74c3c;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        .blog-card .info h4 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #fff;
+            margin: 8px 0;
+        }
+        .blog-card .info p {
+            color: #aaa;
+            font-size: 0.9rem;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        .blog-card .info a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: inline-block;
         }
 
         /* FOOTER */
         .footer {
             background: #0d0d0d;
-            color: #888;
+            color: #aaa;
             padding: 50px 0 30px;
             border-top: 1px solid #2a2a2a;
         }
@@ -338,7 +502,9 @@
         }
         .footer-col h4 {
             color: #fff;
+            font-weight: 400;
             margin-bottom: 18px;
+            font-size: 1rem;
         }
         .footer-col p,
         .footer-col a {
@@ -347,12 +513,14 @@
             display: block;
             margin: 8px 0;
             transition: 0.2s;
+            font-weight: 300;
+            font-size: 0.95rem;
         }
         .footer-col a:hover {
             color: #e74c3c;
         }
         .footer-col .social i {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin-right: 15px;
             color: #888;
             transition: 0.2s;
@@ -364,7 +532,8 @@
             border-top: 1px solid #2a2a2a;
             padding-top: 25px;
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            font-weight: 300;
         }
 
         .whatsapp-float {
@@ -373,21 +542,21 @@
             right: 30px;
             background: #25d366;
             color: #fff;
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.8rem;
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+            font-size: 2.5rem;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
             transition: 0.3s;
             z-index: 1000;
             text-decoration: none;
             animation: pulse 2s infinite;
         }
         .whatsapp-float:hover {
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
         @keyframes pulse {
             0% {
@@ -402,10 +571,9 @@
         }
 
         @media (max-width: 992px) {
-            .modalidades-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .diff-fit-grid {
+            .modalidades-grid,
+            .depoimentos-grid,
+            .blog-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .footer-grid {
@@ -432,23 +600,20 @@
             .nav-links.open {
                 transform: translateY(0);
             }
-            .hero-grid {
+            .hero-grid,
+            .sobre-grid {
                 flex-direction: column;
                 text-align: center;
             }
             .hero-text p {
                 max-width: 100%;
             }
-            .hero-actions {
-                justify-content: center;
-            }
             .hero-text h1 {
                 font-size: 2.8rem;
             }
-            .modalidades-grid {
-                grid-template-columns: 1fr;
-            }
-            .diff-fit-grid {
+            .modalidades-grid,
+            .depoimentos-grid,
+            .blog-grid {
                 grid-template-columns: 1fr;
             }
             .footer-grid {
@@ -458,7 +623,7 @@
             .whatsapp-float {
                 width: 55px;
                 height: 55px;
-                font-size: 2.3rem;
+                font-size: 2.2rem;
                 bottom: 20px;
                 right: 20px;
             }
@@ -467,7 +632,7 @@
             .hero-text h1 {
                 font-size: 2.2rem;
             }
-            .modalidades-header h2 {
+            .section-title {
                 font-size: 2rem;
             }
         }
@@ -480,8 +645,10 @@
                 <i class="fas fa-dumbbell"></i> SuaLogo <span>FITNESS</span>
             </div>
             <ul class="nav-links" id="navLinks">
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#modalidades">Modalidades</a></li>
-                <li><a href="#diferenciais">Diferenciais</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contato" class="nav-cta"><i class="fas fa-calendar-check"></i> Treine</a></li>
             </ul>
             <button class="hamburger" id="hamburgerBtn">
@@ -495,15 +662,29 @@
             <div class="hero-text">
                 <span class="badge"><i class="fas fa-fire"></i> Transformação total</span>
                 <h1>Sua melhor <span>versão</span> começa aqui</h1>
-                <p>Transforme sua academia com um site profissional. Atraia alunos, mostre seus treinos e crie uma comunidade forte.</p>
+                <p>Uma academia completa com estrutura de ponta e profissionais qualificados para ajudar você a alcançar seus objetivos.</p>
                 <div class="hero-actions">
-                    <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Quero meu site</a>
-                    <a href="#" class="btn-secondary"><i class="fas fa-play-circle"></i> Ver cases</a>
+                    <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Agende uma aula experimental</a>
+                    <a href="#" class="btn-outline"><i class="fas fa-play-circle"></i> Conheça nossas modalidades</a>
                 </div>
             </div>
             <div class="hero-image">
                 <i class="fas fa-running"></i>
                 <p><i class="fas fa-quote-left"></i> Sua melhor versão começa aqui</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="container sobre-grid">
+            <div class="sobre-image">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="sobre-text">
+                <h2><span>Sobre</span> a Academia</h2>
+                <p>Com mais de 10 anos de história, nossa academia é referência em treinamento físico na região. Oferecemos estrutura completa e profissionais especializados para ajudar você a alcançar seus objetivos.</p>
+                <p>Nossa missão é transformar vidas através do esporte e da atividade física, com acolhimento e motivação.</p>
+                <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Conheça nossa história</a>
             </div>
         </div>
     </section>
@@ -549,29 +730,77 @@
         </div>
     </section>
 
-    <section class="diff-fit" id="diferenciais">
+    <section class="depoimentos" id="depoimentos">
         <div class="container">
-            <h2>Diferenciais do seu <span>site fitness</span></h2>
-            <div class="diff-fit-grid">
-                <div class="diff-fit-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h4>Responsivo</h4>
-                    <p>Perfeito em qualquer dispositivo</p>
+            <h2>O que nossos <span>alunos</span> dizem</h2>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"A academia mudou minha vida! Perdi 15kg e ganhei muita disposição. Os professores são excelentes."</p>
+                    <div class="author">
+                        <div class="avatar">JR</div>
+                        <div>
+                            <div class="name">João R.</div>
+                            <div class="role">Aluno</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="diff-fit-item">
-                    <i class="fas fa-pencil-alt"></i>
-                    <h4>Copy Motivacional</h4>
-                    <p>Textos que inspiram ação</p>
+                <div class="depoimento-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Ambiente incrível, equipamentos novos e professores muito atenciosos. Melhor academia da região!"</p>
+                    <div class="author">
+                        <div class="avatar">MS</div>
+                        <div>
+                            <div class="name">Maria S.</div>
+                            <div class="role">Aluna</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="diff-fit-item">
-                    <i class="fas fa-heart"></i>
-                    <h4>Design Energético</h4>
-                    <p>Layout que transmite força e resultado</p>
+                <div class="depoimento-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Treino aqui há 3 anos e não troco por nada. Acompanhamento personalizado e resultados reais."</p>
+                    <div class="author">
+                        <div class="avatar">PC</div>
+                        <div>
+                            <div class="name">Paulo C.</div>
+                            <div class="role">Aluno</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="diff-fit-item">
-                    <i class="fas fa-chart-line"></i>
-                    <h4>Alta Conversão</h4>
-                    <p>Otimizado para matrículas e contatos</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog" id="blog">
+        <div class="container">
+            <h2>Dicas e <span>novidades</span></h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="img-placeholder"><i class="fas fa-newspaper"></i></div>
+                    <div class="info">
+                        <span class="tag">Treino</span>
+                        <h4>5 dicas para ganhar massa muscular</h4>
+                        <p>O que fazer para potencializar seus resultados na academia.</p>
+                        <a href="#">Leia mais →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="img-placeholder"><i class="fas fa-newspaper"></i></div>
+                    <div class="info">
+                        <span class="tag">Saúde</span>
+                        <h4>Benefícios da atividade física regular</h4>
+                        <p>Como o exercício transforma corpo e mente.</p>
+                        <a href="#">Leia mais →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="img-placeholder"><i class="fas fa-newspaper"></i></div>
+                    <div class="info">
+                        <span class="tag">Nutrição</span>
+                        <h4>O que comer antes e depois do treino</h4>
+                        <p>Dicas de alimentação para potencializar seus treinos.</p>
+                        <a href="#">Leia mais →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -598,8 +827,10 @@
                 </div>
                 <div class="footer-col">
                     <h4>Links</h4>
+                    <a href="#sobre">Sobre</a>
                     <a href="#modalidades">Modalidades</a>
-                    <a href="#diferenciais">Diferenciais</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                    <a href="#blog">Blog</a>
                 </div>
                 <div class="footer-col">
                     <h4>Contato</h4>
