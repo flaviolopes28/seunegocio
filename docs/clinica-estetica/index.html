@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Clínica de Estética · Sua Marca Aqui</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -13,23 +13,80 @@
             font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
         }
         body {
-            background: #faf7f8;
+            background: #fcf8f9;
             color: #2d2a3e;
+            line-height: 1.6;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
+        .section-title {
+            font-size: 2.6rem;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+            color: #2d2a3e;
+        }
+        .section-sub {
+            color: #7a6b82;
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+        .btn-primary {
+            background: #c47b8e;
+            color: #fff;
+            border: none;
+            padding: 16px 42px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 8px 24px -8px rgba(196, 123, 142, 0.3);
+            letter-spacing: 0.5px;
+        }
+        .btn-primary:hover {
+            background: #a86278;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px -10px rgba(196, 123, 142, 0.4);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #c47b8e;
+            border: 1.5px solid #c47b8e;
+            padding: 14px 36px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .btn-outline:hover {
+            background: #c47b8e;
+            color: #fff;
+        }
 
         /* HEADER */
         .navbar {
-            background: #fff;
+            background: #ffffff;
             padding: 16px 0;
-            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.02);
             position: sticky;
             top: 0;
             z-index: 999;
+            border-bottom: 1px solid #f0e8ec;
         }
         .navbar .container {
             display: flex;
@@ -41,31 +98,33 @@
             align-items: center;
             gap: 10px;
             font-size: 1.6rem;
-            font-weight: 700;
+            font-weight: 600;
             color: #2d2a3e;
+            letter-spacing: -0.5px;
         }
         .logo i {
             color: #c47b8e;
-            font-size: 2.2rem;
+            font-size: 2rem;
         }
         .logo span {
             font-weight: 300;
             color: #c47b8e;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             letter-spacing: 2px;
         }
         .nav-links {
             display: flex;
-            gap: 35px;
+            gap: 40px;
             list-style: none;
             align-items: center;
         }
         .nav-links a {
             text-decoration: none;
             color: #2d2a3e;
-            font-weight: 500;
+            font-weight: 400;
             font-size: 0.95rem;
             transition: 0.2s;
+            letter-spacing: 0.3px;
         }
         .nav-links a:hover {
             color: #c47b8e;
@@ -74,8 +133,8 @@
             background: #c47b8e;
             color: #fff !important;
             padding: 10px 28px;
-            border-radius: 50px;
-            font-weight: 600;
+            border-radius: 40px;
+            font-weight: 500;
         }
         .nav-cta:hover {
             background: #a86278 !important;
@@ -91,9 +150,10 @@
         }
         .hamburger span {
             width: 28px;
-            height: 3px;
+            height: 2px;
             background: #2d2a3e;
             border-radius: 4px;
+            transition: 0.3s;
         }
 
         /* HERO */
@@ -105,10 +165,10 @@
         .hero::before {
             content: '🌸';
             position: absolute;
-            right: 50px;
-            bottom: 50px;
-            font-size: 200px;
-            opacity: 0.05;
+            right: 20px;
+            bottom: 20px;
+            font-size: 250px;
+            opacity: 0.03;
         }
         .hero-grid {
             display: flex;
@@ -116,36 +176,39 @@
             gap: 60px;
         }
         .hero-text {
-            flex: 1;
+            flex: 1.2;
         }
         .hero-text .badge {
             background: #eedde1;
             color: #c47b8e;
             padding: 6px 22px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.85rem;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.8rem;
             display: inline-block;
             margin-bottom: 20px;
+            letter-spacing: 1px;
         }
         .hero-text h1 {
-            font-size: 3.6rem;
-            font-weight: 700;
+            font-size: 3.8rem;
+            font-weight: 300;
             line-height: 1.1;
             margin-bottom: 1.5rem;
             color: #2d2a3e;
         }
         .hero-text h1 span {
             color: #c47b8e;
-            border-bottom: 4px solid #e6cdd4;
+            font-weight: 500;
+            border-bottom: 3px solid #e6cdd4;
             display: inline-block;
         }
         .hero-text p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: #5a4e6e;
             max-width: 500px;
             margin-bottom: 2rem;
             line-height: 1.8;
+            font-weight: 300;
         }
         .hero-image {
             flex: 1;
@@ -153,88 +216,90 @@
             border-radius: 100px 30px 100px 30px;
             padding: 40px;
             text-align: center;
-            box-shadow: 0 40px 60px -30px rgba(196, 123, 142, 0.15);
+            box-shadow: 0 40px 60px -30px rgba(196, 123, 142, 0.1);
         }
         .hero-image i {
-            font-size: 10rem;
+            font-size: 9rem;
             color: #c47b8e;
         }
         .hero-image p {
             background: #fff;
-            padding: 12px 24px;
-            border-radius: 50px;
+            padding: 10px 24px;
+            border-radius: 40px;
             margin-top: 20px;
-            font-weight: 600;
+            font-weight: 400;
             color: #2d2a3e;
             display: inline-block;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
         }
-        .btn-primary {
-            background: #c47b8e;
-            color: #fff;
-            padding: 16px 40px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            box-shadow: 0 15px 30px -10px rgba(196, 123, 142, 0.3);
+
+        /* SOBRE */
+        .sobre {
+            padding: 80px 0;
+            background: #fff;
         }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px -10px rgba(196, 123, 142, 0.4);
-            background: #a86278;
-        }
-        .btn-secondary {
-            background: transparent;
-            color: #c47b8e;
-            padding: 14px 36px;
-            border-radius: 50px;
-            font-weight: 600;
-            border: 2px solid #c47b8e;
-            cursor: pointer;
-            transition: 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-        .btn-secondary:hover {
-            background: #c47b8e;
-            color: #fff;
-        }
-        .hero-actions {
+        .sobre-grid {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 60px;
+        }
+        .sobre-text {
+            flex: 1;
+        }
+        .sobre-text h2 {
+            font-size: 2.6rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: #2d2a3e;
+        }
+        .sobre-text h2 span {
+            color: #c47b8e;
+            font-weight: 500;
+        }
+        .sobre-text p {
+            color: #5a4e6e;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+        .sobre-image {
+            flex: 1;
+            background: #f8eff1;
+            border-radius: 40px 100px 40px 100px;
+            padding: 40px;
+            text-align: center;
+        }
+        .sobre-image i {
+            font-size: 8rem;
+            color: #c47b8e;
         }
 
         /* TRATAMENTOS */
         .tratamentos {
             padding: 80px 0;
-            background: #fff;
+            background: #fcf8f9;
         }
         .tratamentos-header {
             text-align: center;
             margin-bottom: 50px;
         }
         .tratamentos-header h2 {
-            font-size: 2.8rem;
-            font-weight: 700;
+            font-size: 2.6rem;
+            font-weight: 300;
             color: #2d2a3e;
         }
         .tratamentos-header h2 span {
             color: #c47b8e;
+            font-weight: 500;
         }
         .tratamentos-header p {
-            color: #5a4e6e;
+            color: #7a6b82;
             font-size: 1.1rem;
             max-width: 600px;
             margin: 10px auto 0;
+            font-weight: 300;
         }
         .tratamentos-grid {
             display: grid;
@@ -242,85 +307,179 @@
             gap: 30px;
         }
         .tratamento-card {
-            background: #faf7f8;
+            background: #fff;
             padding: 40px 30px;
             border-radius: 30px;
             text-align: center;
             transition: 0.3s;
-            border: 1px solid #f0e8f0;
+            border: 1px solid #f0e8ec;
         }
         .tratamento-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             border-color: #c47b8e;
-            box-shadow: 0 20px 40px -15px rgba(196, 123, 142, 0.1);
+            box-shadow: 0 20px 40px -15px rgba(196, 123, 142, 0.08);
         }
         .tratamento-card .icon {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             background: #f8eff1;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #c47b8e;
         }
         .tratamento-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            font-weight: 500;
             color: #2d2a3e;
             margin-bottom: 10px;
         }
         .tratamento-card p {
-            color: #5a4e6e;
+            color: #7a6b82;
             font-size: 0.95rem;
             line-height: 1.6;
+            font-weight: 300;
         }
 
-        /* DIFERENCIAIS */
-        .diff-est {
+        /* DEPOIMENTOS */
+        .depoimentos {
             padding: 80px 0;
-            background: #faf7f8;
+            background: #fff;
         }
-        .diff-est h2 {
+        .depoimentos h2 {
             text-align: center;
-            font-size: 2.8rem;
+            font-size: 2.6rem;
+            font-weight: 300;
             color: #2d2a3e;
             margin-bottom: 50px;
         }
-        .diff-est h2 span {
+        .depoimentos h2 span {
             color: #c47b8e;
+            font-weight: 500;
         }
-        .diff-est-grid {
+        .depoimentos-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
-        .diff-est-item {
-            background: #fff;
-            padding: 30px 20px;
-            text-align: center;
+        .depoimento-card {
+            background: #fcf8f9;
+            padding: 30px;
             border-radius: 20px;
-            transition: 0.3s;
-            border: 1px solid #f0e8f0;
+            border: 1px solid #f0e8ec;
         }
-        .diff-est-item:hover {
-            transform: translateY(-5px);
-            border-color: #c47b8e;
+        .depoimento-card .stars {
+            color: #f5b342;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
         }
-        .diff-est-item i {
-            font-size: 2.8rem;
-            color: #c47b8e;
-            margin-bottom: 15px;
-        }
-        .diff-est-item h4 {
-            font-size: 1.2rem;
+        .depoimento-card p {
             color: #2d2a3e;
-            margin-bottom: 8px;
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-weight: 300;
         }
-        .diff-est-item p {
-            color: #5a4e6e;
-            font-size: 0.95rem;
+        .depoimento-card .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .depoimento-card .author .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #eedde1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 400;
+            color: #c47b8e;
+            font-size: 0.8rem;
+        }
+        .depoimento-card .author .name {
+            font-weight: 500;
+            color: #2d2a3e;
+        }
+        .depoimento-card .author .role {
+            font-size: 0.8rem;
+            color: #7a6b82;
+            font-weight: 300;
+        }
+
+        /* BLOG */
+        .blog {
+            padding: 80px 0;
+            background: #fcf8f9;
+        }
+        .blog h2 {
+            text-align: center;
+            font-size: 2.6rem;
+            font-weight: 300;
+            color: #2d2a3e;
+            margin-bottom: 50px;
+        }
+        .blog h2 span {
+            color: #c47b8e;
+            font-weight: 500;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .blog-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #f0e8ec;
+            transition: 0.3s;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -15px rgba(196, 123, 142, 0.08);
+        }
+        .blog-card .img-placeholder {
+            height: 180px;
+            background: #eedde1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #c47b8e;
+        }
+        .blog-card .info {
+            padding: 25px;
+        }
+        .blog-card .info .tag {
+            font-size: 0.7rem;
+            color: #c47b8e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        .blog-card .info h4 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2d2a3e;
+            margin: 8px 0;
+        }
+        .blog-card .info p {
+            color: #7a6b82;
+            font-size: 0.9rem;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        .blog-card .info a {
+            color: #c47b8e;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: inline-block;
         }
 
         /* FOOTER */
@@ -337,7 +496,9 @@
         }
         .footer-col h4 {
             color: #fff;
+            font-weight: 400;
             margin-bottom: 18px;
+            font-size: 1rem;
         }
         .footer-col p,
         .footer-col a {
@@ -346,12 +507,14 @@
             display: block;
             margin: 8px 0;
             transition: 0.2s;
+            font-weight: 300;
+            font-size: 0.95rem;
         }
         .footer-col a:hover {
             color: #eedde1;
         }
         .footer-col .social i {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin-right: 15px;
             color: #c4b8cc;
             transition: 0.2s;
@@ -363,7 +526,8 @@
             border-top: 1px solid #4d3f5a;
             padding-top: 25px;
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            font-weight: 300;
         }
 
         .whatsapp-float {
@@ -372,21 +536,21 @@
             right: 30px;
             background: #25d366;
             color: #fff;
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.8rem;
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+            font-size: 2.5rem;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
             transition: 0.3s;
             z-index: 1000;
             text-decoration: none;
             animation: pulse 2s infinite;
         }
         .whatsapp-float:hover {
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
         @keyframes pulse {
             0% {
@@ -401,10 +565,9 @@
         }
 
         @media (max-width: 992px) {
-            .tratamentos-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .diff-est-grid {
+            .tratamentos-grid,
+            .depoimentos-grid,
+            .blog-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .footer-grid {
@@ -426,12 +589,14 @@
                 gap: 20px;
                 transform: translateY(-200%);
                 transition: 0.3s;
-                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.02);
+                border-bottom: 1px solid #f0e8ec;
             }
             .nav-links.open {
                 transform: translateY(0);
             }
-            .hero-grid {
+            .hero-grid,
+            .sobre-grid {
                 flex-direction: column;
                 text-align: center;
             }
@@ -444,10 +609,9 @@
             .hero-text h1 {
                 font-size: 2.8rem;
             }
-            .tratamentos-grid {
-                grid-template-columns: 1fr;
-            }
-            .diff-est-grid {
+            .tratamentos-grid,
+            .depoimentos-grid,
+            .blog-grid {
                 grid-template-columns: 1fr;
             }
             .footer-grid {
@@ -457,7 +621,7 @@
             .whatsapp-float {
                 width: 55px;
                 height: 55px;
-                font-size: 2.3rem;
+                font-size: 2.2rem;
                 bottom: 20px;
                 right: 20px;
             }
@@ -466,7 +630,7 @@
             .hero-text h1 {
                 font-size: 2.2rem;
             }
-            .tratamentos-header h2 {
+            .section-title {
                 font-size: 2rem;
             }
         }
@@ -479,8 +643,10 @@
                 <i class="fas fa-spa"></i> SuaLogo <span>ESTÉTICA</span>
             </div>
             <ul class="nav-links" id="navLinks">
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#tratamentos">Tratamentos</a></li>
-                <li><a href="#diferenciais">Diferenciais</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contato" class="nav-cta"><i class="fas fa-calendar-check"></i> Agende</a></li>
             </ul>
             <button class="hamburger" id="hamburgerBtn">
@@ -492,12 +658,12 @@
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-text">
-                <span class="badge"><i class="fas fa-star"></i> Beleza e bem-estar</span>
+                <span class="badge"><i class="fas fa-star"></i> Excelência em estética</span>
                 <h1>Descubra sua <span>melhor versão</span> com a gente</h1>
-                <p>Transforme sua clínica de estética com um site sofisticado que atrai clientes e transmite excelência.</p>
+                <p>Uma jornada de renovação e cuidado para realçar sua beleza natural com técnicas avançadas e atendimento personalizado.</p>
                 <div class="hero-actions">
-                    <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Quero meu site</a>
-                    <a href="#" class="btn-secondary"><i class="fas fa-play-circle"></i> Ver cases</a>
+                    <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Agende sua avaliação</a>
+                    <a href="#" class="btn-outline"><i class="fas fa-play-circle"></i> Conheça nossos tratamentos</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -507,70 +673,132 @@
         </div>
     </section>
 
+    <section class="sobre" id="sobre">
+        <div class="container sobre-grid">
+            <div class="sobre-image">
+                <i class="fas fa-leaf"></i>
+            </div>
+            <div class="sobre-text">
+                <h2><span>Sobre</span> a Clínica</h2>
+                <p>Com mais de 10 anos de experiência, nossa clínica é referência em tratamentos estéticos faciais e corporais. Unimos ciência, arte e inovação para oferecer procedimentos de alta qualidade em um ambiente acolhedor e sofisticado.</p>
+                <p>Nossa equipe é formada por profissionais especializados que acompanham cada paciente de forma individualizada, garantindo segurança e resultados naturais.</p>
+                <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> Conheça nossa história</a>
+            </div>
+        </div>
+    </section>
+
     <section class="tratamentos" id="tratamentos">
         <div class="container">
             <div class="tratamentos-header">
                 <h2>Nossos <span>tratamentos</span></h2>
-                <p>Procedimentos de alta qualidade para realçar sua beleza</p>
+                <p>Procedimentos de ponta para realçar sua beleza e bem-estar</p>
             </div>
             <div class="tratamentos-grid">
                 <div class="tratamento-card">
                     <div class="icon"><i class="fas fa-face-smile"></i></div>
                     <h3>Lifting Facial</h3>
-                    <p>Rejuvenescimento natural com técnicas avançadas e seguras.</p>
+                    <p>Técnica não invasiva que promove rejuvenescimento e firmeza da pele.</p>
                 </div>
                 <div class="tratamento-card">
                     <div class="icon"><i class="fas fa-hand-sparkles"></i></div>
                     <h3>Limpeza de Pele</h3>
-                    <p>Renovação profunda para uma pele mais saudável e radiante.</p>
+                    <p>Renovação profunda para uma pele mais saudável, luminosa e equilibrada.</p>
                 </div>
                 <div class="tratamento-card">
                     <div class="icon"><i class="fas fa-wind"></i></div>
                     <h3>Massagem Terapêutica</h3>
-                    <p>Relaxamento e alívio de tensões com técnicas especializadas.</p>
+                    <p>Relaxamento e alívio de tensões com técnicas especializadas e personalizadas.</p>
                 </div>
                 <div class="tratamento-card">
                     <div class="icon"><i class="fas fa-sun"></i></div>
                     <h3>Tratamento Capilar</h3>
-                    <p>Recuperação e fortalecimento para cabelos saudáveis e bonitos.</p>
+                    <p>Recuperação e fortalecimento para cabelos saudáveis, brilhantes e cheios de vida.</p>
                 </div>
                 <div class="tratamento-card">
                     <div class="icon"><i class="fas fa-weight-scale"></i></div>
                     <h3>Estética Corporal</h3>
-                    <p>Modelagem e definição corporal com procedimentos de ponta.</p>
+                    <p>Modelagem e definição corporal com procedimentos modernos e eficazes.</p>
                 </div>
                 <div class="tratamento-card">
                     <div class="icon"><i class="fas fa-water"></i></div>
                     <h3>Hidratação Profunda</h3>
-                    <p>Tratamento intensivo para uma pele hidratada e viçosa.</p>
+                    <p>Tratamento intensivo para devolver viço e maciez à pele ressecada.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="diff-est" id="diferenciais">
+    <section class="depoimentos" id="depoimentos">
         <div class="container">
-            <h2>Diferenciais do seu <span>site estético</span></h2>
-            <div class="diff-est-grid">
-                <div class="diff-est-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h4>Responsivo</h4>
-                    <p>Perfeito em qualquer dispositivo</p>
+            <h2>O que nossos <span>clientes</span> dizem</h2>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Fiz o lifting facial e fiquei encantada com o resultado. Natural e sutil, exatamente como eu queria. A equipe é muito atenciosa!"</p>
+                    <div class="author">
+                        <div class="avatar">MR</div>
+                        <div>
+                            <div class="name">Mariana R.</div>
+                            <div class="role">Paciente</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="diff-est-item">
-                    <i class="fas fa-pencil-alt"></i>
-                    <h4>Copy Sofisticada</h4>
-                    <p>Textos elegantes que cativam</p>
+                <div class="depoimento-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"O tratamento corporal superou minhas expectativas. Me sinto mais confiante e feliz comigo mesma. Recomendo de olhos fechados!"</p>
+                    <div class="author">
+                        <div class="avatar">CS</div>
+                        <div>
+                            <div class="name">Carla S.</div>
+                            <div class="role">Paciente</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="diff-est-item">
-                    <i class="fas fa-heart"></i>
-                    <h4>Design Premium</h4>
-                    <p>Layout que transmite luxo e cuidado</p>
+                <div class="depoimento-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Ambiente impecável e profissionais qualificados. A limpeza de pele foi uma experiência incrível, minha pele nunca esteve tão bonita!"</p>
+                    <div class="author">
+                        <div class="avatar">AL</div>
+                        <div>
+                            <div class="name">Ana L.</div>
+                            <div class="role">Paciente</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="diff-est-item">
-                    <i class="fas fa-chart-line"></i>
-                    <h4>Alta Conversão</h4>
-                    <p>Otimizado para agendamentos</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog" id="blog">
+        <div class="container">
+            <h2>Dicas e <span>novidades</span></h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="img-placeholder"><i class="fas fa-newspaper"></i></div>
+                    <div class="info">
+                        <span class="tag">Cuidados com a pele</span>
+                        <h4>5 hábitos para manter a pele radiante</h4>
+                        <p>Descubra como pequenas mudanças na rotina podem transformar a saúde da sua pele.</p>
+                        <a href="#">Leia mais →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="img-placeholder"><i class="fas fa-newspaper"></i></div>
+                    <div class="info">
+                        <span class="tag">Bem-estar</span>
+                        <h4>Os benefícios da massagem terapêutica</h4>
+                        <p>Além do relaxamento, a massagem traz benefícios para a saúde física e mental.</p>
+                        <a href="#">Leia mais →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="img-placeholder"><i class="fas fa-newspaper"></i></div>
+                    <div class="info">
+                        <span class="tag">Estética</span>
+                        <h4>Lifting facial: mitos e verdades</h4>
+                        <p>Saiba tudo sobre o procedimento e como ele pode rejuvenescer sua aparência.</p>
+                        <a href="#">Leia mais →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -581,7 +809,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4><i class="fas fa-spa"></i> SuaLogo Estética</h4>
-                    <p>Beleza e bem-estar com excelência.</p>
+                    <p>Realçando sua beleza com excelência e cuidado.</p>
                     <div class="social">
                         <i class="fab fa-instagram"></i>
                         <i class="fab fa-facebook"></i>
@@ -590,15 +818,17 @@
                 </div>
                 <div class="footer-col">
                     <h4>Tratamentos</h4>
-                    <a href="#">Lifting</a>
+                    <a href="#">Lifting Facial</a>
                     <a href="#">Limpeza de Pele</a>
-                    <a href="#">Massagem</a>
+                    <a href="#">Massagem Terapêutica</a>
                     <a href="#">Estética Corporal</a>
                 </div>
                 <div class="footer-col">
                     <h4>Links</h4>
+                    <a href="#sobre">Sobre</a>
                     <a href="#tratamentos">Tratamentos</a>
-                    <a href="#diferenciais">Diferenciais</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                    <a href="#blog">Blog</a>
                 </div>
                 <div class="footer-col">
                     <h4>Contato</h4>
